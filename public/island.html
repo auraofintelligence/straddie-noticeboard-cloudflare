@@ -6,11 +6,14 @@
   <meta name="description" content="Find official bus and ferry timetables, local maps, weather forecasts and emergency information for Minjerribah / North Stradbroke Island.">
   <link rel="icon" href="./favicon.ico?v=4" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./assets/leaflet/leaflet.css">
   <link rel="stylesheet" href="./island.css">
+  <script defer src="./assets/leaflet/leaflet.js"></script>
   <script type="module" src="./island.js"></script>
   <title>Maps, transport &amp; weather | Straddie Noticeboard Network</title>
   <link rel="stylesheet" href="./brand.css">
   <meta name="theme-color" content="#111526">
+  <link rel="stylesheet" href="./navigation.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,27 +23,54 @@
         <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=4" alt="" width="43" height="43">
         <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="primary-nav" aria-label="Main navigation">
-        <a aria-current="page" href="./island.html">Island travel</a>
-        <a href="./opportunities.html">Work &amp; volunteering</a>
-        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+      <nav class="primary-nav" aria-label="Main navigation" data-nav-page="island">
+        <div class="primary-links" role="group" aria-label="Popular pages">
+          <a href="./board.html?mode=pilot" data-nav-route="board-pilot">Noticeboard</a>
+          <a href="./submit.html" data-nav-route="submit">Draft a notice</a>
+          <a href="./island.html" data-nav-route="island" aria-current="page">Island travel</a>
+          <a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a>
+          <a class="primary-nav-extra" href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a>
+        </div>
         <details class="section-menu">
-          <summary>Network guides</summary>
-          <div class="nav-panel">
-            <a href="./pilot.html">Island infrastructure plan</a>
-            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
-            <a href="./submit.html">Draft a notice</a>
-            <a href="./board.html">Practice noticeboard</a>
-            <a href="./how-it-works.html">Publishing &amp; moderation</a>
-            <a href="./training.html">Media training</a>
-            <a href="./businesses.html">Business onboarding</a>
-            <a href="./grants.html">Funding &amp; maintenance</a>
-            <a href="./setup.html">Screen setup</a>
-            <a href="./resilience.html">Power &amp; outages</a>
-            <a href="./visitor-volunteer.html">Visitor &amp; volunteer operations</a>
+          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>All pages</summary>
+          <div class="nav-panel" id="navigation-panel">
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-start">Start here</p>
+              <ul role="list" aria-labelledby="nav-start">
+                <li><a href="./" data-nav-route="index">Home</a></li>
+                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Pilot noticeboard</a></li>
+                <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
+                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
+                <li><a href="./island.html" data-nav-route="island" aria-current="page">Island travel</a></li>
+                <li><a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a></li>
+                <li><a href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a></li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-displays">Publishing &amp; screens</p>
+              <ul role="list" aria-labelledby="nav-displays">
+                <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Pilot screen</a></li>
+                <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
+                <li><a href="./how-it-works.html" data-nav-route="how-it-works">Publishing &amp; moderation</a></li>
+                <li><a href="./training.html" data-nav-route="training">Media training</a></li>
+                <li><a href="./setup.html" data-nav-route="setup">Screen setup</a></li>
+                <li><a href="./resilience.html" data-nav-route="resilience">Power &amp; outages</a></li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-network">Network &amp; participation</p>
+              <ul role="list" aria-labelledby="nav-network">
+                <li><a href="./pilot.html" data-nav-route="pilot">Island infrastructure plan</a></li>
+                <li><a href="./businesses.html" data-nav-route="businesses">Business onboarding</a></li>
+                <li><a href="./grants.html" data-nav-route="grants">Funding &amp; maintenance</a></li>
+                <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Visitor &amp; volunteer operations</a></li>
+                <li><a href="./network.html" data-nav-route="network">Project references</a></li>
+              </ul>
+            </div>
           </div>
         </details>
       </nav>
+      <script src="./navigation.js" defer></script>
     </div>
   </header>
 
@@ -49,7 +79,7 @@
       <div class="shell island-intro-grid">
         <div>
           <p class="eyebrow">Minjerribah / North Stradbroke Island</p>
-          <h1 id="island-title">Maps &amp; weather</h1>
+          <h1 id="island-title">Island travel &amp; weather</h1>
           <p>Find Dunwich, Amity Point and Point Lookout. Check your ferry, connecting bus and current weather before you head out.</p>
         </div>
         <div class="island-arrival">
@@ -64,44 +94,40 @@
     </section>
 
     <div class="shell island-content">
-      <aside class="island-alert" aria-labelledby="alert-title">
-        <div>
-          <h2 id="alert-title">Official warnings &amp; emergencies</h2>
-          <p>Check official sources for current warnings and local advice. In a life-threatening emergency call <a href="tel:000">Triple Zero (000)</a>.</p>
-        </div>
-        <div class="island-actions">
-          <a class="button button-secondary" href="https://dashboard.redland.qld.gov.au/">Council disaster dashboard</a>
-          <a class="button button-secondary" href="https://www.bom.gov.au/weather-and-climate/warnings-and-alerts">Bureau weather warnings</a>
-          <a class="button button-primary" href="./emergencies.html">Contacts and emergency information</a>
-        </div>
-      </aside>
-
       <section class="island-explorer" aria-labelledby="explore-title">
-        <figure class="island-map">
+        <figure class="island-map" id="explore">
           <div class="island-map-heading">
             <h2 id="explore-title">Explore the island</h2>
-            <a class="button button-secondary island-all" href="#place-island" data-place-link>Island-wide</a>
           </div>
-          <div class="map-figure" role="group" aria-label="North-up locator of Minjerribah. Select Amity Point on the north-western shore, Point Lookout on the north-eastern headland or Dunwich on the western shore.">
-            <span class="map-north" aria-hidden="true">N</span>
-            <span class="map-bay" aria-hidden="true">Moreton Bay</span>
-            <span class="map-ocean" aria-hidden="true">Pacific Ocean</span>
-            <div class="map-relief">
-              <img src="./assets/minjerribah-relief.jpg" width="576" height="1322" alt="Satellite relief of Minjerribah, with a long ocean beach on the east and sandbanks in Moreton Bay to the west">
-              <a class="map-pin map-pin-amity" href="#place-amity" data-place-link>Amity Point</a>
-              <a class="map-pin map-pin-lookout" href="#place-lookout" data-place-link>Point Lookout</a>
-              <a class="map-pin map-pin-dunwich" href="#place-dunwich" data-place-link>Dunwich</a>
+          <div class="map-stage" id="map-stage">
+            <div class="map-toolbar" aria-label="Map controls" role="group" hidden>
+              <label class="map-place-picker"><span class="sr-only">Show a place on the map</span>
+                <select id="map-place"><option value="place-island">Whole island</option><option value="place-dunwich">Dunwich</option><option value="place-amity">Amity Point</option><option value="place-lookout">Point Lookout</option></select>
+              </label>
+              <div class="map-layers" aria-label="Map background" role="group">
+                <button type="button" id="map-aerial" aria-pressed="true">Aerial</button>
+                <button type="button" id="map-streets" aria-pressed="false">Streets</button>
+              </div>
+              <button id="map-expand" type="button" aria-pressed="false">Full screen</button>
             </div>
+            <div class="map-viewport">
+              <img class="map-poster" src="./assets/moreton-bay-aerial.jpg" width="2400" height="925" alt="Aerial overview of North Stradbroke Island, Moreton Bay and the Redlands coast">
+              <div id="island-canvas" role="region" aria-label="Interactive island map. Use the arrow keys to pan and plus or minus to zoom." hidden></div>
+            </div>
+            <div class="map-attribution">
+              <span>© Queensland · Planet / Geoplex</span><span id="map-street-credit" hidden> · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></span>
+              <details><summary>Imagery credits</summary>
+                <p>Includes material © State of Queensland (Department of Natural Resources and Mines, Manufacturing and Regional and Rural Development); © Planet Labs Netherlands B.V. reproduced under licence from Planet and Geoplex, all rights reserved, 2026.</p>
+                <p>The local aerial overview is a JPEG export from the Queensland Latest State Program image service. Capture dates vary. The image service supplies this imagery under Creative Commons Attribution-ShareAlike. <a href="https://spatial-img.information.qld.gov.au/arcgis/rest/services/Basemaps/LatestStateProgram_AllUsers/ImageServer/info/iteminfo">Source and terms</a>.</p>
+                <p>In consideration of the State of Queensland permitting use of this data you acknowledge and agree that the State gives no warranty in relation to the data (including accuracy, reliability, completeness, currency or suitability) and accepts no liability (including without limitation, liability in negligence) for any loss, damage or costs (including consequential damage) relating to any use of the data.</p>
+              </details>
+            </div>
+            <p class="map-message" id="map-message" role="status" hidden></p>
           </div>
-          <figcaption>
-            <p>North-up, for orientation. Imagery captured 13 July 2026. <a href="https://parks.qld.gov.au/parks/minjerribah/maps-resources">Queensland Parks maps and alerts</a></p>
-            <details>
-              <summary>Imagery credits</summary>
-              <p>Contains modified Copernicus Sentinel data 2026. The relief was produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. <a href="https://doi.org/10.5270/ESA-c5d3d65">Copernicus DEM source and terms</a></p>
-              <p>Relief by <a href="https://github.com/auraofintelligence/straddie-twins/blob/main/assets/island/island-relief.jpg">Luke Nathan Hayes / Strange But True / Aura of Intelligence</a>. <a href="https://github.com/auraofintelligence/straddie-twins/blob/main/LICENCE.md">Aura of Intelligence Public Source Licence</a></p>
-            </details>
-          </figcaption>
+          <figcaption>Choose a town for its transport links and weather. <a href="https://parks.qld.gov.au/parks/minjerribah/maps-resources">Queensland Parks maps and alerts</a>.</figcaption>
+          <nav class="map-fallback-links" aria-label="Town information"><a href="#place-dunwich">Dunwich</a> · <a href="#place-amity">Amity Point</a> · <a href="#place-lookout">Point Lookout</a></nav>
         </figure>
+        <dialog id="map-dialog" aria-label="Full-screen island map"></dialog>
 
         <div class="island-details">
           <p class="sr-only" id="place-status" role="status"></p>
@@ -193,6 +219,18 @@
           </article>
         </div>
       </section>
+
+      <aside class="island-alert" aria-labelledby="alert-title">
+        <div>
+          <h2 id="alert-title">Official warnings &amp; emergencies</h2>
+          <p>Check official sources for current warnings and local advice. In a life-threatening emergency call <a href="tel:000">Triple Zero (000)</a>.</p>
+        </div>
+        <div class="island-actions">
+          <a class="button button-secondary" href="https://dashboard.redland.qld.gov.au/">Council disaster dashboard</a>
+          <a class="button button-secondary" href="https://www.bom.gov.au/weather-and-climate/warnings-and-alerts">Bureau weather warnings</a>
+          <a class="button button-primary" href="./emergencies.html">Contacts and emergency information</a>
+        </div>
+      </aside>
 
       <section class="weather-guide" id="transport" aria-labelledby="transport-title">
         <h2 id="transport-title">Plan an island trip</h2>
@@ -287,6 +325,14 @@
         <a href="./screen.html">Try a sample noticeboard screen</a>
       </nav>
     </div>
+    <div class="shell page-navigation">
+      <nav class="page-sequence" aria-label="Pages in this guide">
+        <a href="./screen.html?mode=pilot" rel="prev"><span>Previous</span><strong>Reviewed noticeboard screen</strong></a>
+        <a href="./emergencies.html" rel="next"><span>Next</span><strong>Emergency information</strong></a>
+      </nav>
+      <div class="page-top-slot"><a class="page-top" href="#main">Back to top</a></div>
+    </div>
   </footer>
+  <script type="module" src="./footer-navigation.js"></script>
 </body>
 </html>

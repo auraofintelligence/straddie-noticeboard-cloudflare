@@ -394,6 +394,13 @@
 .board-place-grid [aria-pressed="true"] .board-place-bar { background: #ffffff48; }
 .board-place-grid [aria-pressed="true"] .board-place-bar::before { background: var(--gold); }
 .board-count:not(:empty) { margin-bottom: .75rem; }
+.notice-figure { margin: 0; }
+.notice-credit {
+  padding: .45rem 1.18rem;
+  color: var(--muted);
+  font-size: .78rem;
+  border-bottom: 1px solid var(--line);
+}
 .notice-media-text { min-height: 4.25rem; aspect-ratio: auto; background: var(--mist); }
 .notice-media-text .notice-place { background: var(--paper); }
 .notice-source { margin-top: .7rem; color: var(--muted); font-size: .9rem; }

@@ -10,6 +10,7 @@
   <title>Media training | Straddie Noticeboard Network</title>
   <link rel="stylesheet" href="./brand.css">
   <meta name="theme-color" content="#111526">
+  <link rel="stylesheet" href="./navigation.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -19,27 +20,54 @@
         <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=4" alt="" width="43" height="43">
         <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="primary-nav" aria-label="Main navigation">
-        <a href="./island.html">Island travel</a>
-        <a href="./opportunities.html">Work &amp; volunteering</a>
-        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+      <nav class="primary-nav" aria-label="Main navigation" data-nav-page="training">
+        <div class="primary-links" role="group" aria-label="Popular pages">
+          <a href="./board.html?mode=pilot" data-nav-route="board-pilot">Noticeboard</a>
+          <a href="./submit.html" data-nav-route="submit">Draft a notice</a>
+          <a href="./island.html" data-nav-route="island">Island travel</a>
+          <a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a>
+          <a class="primary-nav-extra" href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a>
+        </div>
         <details class="section-menu">
-          <summary>Network guides</summary>
-          <div class="nav-panel">
-            <a href="./pilot.html">Island infrastructure plan</a>
-            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
-            <a href="./submit.html">Draft a notice</a>
-            <a href="./board.html">Practice noticeboard</a>
-            <a href="./how-it-works.html">Publishing &amp; moderation</a>
-            <a aria-current="page" href="./training.html">Media training</a>
-            <a href="./businesses.html">Business onboarding</a>
-            <a href="./grants.html">Funding &amp; maintenance</a>
-            <a href="./setup.html">Screen setup</a>
-            <a href="./resilience.html">Power &amp; outages</a>
-            <a href="./visitor-volunteer.html">Visitor &amp; volunteer operations</a>
+          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>All pages</summary>
+          <div class="nav-panel" id="navigation-panel">
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-start">Start here</p>
+              <ul role="list" aria-labelledby="nav-start">
+                <li><a href="./" data-nav-route="index">Home</a></li>
+                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Pilot noticeboard</a></li>
+                <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
+                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
+                <li><a href="./island.html" data-nav-route="island">Island travel</a></li>
+                <li><a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a></li>
+                <li><a href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a></li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-displays">Publishing &amp; screens</p>
+              <ul role="list" aria-labelledby="nav-displays">
+                <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Pilot screen</a></li>
+                <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
+                <li><a href="./how-it-works.html" data-nav-route="how-it-works">Publishing &amp; moderation</a></li>
+                <li><a href="./training.html" data-nav-route="training" aria-current="page">Media training</a></li>
+                <li><a href="./setup.html" data-nav-route="setup">Screen setup</a></li>
+                <li><a href="./resilience.html" data-nav-route="resilience">Power &amp; outages</a></li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-network">Network &amp; participation</p>
+              <ul role="list" aria-labelledby="nav-network">
+                <li><a href="./pilot.html" data-nav-route="pilot">Island infrastructure plan</a></li>
+                <li><a href="./businesses.html" data-nav-route="businesses">Business onboarding</a></li>
+                <li><a href="./grants.html" data-nav-route="grants">Funding &amp; maintenance</a></li>
+                <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Visitor &amp; volunteer operations</a></li>
+                <li><a href="./network.html" data-nav-route="network">Project references</a></li>
+              </ul>
+            </div>
           </div>
         </details>
       </nav>
+      <script src="./navigation.js" defer></script>
     </div>
   </header>
 
@@ -58,7 +86,7 @@
             <p class="eyebrow">Practice story</p>
             <h2>How to check a ferry update</h2>
             <p>Use a simulated operator notice to show where a traveller would check the latest update and how to tell when it was issued. All example notices are workshop material.</p>
-            <a class="training-credit" href="https://github.com/auraofintelligence/ballow-road-sand-screen-hub/blob/main/assets/img/site-aerial-west-northwest-bay.webp">Dunwich aerial by Ballow Road Sand &amp; Screen Hub</a>
+            <span class="training-credit"><a href="https://www.commercialrealestate.com.au/property/10-12-ballow-road-dunwich-qld-4183-2020492491">Dunwich aerial from LJ Hooker Property Centre’s Ballow Road listing</a>. Cropped for display.</span>
           </figcaption>
         </figure>
       </div>
@@ -195,6 +223,14 @@
         <a href="./setup.html">Setup guide</a>
       </div>
     </div>
+    <div class="shell page-navigation">
+      <nav class="page-sequence" aria-label="Pages in this guide">
+        <a href="./visitor-volunteer.html" rel="prev"><span>Previous</span><strong>Visitor and volunteer operations</strong></a>
+        <a href="./businesses.html" rel="next"><span>Next</span><strong>Business onboarding</strong></a>
+      </nav>
+      <div class="page-top-slot"><a class="page-top" href="#main">Back to top</a></div>
+    </div>
   </footer>
+  <script type="module" src="./footer-navigation.js"></script>
 </body>
 </html>

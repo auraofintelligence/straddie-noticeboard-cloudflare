@@ -1,4 +1,4 @@
-import { notices, noticesForScreen, places } from './notices.js';
+import { notices, noticesForScreen, places, renderImageCredit } from './notices.js';
 import { formatPilotTime, watchPilotFeed } from './pilot-feed.js';
 
 const placeSelect = document.querySelector('#screen-place');
@@ -49,6 +49,22 @@ let outageDrill = false;
 let feedState = isPilot ? 'loading' : 'ready';
 let displayNotices = isPilot ? [] : notices;
 
+function renderMedia(notice) {
+  const hasImage = notice?.image && !outageDrill;
+  if (!hasImage) {
+    media.hidden = true;
+    image.removeAttribute('src');
+    image.alt = '';
+    renderImageCredit(credit);
+    return;
+  }
+
+  image.alt = notice.imageAlt || '';
+  if (image.getAttribute('src') !== notice.image) image.src = notice.image;
+  media.hidden = !image.complete || !image.naturalWidth || image.currentSrc !== image.src;
+  renderImageCredit(credit, notice.imageCredit);
+}
+
 function render() {
   const notice = filtered[index];
   slide.hidden = !notice;
@@ -62,6 +78,7 @@ function render() {
   if (isPilot) badge.textContent = notice ? 'Reviewed pilot notice' : 'Reviewed pilot feed';
   const mapPlace = notice?.place || placeSelect.value;
   island.href = mapPlace ? `./island.html?${new URLSearchParams({ place: mapPlace })}` : './island.html';
+  renderMedia(notice);
 
   if (!notice) {
     if (feedState === 'loading') empty.textContent = 'Checking the reviewed pilot feed…';
@@ -80,13 +97,6 @@ function render() {
     source.hidden = false;
   }
 
-  media.hidden = outageDrill || !notice.image;
-  if (!media.hidden) {
-    image.alt = notice.imageAlt || '';
-    image.src = notice.image;
-    credit.textContent = notice.credits || '';
-    credit.hidden = !notice.credits;
-  }
 }
 
 function move(step) {
@@ -213,6 +223,9 @@ outage.addEventListener('click', () => {
 for (const button of [previous, touchPrevious]) button.addEventListener('click', () => stepManually(-1));
 for (const button of [next, touchNext]) button.addEventListener('click', () => stepManually(1));
 play.addEventListener('click', toggleRotation);
+image.addEventListener('load', () => {
+  if (!outageDrill && image.hasAttribute('src') && image.currentSrc === image.src) media.hidden = false;
+});
 image.addEventListener('error', () => {
   media.hidden = true;
 });

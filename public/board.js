@@ -1,4 +1,4 @@
-import { allowsNoticeOutlet, categories, notices, places } from "./notices.js";
+import { allowsNoticeOutlet, categories, notices, places, renderImageCredit } from "./notices.js";
 import { addPills, setActivePill } from "./filters.js";
 import { formatPilotTime, watchPilotFeed } from "./pilot-feed.js";
 
@@ -35,15 +35,21 @@ function renderNotices() {
 
   noticeGrid.replaceChildren(...matches.map(notice => {
     const card = noticeTemplate.content.cloneNode(true);
-    const image = card.querySelector(".notice-image");
+    const figure = card.querySelector(".notice-figure");
+    const textMedia = card.querySelector(".notice-media-text");
+    for (const place of card.querySelectorAll(".notice-place")) place.textContent = notice.place;
     if (notice.image) {
-      image.src = notice.image;
+      const image = figure.querySelector(".notice-image");
       image.alt = notice.imageAlt;
-    } else {
-      image.hidden = true;
-      card.querySelector(".notice-media").classList.add("notice-media-text");
+      renderImageCredit(figure.querySelector("figcaption"), notice.imageCredit);
+      figure.hidden = false;
+      textMedia.hidden = true;
+      image.addEventListener("error", () => {
+        figure.hidden = true;
+        textMedia.hidden = false;
+      }, { once: true });
+      image.src = notice.image;
     }
-    card.querySelector(".notice-place").textContent = notice.place;
     card.querySelector(".notice-category").textContent = notice.category;
     card.querySelector("h2").textContent = notice.title;
     card.querySelector(".notice-summary").textContent = notice.summary;

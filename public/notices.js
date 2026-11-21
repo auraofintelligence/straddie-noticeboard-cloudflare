@@ -18,19 +18,54 @@ const photos = {
   dunwich: {
     image: "./assets/dunwich-bay.webp",
     imageAlt: "Aerial view looking across the bay from Dunwich",
-    credits: "Ballow Road Sand and Screen Hub",
+    imageCredit: {
+      source: "Dunwich aerial from LJ Hooker Property Centre’s Ballow Road listing",
+      sourceUrl: "https://www.commercialrealestate.com.au/property/10-12-ballow-road-dunwich-qld-4183-2020492491",
+      note: "Cropped for display.",
+    },
   },
   amity: {
     image: "./assets/amity-jetty.webp",
     imageAlt: "Amity Point Jetty at sunset",
-    credits: "Pacificwizard, CC0",
+    imageCredit: {
+      source: "Amity Point Jetty at sunset by Pacificwizard",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Amity_Point_Jetty_at_Sunset._North_Stradbroke_Island,_Queensland,_Australia.jpg",
+      licence: "CC0 1.0",
+      licenceUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+      note: "Resized, converted to WebP and cropped for display.",
+    },
   },
   point: {
     image: "./assets/point-lookout.webp",
     imageAlt: "The coast at Point Lookout",
-    credits: "Sarah Barry, CC BY 4.0",
+    imageCredit: {
+      source: "Point Lookout by Sarah Barry",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Point_Lookout,_North_Stradbroke_Island,_by_Sarah_Barry.jpg",
+      licence: "CC BY 4.0",
+      licenceUrl: "https://creativecommons.org/licenses/by/4.0/",
+      note: "Converted to WebP and cropped for display.",
+    },
   },
 };
+
+export function renderImageCredit(caption, credit) {
+  caption.replaceChildren();
+  caption.hidden = !credit;
+  if (!credit) return;
+
+  const source = document.createElement("a");
+  source.href = credit.sourceUrl;
+  source.textContent = credit.source;
+  caption.append(source);
+
+  if (credit.licence) {
+    const licence = document.createElement("a");
+    licence.href = credit.licenceUrl;
+    licence.textContent = credit.licence;
+    caption.append(" · ", licence);
+  }
+  if (credit.note) caption.append(" · ", credit.note);
+}
 
 export const notices = [
   {
