@@ -7,6 +7,13 @@
 .island-intro .eyebrow { color: var(--gold); }
 .island-intro h1 { margin-top: .58rem; font-size: clamp(3rem, 6vw, 5.4rem); }
 .island-intro h1 + p { max-width: 40rem; margin-top: .9rem; color: #e4f0eb; font-size: 1.08rem; }
+.island-intro-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); align-items: center; gap: 1.1rem 2.4rem; }
+.island-arrival { display: flex; align-items: center; gap: 1rem; padding: 1rem; border: 1px solid #9cb8ad; border-radius: .6rem; background: #143e3d; }
+.island-arrival img { flex: 0 0 76px; object-fit: contain; }
+.island-arrival h2 { margin-bottom: .3rem; font-size: clamp(1.65rem, 3vw, 2.2rem); }
+.island-arrival p { color: #e4f0eb; }
+.island-arrival a { display: inline-block; margin-top: .35rem; color: var(--gold); font-weight: 700; }
+.island-arrival a:focus-visible { outline-color: var(--gold); }
 .island-content { padding-block: 1.5rem 3.65rem; }
 
 .island-alert {
@@ -39,35 +46,31 @@
 .island-map-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .7rem; margin-bottom: .8rem; }
 .island-map h2, .weather-guide h2 { font-size: clamp(2rem, 4.2vw, 3.2rem); }
 .island-map figcaption { margin-top: .66rem; color: var(--muted); font-size: .9rem; }
+.island-map figcaption p + p { margin-top: .3rem; }
+.island-map figcaption details { margin-top: .3rem; }
+.island-map figcaption summary { color: var(--teal); font-weight: 700; }
 .island-map figcaption a { color: var(--teal); font-weight: 650; }
 .island-all[aria-current] { background: var(--teal); border-color: var(--teal); color: white; }
 
 .map-figure {
+  --map-height: clamp(22rem, 41vw, 30rem);
   position: relative;
   isolation: isolate;
-  height: clamp(16rem, 34vw, 25rem);
-  border: 1px solid #bbd7d3;
+  height: var(--map-height);
+  border: 1px solid #365e65;
   border-radius: .45rem;
-  background:
-    repeating-radial-gradient(ellipse at 48% 27%, transparent 0 1.12rem, #28605512 1.16rem 1.21rem, transparent 1.3rem 2rem),
-    linear-gradient(140deg, #d2e8e1, #bcd9d8 75%);
+  background: #143548;
 }
 
-.map-land {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(102deg, #416c4b0d 0 .55rem, transparent .64rem 1.45rem), linear-gradient(145deg, #e2e8b8, #9ac198 95%);
-  clip-path: polygon(
-    30% 26%, 34% 25%, 38% 27%, 44% 25%, 48% 23%, 55% 22%,
-    59% 19%, 67% 20%, 71% 21%, 75% 23%, 78% 27%, 75% 31%,
-    72% 35%, 69% 44%, 66% 56%, 63% 69%, 60% 82%, 55% 92%,
-    51% 96%, 49% 94%, 51% 89%, 52% 84%, 50% 77%, 47% 71%,
-    46% 61%, 45% 56%, 41% 53%, 40% 50%, 39% 47%, 38% 40%,
-    35% 34%, 31% 31%
-  );
+.map-relief {
+  position: relative;
+  height: 100%;
+  width: calc(var(--map-height) * .4357);
+  margin-inline: auto;
 }
 
-.map-north, .map-bay, .map-ocean { position: absolute; color: #284e51; font-size: .85rem; font-weight: 670; }
+.map-relief > img { width: 100%; height: 100%; border-radius: .4rem; }
+.map-north, .map-bay, .map-ocean { position: absolute; z-index: 1; color: #e1f3f1; font-size: .85rem; font-weight: 720; pointer-events: none; }
 .map-north { top: .85rem; left: .85rem; display: grid; justify-items: center; line-height: 1; }
 .map-north::before { content: ''; margin-bottom: .32rem; border-right: .26rem solid transparent; border-bottom: .62rem solid currentColor; border-left: .26rem solid transparent; }
 .map-bay { top: 67%; left: 5%; }
@@ -111,9 +114,10 @@
 .map-pin:hover { background: var(--mist); }
 .map-pin[aria-current] { z-index: 1; background: var(--teal); border-color: var(--teal); color: white; }
 .map-pin[aria-current]::after { background: var(--gold); }
-.map-pin-amity { --pin-x: 31%; --pin-y: 27%; }
-.map-pin-lookout { --pin-x: 76%; --pin-y: 26%; }
-.map-pin-dunwich { --pin-x: 40%; --pin-y: 51%; }
+.map-pin-amity { --pin-x: 38.05%; --pin-y: 17.15%; }
+.map-pin-lookout { --pin-x: 87.5%; --pin-y: 25.54%; transform: translate(-63%, .55rem); }
+.map-pin-lookout::after { left: calc(63% - .27rem); top: -.82rem; bottom: auto; }
+.map-pin-dunwich { --pin-x: 18.75%; --pin-y: 42.49%; }
 
 .place-panel { padding: clamp(1.05rem, 3vw, 1.65rem); scroll-margin-top: 1rem; }
 .place-panel + .place-panel { margin-top: .8rem; }
@@ -123,6 +127,7 @@
 .place-local { margin-top: 1rem; padding: .9rem 1rem; border-radius: .44rem; background: var(--mist); }
 .place-panel h4 { margin: 0 0 .3rem; font-size: .98rem; }
 .place-local a, .weather-guide details a { display: inline-block; margin-top: .46rem; color: var(--teal); font-weight: 700; }
+.place-transport a { display: block; width: fit-content; }
 .place-weather { margin-top: 1.2rem; }
 .place-weather .island-actions { margin-top: .56rem; }
 
@@ -136,6 +141,7 @@
 .weather-guide details a { margin: -.35rem 1rem .85rem; }
 
 @media (max-width: 810px) {
+  .island-intro-grid { grid-template-columns: minmax(0, 1fr); }
   .island-explorer { grid-template-columns: minmax(0, 1fr); }
 }
 

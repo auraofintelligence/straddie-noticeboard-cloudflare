@@ -6,43 +6,59 @@
   <meta name="description" content="Browse the island, media and civic projects that informed the Straddie Noticeboard Network prototype.">
   <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./tools.css">
+  <link rel="stylesheet" href="./references.css">
   <script type="module" src="./projects.js"></script>
   <title>Project references | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="./">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
 
-  <main class="network-section" id="main">
-    <div class="shell">
-      <div class="section-heading">
-        <div class="tool-heading">
-          <a class="tool-back" href="./">Back to the noticeboard prototype</a>
-          <h1>Project references</h1>
-          <p>These island, media and civic projects informed the proposed community noticeboard for Minjerribah. Ready SETCO is a proposed cooperative that would bring local publishers together and moderate notices.</p>
-        </div>
+  <main id="main">
+    <section class="reference-hero" aria-labelledby="reference-title">
+      <div class="shell">
+        <a class="reference-back" href="./">Back to the noticeboard proposal</a>
+        <h1 id="reference-title">Project references</h1>
+        <p>Luke Nathan Hayes’s island, media and civic projects are connected parts of one body of work. Follow the sources behind a practical feature of the Minjerribah pilot, from a verified volunteer hour to a screen that can show saved text.</p>
       </div>
-      <div class="pill-list network-filters" id="project-groups" role="group" aria-label="Project area"></div>
+    </section>
+    <section class="shell reference-directory" aria-labelledby="reference-directory-title">
+      <h2 id="reference-directory-title">Browse by area</h2>
+      <div class="reference-picker" id="project-groups" role="group" aria-label="Project area"></div>
       <p class="sr-only" id="project-count" role="status"></p>
       <div class="project-grid" id="project-grid"></div>
       <button class="button button-secondary more-projects" id="more-projects" type="button" aria-controls="project-grid" aria-expanded="false" hidden>Show all projects</button>
       <noscript><p>Enable JavaScript to browse and filter the references.</p></noscript>
-    </div>
+    </section>
   </main>
 
   <footer class="site-footer">

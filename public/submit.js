@@ -1,4 +1,5 @@
 import { categories, places } from './notices.js';
+import { pilotZone } from './pilot-feed.js';
 
 const form = document.querySelector('#draft-form');
 const fields = Object.fromEntries(Array.from(form.querySelectorAll('input, select, textarea')).map(field => [field.id, field]));
@@ -6,6 +7,8 @@ const generate = document.querySelector('#generate-draft');
 const preview = document.querySelector('#draft-preview');
 const copy = document.querySelector('#copy-draft');
 const download = document.querySelector('#download-draft');
+const draftFile = document.querySelector('#draft-file');
+const draftFilename = document.querySelector('#draft-filename');
 const aiPreview = document.querySelector('#ai-preview');
 const copyAi = document.querySelector('#copy-ai-prompt');
 const storageStatus = document.querySelector('#storage-status');
@@ -78,6 +81,7 @@ function localDateTime(value) {
 function buildMarkdown({ title, publisher, place, category, starts, expires, venue, source, summary }) {
   const metadata = {
     schema: 'notice.v1',
+    zone: pilotZone,
     title,
     publisher,
     town: place,
@@ -126,6 +130,9 @@ function showDraft() {
 
   preview.value = buildMarkdown(values);
   aiPreview.value = buildAiPrompt(values);
+  const slug = values.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70);
+  draftFilename.textContent = `${slug || 'straddie-notice'}-draft.md`;
+  draftFile.hidden = false;
   copy.disabled = false;
   download.disabled = false;
   copyAi.disabled = false;
@@ -158,6 +165,7 @@ form.addEventListener('input', event => {
   if (preview.value) {
     preview.value = '';
     aiPreview.value = '';
+    draftFile.hidden = true;
     copy.disabled = true;
     download.disabled = true;
     copyAi.disabled = true;
@@ -180,9 +188,8 @@ download.addEventListener('click', () => {
   const content = new Blob([preview.value], { type: 'text/markdown;charset=utf-8' });
   const url = URL.createObjectURL(content);
   const link = document.createElement('a');
-  const slug = fields.title.value.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 70);
   link.href = url;
-  link.download = `${slug || 'straddie-notice'}-draft.md`;
+  link.download = draftFilename.textContent;
   document.body.append(link);
   link.click();
   link.remove();

@@ -7,22 +7,39 @@
   <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./resilience.css">
+  <link rel="stylesheet" href="./guide-figures.css">
+  <script type="module" src="./resilience.js"></script>
   <title>Screens &amp; outages | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a aria-current="page" href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -35,6 +52,7 @@
         <div class="resilience-actions">
           <a class="button button-accent" href="./screen.html?format=portrait&amp;outage=1">Try the sample outage drill</a>
           <a class="button button-ghost" href="#outages">See the outage plan</a>
+          <a class="button button-ghost" href="#battery-runtime">Estimate battery runtime</a>
         </div>
       </div>
     </section>
@@ -70,8 +88,18 @@
       <div class="section-heading">
         <div>
           <h2 id="resilience-title">When the power or internet goes out</h2>
-          <p>A battery supplies power. A saved copy supplies information. Each site would need to test the two separately and rehearse what happens when both fail.</p>
+          <p>Each site would need to test power and the internet separately, then rehearse what happens when both fail.</p>
         </div>
+      </div>
+      <div class="outage-inputs" role="group" aria-label="Two ways to keep a screen useful">
+        <article>
+          <img class="guide-pictogram" src="./assets/icons/battery.webp" width="88" height="88" alt="">
+          <div><h3>Power keeps the screen on</h3><p>Test the battery with the display and the player together.</p></div>
+        </article>
+        <article>
+          <img class="guide-pictogram" src="./assets/icons/notice.webp" width="88" height="88" alt="">
+          <div><h3>A saved copy keeps information available</h3><p>Open the approved text and maps without an internet connection.</p></div>
+        </article>
       </div>
       <div class="resilience-grid">
         <article>
@@ -126,6 +154,64 @@
           </tbody>
         </table>
       </div>
+    </section>
+
+    <section class="shell power-section" id="battery-runtime" aria-labelledby="power-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="power-title">Estimate battery runtime</h2>
+          <p>Divide the usable battery energy in watt-hours by the combined measured power in watts. These starting values are a worked example. Replace them with your venue’s measurements.</p>
+        </div>
+      </div>
+      <div class="power-layout">
+        <form id="power-form" class="power-panel" aria-label="Battery runtime inputs">
+          <div class="power-fields">
+            <label class="power-field power-field-wide">Usable battery energy (Wh)
+              <input id="power-energy" type="number" min="0" step="any" inputmode="decimal" value="500" required aria-describedby="power-energy-hint">
+            </label>
+            <p class="power-hint power-field-wide" id="power-energy-hint">Use the energy available to the equipment after conversion losses. A battery’s nameplate capacity is a starting point. Age and temperature can reduce what it actually delivers.</p>
+            <label class="power-field">Screen (W)
+              <input id="power-screen" type="number" min="0" step="any" inputmode="decimal" value="35" required>
+            </label>
+            <label class="power-field">Media player (W)
+              <input id="power-player" type="number" min="0" step="any" inputmode="decimal" value="10" required>
+            </label>
+            <label class="power-field">Router or hotspot (W)
+              <input id="power-router" type="number" min="0" step="any" inputmode="decimal" value="8" required>
+            </label>
+            <label class="power-field">Planning reserve (%)
+              <input id="power-reserve" type="number" min="0" max="100" step="any" inputmode="decimal" value="20" required aria-describedby="power-reserve-hint">
+            </label>
+            <p class="power-hint power-field-wide" id="power-reserve-hint">Enter 0 W for equipment that will be off or already included in another measurement. The reserve leaves part of the usable energy unallocated to allow for changing loads and site conditions.</p>
+          </div>
+          <button id="power-estimate" class="button button-primary" type="submit" disabled>Estimate runtime</button>
+          <p id="power-error" class="power-hint" role="status"></p>
+          <noscript><p>For a manual estimate, divide the usable Wh by the sum of the measured W.</p></noscript>
+        </form>
+        <section class="power-panel power-output" aria-labelledby="power-output-title">
+          <h3 id="power-output-title">How long could it run?</h3>
+          <div id="power-results" aria-live="polite">
+            <p id="power-totals" class="power-hint">53 W total · 400 Wh after reserve</p>
+            <ul class="runtime-chart" role="list" aria-label="Estimated battery runtime comparison">
+              <li>
+                <strong>Screen alone</strong><span id="runtime-screen">14 hr 17 min</span>
+                <meter id="runtime-screen-bar" min="0" max="100" value="100" aria-hidden="true"></meter>
+              </li>
+              <li>
+                <strong>Full setup</strong><span id="runtime-full">9 hr 26 min</span>
+                <meter id="runtime-full-bar" min="0" max="100" value="66" aria-hidden="true"></meter>
+              </li>
+              <li>
+                <strong>Full setup with reserve</strong><span id="runtime-reserve">7 hr 32 min</span>
+                <meter id="runtime-reserve-bar" min="0" max="100" value="53" aria-hidden="true"></meter>
+              </li>
+            </ul>
+          </div>
+          <p id="power-pending" class="power-hint" role="status" hidden>Inputs changed. Estimate the runtime again.</p>
+        </section>
+      </div>
+      <p class="power-venue-test">This is a planning estimate. At the venue, run the screen at its usual brightness with the player and any required router attached. Measure runtime and record the battery’s age, weather, connection and restart behaviour. Repeat under likely site conditions before setting a local operating limit.</p>
+      <p class="power-hint">The estimate applies the distinction between battery nameplate capacity and usable energy to a noticeboard installation. <a href="https://auraofintelligence.github.io/sovereign-capacity-lab/storage.html">Sovereign Capacity Lab’s solar and storage workbench</a></p>
     </section>
 
     <section class="shell outage-case" id="corrections" aria-labelledby="correction-title">

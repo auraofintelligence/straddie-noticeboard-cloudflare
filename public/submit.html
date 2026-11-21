@@ -9,36 +9,64 @@
   <link rel="stylesheet" href="./tools.css">
   <script type="module" src="./submit.js"></script>
   <title>Draft a notice | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="./">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html" aria-current="page">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a aria-current="page" href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
 
   <main id="main" class="shell tool-main">
-    <div class="tool-heading">
-      <a class="tool-back" href="./board.html">Back to the practice board</a>
-      <h1>Draft a notice</h1>
-      <p>Prepare an event, update or call-out for review. Export the draft or copy a prompt to help adapt it for phones, TVs and kiosks.</p>
+    <div class="draft-page-head">
+      <div class="tool-heading">
+        <a class="tool-back" href="./board.html">Back to the practice board</a>
+        <h1>Draft a notice</h1>
+        <p>Prepare an event, update or call-out for review. Export the draft or copy a prompt to help adapt it for phones, TVs and kiosks.</p>
+      </div>
+      <figure class="draft-anatomy">
+        <figcaption class="tool-illustration">
+          <img src="./assets/icons/notice.webp" alt="" width="48" height="48">
+          <strong>What goes in a notice</strong>
+        </figcaption>
+        <dl>
+          <dt>Title and place</dt><dd>Seedling swap in Amity Point</dd>
+          <dt>What to do</dt><dd>Bring labelled seedlings or spare pots.</dd>
+          <dt>Source and expiry</dt><dd>Link to the organiser’s public page and remove the notice after the swap.</dd>
+        </dl>
+      </figure>
     </div>
 
     <div class="draft-layout">
       <form class="tool-panel draft-form" id="draft-form" aria-labelledby="details-title">
         <h2 id="details-title">Notice details</h2>
-        <p class="tool-hint">All fields are required except the start date and venue.</p>
+        <p class="tool-hint">All fields are required except the start date and venue. For paid work, volunteering and C-Hours, see <a href="./opportunities.html">local opportunities</a>. Direct people to the <a href="https://dashboard.redland.qld.gov.au/">Council disaster dashboard</a> for official emergency information.</p>
         <div class="tool-fields">
           <label class="tool-field field-wide">Notice title
             <input id="title" type="text" required maxlength="100">
@@ -84,9 +112,11 @@
 
       <section class="tool-panel draft-export" aria-labelledby="export-title">
         <h2 id="export-title">Review and export</h2>
-        <p class="tool-hint">The editor keeps your draft in this browser. Download the Markdown and send it to a reviewer who can confirm the details, permissions and take-down time.</p>
+        <p class="tool-hint">The editor keeps your draft in this browser. Download the Markdown and share it with an authorised local reviewer. For a correction, renewal or removal, give the reviewer the original notice’s ID or public source so they can find it.</p>
+        <p class="tool-hint">To discuss a first island notice or find the right reviewer, <a href="https://auraofintelligence.github.io/strange-but-true/contact.html">contact Luke through Strange But True</a>.</p>
         <label class="tool-field" for="draft-preview">Markdown preview</label>
         <textarea class="draft-preview" id="draft-preview" rows="11" readonly placeholder="Your Markdown draft will appear here."></textarea>
+        <p class="draft-filename tool-hint" id="draft-file" hidden>Download name <code id="draft-filename"></code></p>
         <div class="tool-actions">
           <button class="button button-primary" id="download-draft" type="button" disabled>Download Markdown</button>
           <button class="button button-secondary" id="copy-draft" type="button" disabled>Copy Markdown</button>

@@ -1,6 +1,6 @@
 export const places = ["Dunwich", "Amity Point", "Point Lookout", "Island-wide"];
 
-export const categories = ["Events", "Clubs & sport", "Volunteering", "Arts & culture", "Community", "Learning"];
+export const categories = ["Events", "Clubs & sport", "Paid work", "Volunteering", "Arts & culture", "Community", "Learning"];
 
 const photos = {
   dunwich: {

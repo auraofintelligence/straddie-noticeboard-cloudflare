@@ -8,21 +8,36 @@
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./grants.css">
   <title>Grants &amp; funding | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a aria-current="page" href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -38,10 +53,10 @@
         </div>
         <aside class="grants-brief" aria-labelledby="brief-title">
           <h2 id="brief-title">What the pilot would deliver</h2>
-          <ul>
-            <li>One indoor display and a phone-friendly board carrying the same checked notices.</li>
-            <li>Two supervised workshop sessions for a small group, with practice in recording, captioning and checking sources.</li>
-            <li>A record of use, corrections, operating time and costs for the next host to learn from.</li>
+          <ul class="grants-deliverables">
+            <li><img src="./assets/icons/television.webp" width="52" height="52" alt=""><span><strong>One indoor display</strong><br>The same checked notices on a venue TV and a phone-friendly board.</span></li>
+            <li><img src="./assets/icons/camera.webp" width="52" height="52" alt=""><span><strong>Two supervised sessions</strong><br>A small group practises recording, captioning and source checks.</span></li>
+            <li><img src="./assets/icons/review.webp" width="52" height="52" alt=""><span><strong>A pilot report</strong><br>Use, corrections, operating time and costs for the next host.</span></li>
           </ul>
           <p>Applicant, venue and workshop team are to be confirmed.</p>
         </aside>
@@ -102,6 +117,16 @@
             <tfoot><tr><th scope="row">Total example cash cost</th><td>$5,400</td></tr></tfoot>
           </table>
           <div class="grants-budget-ideas" id="budget-note">
+            <figure class="grants-budget-chart" aria-labelledby="budget-chart-title">
+              <h3 id="budget-chart-title">Where $5,400 would go</h3>
+              <div class="grants-budget-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <dl>
+                <div><dt>Workshop and editorial work</dt><dd>$3,060 <span>57%</span></dd></div>
+                <div><dt>Equipment, setup and print</dt><dd>$1,700 <span>31%</span></dd></div>
+                <div><dt>Evaluation and reporting</dt><dd>$640 <span>12%</span></dd></div>
+              </dl>
+              <figcaption>Shares of the example cash budget, rounded to the nearest per cent.</figcaption>
+            </figure>
             <article>
               <h3>In-kind contributions</h3>
               <p>Illustrative total of $1,300 for an existing TV ($400), workshop space ($600) and host support ($300). Confirm the contribution in writing and use the funder’s valuation rules.</p>
@@ -136,8 +161,36 @@
         </div>
         <div class="grants-local-links">
           <a href="https://www.redland.qld.gov.au/Grants-and-sponsorship">Browse Council grants and assistance</a>
-          <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/grant-watchlist.html">Research other options in Stradbroke Grants Lab</a>
         </div>
+        <aside class="grants-lab" aria-labelledby="grants-lab-title">
+          <div class="grants-lab-heading">
+            <img src="./assets/icons/grants.webp" width="64" height="64" alt="">
+            <div>
+              <h3 id="grants-lab-title">Research the pilot with Stradbroke Grants Lab</h3>
+              <p>Start with one venue, named people and quoted costs. Use the Lab to assemble evidence and check possible funding against that scope.</p>
+            </div>
+          </div>
+          <ol>
+            <li>
+              <strong>Make the applicant record.</strong>
+              <p>Record the legal entity, authority to apply, community benefit, delivery experience and insurance. Use the readiness file for quotes, host permission, the deadline and reporting responsibilities.</p>
+              <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/profile-kit.html#business-profile-form">Applicant profile builder</a>
+              <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/profile-kit.html#grant-readiness-form">Grant readiness builder</a>
+            </li>
+            <li>
+              <strong>Compare the project with possible grants.</strong>
+              <p>The Lab records the Noticeboard Network as a prototype. It identifies possible support for a small digital improvement and flags that the applicant, scope and eligibility need to be confirmed.</p>
+              <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/ledger-projects.html#ledger-straddie-noticeboard-network">Noticeboard project profile</a>
+              <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/grant-matches.html#project-straddie-noticeboard-network">Noticeboard funding research</a>
+            </li>
+            <li>
+              <strong>Check closing dates and source documents.</strong>
+              <p>Use the watchlist to shortlist rounds. Confirm the opening and closing times, eligibility and eligible costs in the funder’s current guidelines before planning an application.</p>
+              <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/grant-watchlist.html#fundingViewTabs">Grant watchlist</a>
+              <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/resources.html#documents">Grant sources and documents</a>
+            </li>
+          </ol>
+        </aside>
       </section>
 
       <section class="grants-section grants-results" id="results" aria-labelledby="results-title">

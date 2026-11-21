@@ -1,0 +1,18 @@
+.reference-hero { padding-block: clamp(2.25rem, 5.8vw, 4.55rem); background: linear-gradient(115deg, #0b2d33 38%, #18574c); color: var(--paper); }
+.reference-back { color: #f4dc98; font-weight: 700; }
+.reference-back:focus-visible { outline-color: var(--gold); }
+.reference-hero h1 { margin-block: .6rem .8rem; font-size: clamp(2.85rem, 7vw, 5.6rem); }
+.reference-hero p { max-width: 41rem; color: #e6f3ed; font-size: clamp(1rem, 2vw, 1.16rem); }
+.reference-directory { padding-block: clamp(1.8rem, 4.5vw, 3.45rem); }
+.reference-directory h2 { margin-bottom: .75rem; font-size: clamp(2rem, 4vw, 3.25rem); }
+.reference-picker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; margin-bottom: 1rem; }
+.reference-picker .pill { display: grid; justify-items: start; align-content: start; gap: .3rem; min-width: 0; padding: .85rem; border-radius: .65rem; text-align: left; }
+.reference-picker img { object-fit: contain; margin-bottom: .15rem; }
+.reference-picker strong { font-size: 1.03rem; line-height: 1.16; }
+.reference-picker .pill > span { color: var(--muted); font-size: .9rem; font-weight: 550; }
+.reference-picker .pill[aria-pressed="true"] > span { color: #e0f0e7; }
+.reference-directory .project-grid { margin-top: 1.2rem; }
+
+@media (max-width: 700px) {
+  .reference-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

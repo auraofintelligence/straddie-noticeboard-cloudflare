@@ -107,6 +107,8 @@
   font-size: clamp(1.2rem, 2.4vw, 1.5rem);
   line-height: 1.25;
 }
+.training-lessons h3 { display: flex; align-items: center; gap: .6rem; }
+.training-lessons h3 img { flex: 0 0 50px; object-fit: contain; }
 
 .training-lessons dl {
   display: grid;
@@ -127,8 +129,13 @@
 
 .training-sources-drill summary { color: var(--teal); font-weight: 750; }
 .training-sources-drill > p, .training-participation p { margin-top: .45rem; }
-.training-sources-drill .training-session-grid { margin-top: .85rem; }
 .training-participation h3 { font-size: 1.15rem; }
+.training-correction-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; margin: .95rem 0 0; padding: 0; list-style: none; }
+.training-correction-flow > li { padding: .85rem; border: 1px solid var(--line); border-top: 4px solid #214f67; border-radius: .4rem; background: var(--paper); }
+.training-correction-flow > li:nth-child(2) { border-top-color: var(--teal); }
+.training-correction-flow > li:nth-child(3) { border-top-color: #a77724; }
+.training-correction-flow h3 { margin-block: .2rem; font-size: 1.02rem; }
+.training-correction-flow time { color: var(--teal); font-weight: 780; font-variant-numeric: tabular-nums; }
 
 .training-formats {
   padding: clamp(1.2rem, 4vw, 2.8rem);
@@ -175,7 +182,7 @@
 }
 
 @media (max-width: 660px) {
-  .training-lessons, .training-session-grid, .training-format-grid { grid-template-columns: 1fr; }
+  .training-lessons, .training-session-grid, .training-format-grid, .training-correction-flow { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 400px) {

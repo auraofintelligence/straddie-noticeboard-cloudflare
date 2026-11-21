@@ -7,22 +7,38 @@
   <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./tools.css">
+  <link rel="stylesheet" href="./guide-figures.css">
   <title>How it works | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html" aria-current="page">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a aria-current="page" href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -36,13 +52,33 @@
 
     <section class="guide-section" aria-labelledby="workflow-title">
       <h2 id="workflow-title">From a local tip to a checked notice</h2>
-      <ol class="process-list">
-        <li><h3>Gather the information</h3><p>Start with an event detail, a question, an interview, a photo or an official source. Name the person or group who can confirm the details.</p></li>
-        <li><h3>Verify the source</h3><p>Check the issuer, place, dates and affected audience. Record where the information came from and who can correct it. Mark anything still uncertain.</p></li>
-        <li><h3>Prepare the notice</h3><p>Write the useful details in plain language. Check photo credits and agreement to publish. Keep copies of permissions where only the people who need them can access them.</p><a href="./submit.html">Try the draft tool</a></li>
-        <li><h3>Approve and publish</h3><p>A named reviewer checks the public copy and approves specific outlets and a take-down time. The same approved version goes to the chosen screens and mobile board.</p></li>
-        <li><h3>Adapt for each screen</h3><p>A venue TV shows a headline people can read from a distance. The phone version can link to the source. A kiosk can open the notice alongside a map or an explanation.</p><a href="./screen.html">Try a screen preview</a></li>
-        <li><h3>Correct or take it down</h3><p>Log any correction against the original notice. Send the new version to the same channels, then check that venues have replaced the old one. Expire routine notices on schedule.</p></li>
+      <ol class="process-list" role="list">
+        <li>
+          <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/camera.webp" alt="" width="80" height="80"><h3>Gather the information</h3></div>
+          <p>Start with an event detail, a question, an interview, a photo or an official source. Name the person or group who can confirm the details.</p>
+        </li>
+        <li>
+          <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/map.webp" alt="" width="80" height="80"><h3>Verify the source</h3></div>
+          <p>Check the issuer, place, dates and affected audience. Record where the information came from and who can correct it. Mark anything still uncertain.</p>
+        </li>
+        <li>
+          <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/notice.webp" alt="" width="80" height="80"><h3>Prepare the notice</h3></div>
+          <p>Write the useful details in plain language. Check photo credits and agreement to publish. Keep copies of permissions where only the people who need them can access them.</p>
+          <a href="./submit.html">Try the draft tool</a>
+        </li>
+        <li>
+          <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/review.webp" alt="" width="80" height="80"><h3>Approve and publish</h3></div>
+          <p>A named reviewer checks the public copy and approves specific outlets and a take-down time. The same approved version goes to the chosen screens and mobile board.</p>
+        </li>
+        <li>
+          <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/television.webp" alt="" width="80" height="80"><h3>Adapt for each screen</h3></div>
+          <p>A venue TV shows a headline people can read from a distance. The phone version can link to the source. A kiosk can open the notice alongside a map or an explanation.</p>
+          <a href="./screen.html">Try a screen preview</a>
+        </li>
+        <li>
+          <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/signal.webp" alt="" width="80" height="80"><h3>Correct or take it down</h3></div>
+          <p>Log any correction against the original notice. Send the new version to the same channels, then check that venues have replaced the old one. Expire routine notices on schedule.</p>
+        </li>
       </ol>
     </section>
 
@@ -80,6 +116,7 @@
       <div class="guide-actions">
         <a href="./training.html">Open media training</a>
         <a href="./board.html">Browse practice notices</a>
+        <a href="./opportunities.html">Find work and volunteering routes</a>
       </div>
     </section>
   </main>

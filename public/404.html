@@ -5,13 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/tools.css">
   <title>Page not found | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="/brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
-  <main class="shell board-section not-found">
-    <h1>Page not found</h1>
-    <p>The address may have changed.</p>
-    <a class="button button-primary" href="/">Back to the noticeboard</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="/assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="/island.html">Maps &amp; ferries</a>
+        <a href="/opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="/emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="/pilot.html">The island pilot</a>
+            <a href="/board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="/submit.html">Draft a notice</a>
+            <a href="/board.html">Practice noticeboard</a>
+            <a href="/how-it-works.html">Publishing &amp; moderation</a>
+            <a href="/training.html">Media training</a>
+            <a href="/businesses.html">Business onboarding</a>
+            <a href="/grants.html">Pilot grants</a>
+            <a href="/setup.html">Screen setup</a>
+            <a href="/resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="shell tool-main">
+    <div class="tool-heading">
+      <h1>Page not found</h1>
+      <p>The address may have changed. Head back to the proposal or open a page below.</p>
+    </div>
+    <a class="button button-primary" href="/">Back to the proposal</a>
+    <nav class="recovery-links" aria-label="Find a noticeboard page">
+      <a class="tool-illustration" href="/board.html">
+        <img src="/assets/icons/notice.webp" alt="" width="52" height="52">
+        <span><strong>Practice noticeboard</strong><span>Browse sample notices.</span></span>
+      </a>
+      <a class="tool-illustration" href="/setup.html">
+        <img src="/assets/icons/television.webp" alt="" width="52" height="52">
+        <span><strong>Setup guide</strong><span>Try a TV or touchscreen.</span></span>
+      </a>
+      <a class="tool-illustration" href="/island.html">
+        <img src="/assets/icons/map.webp" alt="" width="52" height="52">
+        <span><strong>Maps &amp; weather</strong><span>Find a place and official sources.</span></span>
+      </a>
+    </nav>
   </main>
 </body>
 </html>

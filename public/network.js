@@ -1,5 +1,17 @@
 export const projects = [
   {
+    name: "Original Straddie Noticeboard",
+    url: "https://auraofintelligence.github.io/straddie-noticeboard-network/",
+    description: "One source notice, several display formats and a take-down time. The pilot carries this pattern into the phone board and venue screen.",
+    group: "Island life",
+  },
+  {
+    name: "Strange But True",
+    url: "https://auraofintelligence.github.io/strange-but-true/index.html",
+    description: "Luke Nathan Hayes is developing the noticeboard proposal through Strange But True on Minjerribah while seeking local support to form Ready SETCO.",
+    group: "Island life",
+  },
+  {
     name: 'Ready SETCO',
     url: 'https://ready-setco.auraofintelligence.workers.dev/',
     description: 'A proposed cooperative for local training and participation. Its proposed noticeboard role is to convene publishers and moderate notices.',
@@ -8,25 +20,25 @@ export const projects = [
   {
     name: 'Minjerribah Screen & Media Network',
     url: 'https://auraofintelligence.github.io/minjerribah-screen-media-network/',
-    description: 'Local storytelling, screen work, public displays and media training.',
+    description: 'Reporting, recording, captioning and checking a source become a supervised job for a local media crew. A learner and host rehearse the handover together.',
     group: 'Media & opportunity',
   },
   {
     name: 'Stradbroke Grants Lab',
     url: 'https://auraofintelligence.github.io/stradbroke-grants-lab/',
-    description: 'Funding research, project profiles and tools for preparing grant applications.',
+    description: 'The noticeboard has a project profile and candidate funding matches. A local applicant still needs host permission, quotes and a current check of each round.',
     group: 'Media & opportunity',
   },
   {
     name: 'Point Lookout Fishing Club',
     url: 'https://plfc-clubhouse.auraofintelligence.workers.dev/',
-    description: 'The digital clubhouse and its committee demonstration.',
+    description: 'The clubhouse prototype brings visitor information and club activity into one place. A committee could supply its own approved fixture or club update.',
     group: 'Island life',
   },
   {
     name: 'Wildlife Rescue Minjerribah',
     url: 'https://wildlife-rescue-minjerribah.auraofintelligence.workers.dev/',
-    description: 'Island wildlife reporting and rescue resources.',
+    description: 'Place-specific reporting and a direct handover to a rescuer illustrate how to get someone to the responsible service while keeping incident details private.',
     group: 'Island life',
   },
   {
@@ -38,7 +50,7 @@ export const projects = [
   {
     name: '7 Mile Admin Prep',
     url: 'https://auraofintelligence.github.io/7-mile-admin-prep/',
-    description: 'Documents, decisions and checklists for the proposed 7 Mile project.',
+    description: 'A document register records who owns a task and what approval it needs. A venue handover can similarly name the person who reviews and removes notices.',
     group: 'Island life',
   },
   {
@@ -68,14 +80,8 @@ export const projects = [
   {
     name: 'Community Club Builder',
     url: 'https://auraofintelligence.github.io/community-club-builder-sandy-sports/',
-    description: 'A practical club setup guide using the proposed Sandy Sports club as a worked example.',
+    description: 'The Sandy Sports example distributes decisions, jobs and ongoing care across a founding group. A screen host also needs someone who can take over when the usual steward is away.',
     group: 'Media & opportunity',
-  },
-  {
-    name: 'Redlands Civic Lab',
-    url: 'https://auraofintelligence.github.io/redlands-mayoral-campaign/',
-    description: 'A civic simulation and local policy ideas from Luke Hayes’s Redlands mayoral project.',
-    group: 'Civic & digital',
   },
   {
     name: 'P4A',
@@ -86,13 +92,13 @@ export const projects = [
   {
     name: 'P4A Committees & Inquiries',
     url: 'https://auraofintelligence.github.io/p4a-xyz-committees-inquiries/',
-    description: 'A directory of parliamentary committees, inquiries and participation pathways.',
+    description: 'An inquiry is useful when its issuing body, subject and closing date travel together. A civic notice could preserve those details and link readers to the official submission route.',
     group: 'Civic & digital',
   },
   {
     name: 'Gamify Democracy',
     url: 'https://gamifydemocracy.com/',
-    description: 'Interactive tools for exploring representation and civic decisions.',
+    description: 'Start with an everyday concern and follow it to evidence and an action. The island board uses the same approach when it takes a reader from a headline to its issuer.',
     group: 'Civic & digital',
   },
   {
@@ -112,5 +118,47 @@ export const projects = [
     url: 'https://auraofintelligence.github.io/straddie-twins/',
     description: 'Two Minjerribah digital-twin builds, with their purpose, data sources and system design.',
     group: 'Civic & digital',
+  },
+  {
+    name: "Community Hours",
+    url: "https://github.com/auraofintelligence/C-Hour-introduction",
+    description: "Recognition for verified time freely given. The island worksheet keeps voluntary human time separate from paid work and machine output.",
+    group: "Media & opportunity",
+  },
+  {
+    name: "Ready S.E.T. Co-op Cultural Intelligence Node",
+    url: "https://github.com/auraofintelligence/ready-set-co-op-cultural-intelligence-node",
+    description: "Shared equipment and training in Dunwich, with project-level consent. On the board, a cultural story needs permission from the people who have authority to share it.",
+    group: "Island life",
+  },
+  {
+    name: "Sovereign Capacity Lab",
+    url: "https://auraofintelligence.github.io/sovereign-capacity-lab/index.html",
+    description: "Change power and energy assumptions and see the result. The island outage guide applies that method to the screen, player and router at one venue.",
+    group: "Civic & digital",
+  },
+  {
+    name: "Aura Civic Establishment",
+    url: "https://auraofintelligence.github.io/aura-civic-establishment/index.html",
+    description: "Its shared-space scenarios ask who can use a venue and when. The island host plan applies that question to viewing hours, access and staff cover.",
+    group: "Civic & digital",
+  },
+  {
+    name: "Joyful Responsible Abundance",
+    url: "https://auraofintelligence.github.io/joyful-responsible-abundance/start-here.html",
+    description: "The wider vision connects useful shared tools with human responsibility. For this trial the question is whether residents can contribute a story, find help or learn a skill.",
+    group: "Civic & digital",
+  },
+  {
+    name: "Aura Genesis Geode Atlas",
+    url: "https://github.com/auraofintelligence/aura-genesis-geode-atlas",
+    description: "Its guided practice and source trail offer a model for rehearsal. Here a learner practises on a sample notice before a reviewer approves any public copy.",
+    group: "Civic & digital",
+  },
+  {
+    name: "A fair go in the age of intelligence",
+    url: "https://github.com/auraofintelligence/UNGA81-Luke-Hayes",
+    description: "Luke Nathan Hayes’s independent contribution for UNGA81 asks how more people can participate in shaping their futures. For Straddie that includes a way into media work, volunteering and publishing.",
+    group: "Civic & digital",
   },
 ];

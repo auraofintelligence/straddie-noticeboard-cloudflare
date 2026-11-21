@@ -9,21 +9,36 @@
   <link rel="stylesheet" href="./tools.css">
   <script type="module" src="./board.js"></script>
   <title>Practice noticeboard | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -32,22 +47,39 @@
     <div class="tool-heading">
       <a class="tool-back" href="./">Back to the proposal</a>
       <h1 id="board-title">Practice noticeboard</h1>
-      <p>Explore examples of film, sports reporting, volunteering, transport information and local learning. Filter by place or topic, then see how an example would look on a screen.</p>
+      <p id="board-description">Explore examples of film, sports reporting, volunteering, transport information and local learning. Filter by place or topic, then see how an example would look on a screen.</p>
+      <div class="tool-actions board-modes">
+        <a class="button button-secondary" id="board-mode-link" href="./board.html?mode=pilot">View reviewed pilot board</a>
+        <a class="button button-primary" id="board-pilot-screen" href="./screen.html?mode=pilot" hidden>Open pilot screen</a>
+        <a href="./opportunities.html">Paid work &amp; volunteering</a>
+        <a href="https://dashboard.redland.qld.gov.au/">Official emergency information</a>
+      </div>
     </div>
-    <div class="filters" aria-label="Filter sample notices">
-      <div class="pill-list" id="places" role="group" aria-label="Place"></div>
-      <label class="category-filter" for="category-filter">
-        <span class="sr-only">Notice category</span>
-        <select id="category-filter">
-          <option value="">All categories</option>
-        </select>
-      </label>
-    </div>
-    <p class="sr-only" id="notice-count" role="status"></p>
+    <section class="board-coverage tool-panel" id="board-coverage" aria-labelledby="coverage-title" hidden>
+      <div class="board-coverage-head">
+        <div class="tool-illustration">
+          <img src="./assets/icons/map.webp" alt="" width="52" height="52">
+          <div>
+            <h2 id="coverage-title">Samples by place</h2>
+            <p class="tool-hint">Choose a place to filter the notices below.</p>
+          </div>
+        </div>
+        <label class="category-filter" for="category-filter">
+          <span class="sr-only">Notice category</span>
+          <select id="category-filter">
+            <option value="">All categories</option>
+          </select>
+        </label>
+      </div>
+      <div class="board-place-grid" id="places" role="group" aria-label="Filter by place"></div>
+    </section>
+    <p class="board-count tool-hint" id="notice-count" role="status"></p>
     <div class="notice-grid" id="notice-grid"></div>
     <div class="empty-state" id="empty-state" hidden>
-      <h2>No notices match those filters</h2>
-      <p>Try another place or category.</p>
+      <img class="board-empty-art" src="./assets/icons/notice.webp" alt="" width="78" height="78">
+      <h2 id="empty-title">No notices match those filters</h2>
+      <p id="empty-description">Try another place or category.</p>
+      <a class="button button-primary" id="board-empty-draft" href="./submit.html" hidden>Prepare a notice for review</a>
       <button class="button button-secondary" id="clear-filters" type="button">Clear filters</button>
     </div>
     <noscript><p>Enable JavaScript to filter and browse the sample notices.</p></noscript>
@@ -57,7 +89,7 @@
     <div class="shell footer-inner">
       <div>
         <strong>Straddie Noticeboard Network</strong>
-        <p>This board is for practice. Its examples illustrate the proposed service.</p>
+        <p id="board-footer-note">This board is for practice. Its examples illustrate the proposed service.</p>
       </div>
       <div class="footer-links">
         <a href="./training.html">Learn to make a notice or local story</a>
@@ -82,6 +114,8 @@
         <p class="notice-category"></p>
         <h2></h2>
         <p class="notice-summary"></p>
+        <p class="notice-source" hidden></p>
+        <a class="notice-source-link" hidden>Read the public source</a>
         <a class="notice-link">Preview on a screen</a>
       </div>
     </article>

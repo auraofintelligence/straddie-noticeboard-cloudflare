@@ -9,30 +9,45 @@
   <link rel="stylesheet" href="./tools.css">
   <script type="module" src="./screen.js"></script>
   <title>Screen preview | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="brand" href="./">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
 
   <main id="main" class="shell tool-main">
     <div class="tool-heading">
-      <a class="tool-back" href="./board.html">Back to the practice board</a>
-      <h1>Screen preview</h1>
-      <p>Try a rotating display for an ordinary TV or an interactive portrait touchscreen. The outage drill shows how a device could fall back to saved text.</p>
+      <a class="tool-back" id="screen-board-link" href="./board.html">Back to the practice board</a>
+      <h1 id="screen-page-title">Screen preview</h1>
+      <p id="screen-page-description">See how the same practice notice fits a venue TV or a portrait touchscreen.</p>
     </div>
 
     <section class="screen-workbench" id="screen-workbench" aria-label="Notice display preview">
@@ -44,7 +59,7 @@
             </select>
           </label>
           <label class="tool-field">Display format
-            <select id="screen-format" disabled>
+            <select id="screen-format" aria-describedby="screen-wall-guide" disabled>
               <option value="wall">Venue TV (16:9)</option>
               <option value="portrait">Touchscreen (9:16)</option>
             </select>
@@ -55,7 +70,25 @@
           <button class="button button-secondary" id="screen-next" type="button" disabled>Next</button>
           <button class="button button-primary" id="screen-play" type="button" disabled>Start rotation</button>
           <button class="button button-secondary" id="screen-fullscreen" type="button" hidden>Full screen</button>
-          <button class="button button-secondary" id="screen-outage" type="button" aria-pressed="false" disabled>Outage drill</button>
+          <button class="button button-secondary" id="screen-outage" type="button" aria-pressed="false" aria-describedby="screen-outage-guide" disabled>Outage drill</button>
+        </div>
+      </div>
+      <div class="screen-guides">
+        <div class="tool-illustration screen-guide" id="screen-wall-guide">
+          <img src="./assets/icons/television.webp" alt="" width="48" height="48">
+          <div><strong>For a room to glance at</strong><p>Start rotation to cycle through notices every 12 seconds.</p></div>
+        </div>
+        <div class="tool-illustration screen-guide" id="screen-portrait-guide" hidden>
+          <img src="./assets/icons/kiosk.webp" alt="" width="48" height="48">
+          <div><strong>For visitors to explore</strong><p>Tap through notices and open the island map on the touchscreen.</p></div>
+        </div>
+        <div class="tool-illustration screen-guide" id="screen-outage-guide">
+          <img src="./assets/icons/battery.webp" alt="" width="48" height="48">
+          <div><strong>Text-only fallback</strong><p>The outage drill hides photos and shows when the sample text was loaded.</p></div>
+        </div>
+        <div class="tool-illustration screen-guide" id="screen-pilot-guide" hidden>
+          <img src="./assets/icons/signal.webp" alt="" width="48" height="48">
+          <div><strong>Reviewed pilot feed</strong><p>Keep this display connected so it can refresh. For emergencies, see the <a href="https://dashboard.redland.qld.gov.au/">Council disaster dashboard</a>.</p></div>
         </div>
       </div>
       <div class="screen-display" id="screen-display">
@@ -69,6 +102,10 @@
               <p class="screen-meta" id="screen-meta"></p>
               <h2 id="screen-title"></h2>
               <p class="screen-summary" id="screen-summary"></p>
+              <p class="screen-source tool-hint" id="screen-source" hidden>
+                <span id="screen-source-details"></span>
+                <a id="screen-source-link">Read the public source</a>
+              </p>
             </div>
             <figure class="screen-media" id="screen-media" hidden>
               <img id="screen-image" alt="">

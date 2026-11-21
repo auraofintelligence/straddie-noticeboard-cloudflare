@@ -110,6 +110,25 @@
   background: var(--mist);
 }
 
+.setup-kit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  padding: 0;
+  margin: .85rem 0 .7rem;
+  list-style: none;
+}
+
+.setup-kit li {
+  padding: .26rem .52rem;
+  border: 1px solid var(--line);
+  border-radius: 100vmax;
+  background: var(--mist);
+  color: var(--teal);
+  font-size: .88rem;
+  font-weight: 710;
+}
+
 .setup-device h3,
 .setup-outage-grid h3,
 .setup-handover h3,

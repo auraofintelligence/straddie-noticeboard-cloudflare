@@ -3,75 +3,119 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A proposed noticeboard network for Minjerribah, with reviewed local notices on phones, venue TVs and battery-backed public touchscreens.">
-  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <meta name="description" content="An island noticeboard pilot for Minjerribah / North Stradbroke Island. Find local resources and explore how one reviewed notice could reach phones, venue TVs and battery-backed kiosks.">
+  <link rel="icon" href="./favicon.ico?v=2">
   <link rel="stylesheet" href="./styles.css">
-  <title>Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./home.css">
+  <title>Straddie Noticeboard Network · North Stradbroke Island pilot</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
-
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="shell hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow hero-label">A proposal for Minjerribah / North Stradbroke Island</p>
-          <h1 id="hero-title">One local notice.<br>Across Straddie.</h1>
-          <p class="hero-description">A local group could prepare a notice once. After review, it could appear on phones, venue TVs and battery-backed public touchscreens around the island.</p>
-          <p class="hero-note">Ready SETCO, a proposed local co-operative, would bring publishers and venues together and moderate the shared board.</p>
-          <div class="hero-actions">
-            <a class="button button-accent" href="./how-it-works.html">How the network would work</a>
-            <a class="button button-ghost" href="./board.html">Browse practice notices</a>
+    <section class="landing-intro" aria-labelledby="hero-title">
+      <div class="shell landing-split">
+        <div class="landing-copy">
+          <p class="location-line">Minjerribah · North Stradbroke Island</p>
+          <h1 id="hero-title">Local notices.<br><em>Island-wide.</em></h1>
+          <p class="landing-lede">A proposed community noticeboard for Straddie. One checked update about a job, a club event or a local service could reach phones, TVs in clubs, on ferries and in shop windows, and weather-resistant touchscreens with their own batteries.</p>
+          <div class="landing-actions">
+            <a class="action-bright" href="./pilot.html">Explore the island pilot <span aria-hidden="true">↗</span></a>
+            <a class="action-line" href="./board.html?mode=pilot">Open the pilot board</a>
           </div>
         </div>
-        <figure class="home-photo">
-          <img src="./assets/point-lookout.webp" alt="Rocky headland and surf at Point Lookout, North Stradbroke Island" width="960" height="720" fetchpriority="high">
-          <figcaption><a href="https://commons.wikimedia.org/wiki/File:Point_Lookout,_North_Stradbroke_Island,_by_Sarah_Barry.jpg">Point Lookout, Sarah Barry</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Cropped for display.</figcaption>
+        <figure class="original-art">
+          <a href="./assets/noticeboard-device-pipeline.webp" aria-label="Open the original network illustration at full size">
+            <img src="./assets/noticeboard-device-pipeline.webp" alt="One notice record connects a club TV, ferry kiosk, counter tablet, mobile phone and low-power display. A person reviews the notice before it goes to the screens." width="1672" height="941" fetchpriority="high">
+          </a>
+          <figcaption><span>Original concept artwork · Example notices and times</span><a href="./assets/noticeboard-device-pipeline.webp">View full size ↗</a></figcaption>
         </figure>
       </div>
     </section>
 
-    <nav class="shell home-directory" aria-labelledby="directory-title">
-      <h2 id="directory-title">Explore the proposal</h2>
-      <ul class="home-directory-grid">
-        <li id="how-it-works"><a href="./how-it-works.html"><strong>Publishing and moderation</strong><span>Who checks a notice, where it can go and how to correct it.</span></a></li>
-        <li><a href="./training.html"><strong>Media training</strong><span>Learn reporting, phone production, editing, captions and local publishing.</span></a></li>
-        <li><a href="./businesses.html"><strong>Business onboarding</strong><span>Prepare to post notices, host a screen or do both.</span></a></li>
-        <li><a href="./grants.html"><strong>Grants for a first pilot</strong><span>Scope the work, gather evidence and find funding sources.</span></a></li>
-        <li><a href="./setup.html"><strong>Screen setup</strong><span>Choose equipment, prepare notices and plan a venue trial.</span></a></li>
-        <li id="outages"><a href="./resilience.html"><strong>Screens and outages</strong><span>See what TVs and touchscreens could do when power or internet fails.</span></a></li>
-        <li><a href="./island.html"><strong>Maps and weather</strong><span>Explore the island and find official forecasts, warnings and ferry information.</span></a></li>
-        <li id="board"><a href="./board.html"><strong>Practice noticeboard</strong><span>Browse different sample stories and see how they display.</span></a></li>
-      </ul>
+    <nav class="island-doors shell" aria-label="Community resources">
+      <a class="island-door route-work" href="./opportunities.html">
+        <img src="./assets/icons/venue.webp" alt="" width="64" height="64">
+        <span><strong>Work &amp; volunteering</strong><small>Find opportunities and explore C-Hours</small></span><b aria-hidden="true">↗</b>
+      </a>
+      <a class="island-door route-place" href="./island.html">
+        <img src="./assets/icons/ferry.webp" alt="" width="64" height="64">
+        <span><strong>Island maps &amp; ferries</strong><small>Find your town, crossing and forecast</small></span><b aria-hidden="true">↗</b>
+      </a>
+      <a class="island-door route-help" href="./emergencies.html">
+        <img src="./assets/icons/signal.webp" alt="" width="64" height="64">
+        <span><strong>Emergency information</strong><small>Official warnings, contacts and local radio</small></span><b aria-hidden="true">↗</b>
+      </a>
     </nav>
-  </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <div>
-        <strong>Straddie Noticeboard Network</strong>
-        <p>We acknowledge the Quandamooka People as the Traditional Custodians of Minjerribah and pay respect to Elders past and present.</p>
-        <p>Based on the <a href="https://github.com/auraofintelligence/straddie-noticeboard-network">original project by Luke Nathan Hayes / Strange But True / Aura of Intelligence</a>. Used under the <a href="https://github.com/auraofintelligence/straddie-noticeboard-network/blob/main/LICENCE.md">Strange But True Public Source Licence</a>.</p>
+    <section class="shell notice-journey" id="how-it-works" aria-labelledby="journey-title">
+      <div class="journey-copy">
+        <p class="section-tag">From the ferry to your phone</p>
+        <h2 id="journey-title">How one notice travels.</h2>
+        <p>Imagine a visitor in Dunwich checking the ferry. A club TV only needs a headline. A phone can open the operator’s update. At a kiosk, the visitor can also find the town map.</p>
+        <p>The publisher would supply the source. A reviewer would check the wording and expiry, then the screen host would confirm any correction had reached the display. Ready SETCO, a proposed local co-operative, would convene the hosts and moderate the board.</p>
+        <a class="editor-link" href="./how-it-works.html">Follow the publishing process <span aria-hidden="true">→</span></a>
       </div>
-      <div class="footer-links" id="credits">
-        <a href="./network.html">Project references</a>
+      <div class="format-card" id="board">
+        <header><img src="./assets/icons/television.webp" width="66" height="66" alt=""><div><p class="section-tag">Practice notice · Dunwich</p><h3>Check the ferry and the weather</h3></div></header>
+        <p>Choose a display to see what a traveller could read.</p>
+        <div class="format-links">
+          <a href="./screen.html?place=Dunwich&amp;notice=dunwich-ferry-weather-guide"><strong>Venue TV</strong><span>Wide screen <i aria-hidden="true">→</i></span></a>
+          <a href="./screen.html?place=Dunwich&amp;notice=dunwich-ferry-weather-guide&amp;format=portrait"><strong>Touch kiosk</strong><span>Portrait + map <i aria-hidden="true">→</i></span></a>
+          <a id="outages" href="./screen.html?place=Dunwich&amp;notice=dunwich-ferry-weather-guide&amp;format=portrait&amp;outage=1"><strong>Outage drill</strong><span>Saved text <i aria-hidden="true">→</i></span></a>
+        </div>
+        <a class="format-source" href="./island.html?place=Dunwich">Current ferry information for Dunwich ↗</a>
       </div>
-    </div>
-  </footer>
-</body>
-</html>
+    </section>
+
+    <section class="pilot-launch" aria-labelledby="launch-title">
+      <div class="shell launch-grid">
+        <figure class="rehearsal-photo"><img src="./assets/pilot-rehearsal.webp" alt="Concept showing a host and a learner comparing the same community notice on a phone and a clubhouse TV." width="1450" height="816" loading="lazy"><figcaption>AI illustration of a proposed venue rehearsal</figcaption></figure>
+        <div class="launch-copy">
+          <p class="section-tag">The first local trial</p>
+          <h2 id="launch-title">Put one venue on the board.</h2>
+          <p>The proposed eight-week trial starts with a willing host, an existing TV and a small media crew. Luke Nathan Hayes is developing the proposal through <a href="https://auraofintelligence.github.io/strange-but-true/index.html">Strange But True</a> while seeking local support to form Ready SETCO.</p>
+          <nav class="launch-links" aria-label="Pilot guides">
+            <a href="./businesses.html">Publish or host as a business <span>↗</span></a>
+            <a href="./training.html">Train a local media crew <span>↗</span></a>
+            <a href="./setup.html">Set up the first screen <span>↗</span></a>
+            <a href="./grants.html">Fund the pilot <span>↗</span></a>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner">
+    <div><strong>Straddie Noticeboard Network</strong><p>We acknowledge the Quandamooka People as the Traditional Custodians of Minjerribah and pay respect to Elders past and present.</p></div>
+    <div class="footer-links" id="credits"><a href="./network.html">Connected projects &amp; sources</a><a href="https://github.com/auraofintelligence/straddie-noticeboard-network">Original noticeboard by Luke Nathan Hayes / Strange But True / Aura of Intelligence</a><a href="https://github.com/auraofintelligence/straddie-noticeboard-network/blob/main/LICENCE.md">Strange But True Public Source Licence</a></div>
+  </div></footer>
+</body></html>

@@ -9,31 +9,56 @@
   <link rel="stylesheet" href="./island.css">
   <script type="module" src="./island.js"></script>
   <title>Maps &amp; weather | Straddie Noticeboard Network</title>
+  <link rel="stylesheet" href="./brand.css">
+  <meta name="theme-color" content="#111526">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
-        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./setup.html">Setup guide</a>
-        <a href="./training.html">Media training</a>
-        <a href="./island.html" aria-current="page">Maps &amp; weather</a>
-        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a aria-current="page" href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Pilot guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">The island pilot</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Pilot grants</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="island-intro" aria-labelledby="island-title">
-      <div class="shell">
-        <p class="eyebrow">Minjerribah / North Stradbroke Island</p>
-        <h1 id="island-title">Maps &amp; weather</h1>
-        <p>Pick a place to see how the proposed noticeboard could serve it and where to find official local information.</p>
+      <div class="shell island-intro-grid">
+        <div>
+          <p class="eyebrow">Minjerribah / North Stradbroke Island</p>
+          <h1 id="island-title">Maps &amp; weather</h1>
+          <p>Find Dunwich, Amity Point and Point Lookout, and see where to check the ferry, local transport and current conditions before you head out.</p>
+        </div>
+        <div class="island-arrival">
+          <img src="./assets/icons/ferry.webp" alt="" width="76" height="76">
+          <div>
+            <h2>Arriving by ferry?</h2>
+            <p>Check your operator’s departure point, arrival terminal and sailing status. Allow time to connect to your next ride.</p>
+            <a href="./island.html?place=Dunwich#explore-title">Find Dunwich transport links</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -46,6 +71,7 @@
         <div class="island-actions">
           <a class="button button-secondary" href="https://dashboard.redland.qld.gov.au/">Council disaster dashboard</a>
           <a class="button button-secondary" href="https://www.bom.gov.au/weather-and-climate/warnings-and-alerts">Bureau weather warnings</a>
+          <a class="button button-primary" href="./emergencies.html">Contacts and emergency information</a>
         </div>
       </aside>
 
@@ -55,16 +81,25 @@
             <h2 id="explore-title">Explore the island</h2>
             <a class="button button-secondary island-all" href="#place-island" data-place-link>Island-wide</a>
           </div>
-          <div class="map-figure" role="group" aria-label="Schematic of Minjerribah with Amity Point in the north-west, Point Lookout in the north-east and Dunwich on the western shore">
-            <div class="map-land" aria-hidden="true"></div>
+          <div class="map-figure" role="group" aria-label="North-up locator of Minjerribah. Select Amity Point on the north-western shore, Point Lookout on the north-eastern headland or Dunwich on the western shore.">
             <span class="map-north" aria-hidden="true">N</span>
             <span class="map-bay" aria-hidden="true">Moreton Bay</span>
             <span class="map-ocean" aria-hidden="true">Pacific Ocean</span>
-            <a class="map-pin map-pin-amity" href="#place-amity" data-place-link>Amity Point</a>
-            <a class="map-pin map-pin-lookout" href="#place-lookout" data-place-link>Point Lookout</a>
-            <a class="map-pin map-pin-dunwich" href="#place-dunwich" data-place-link>Dunwich</a>
+            <div class="map-relief">
+              <img src="./assets/minjerribah-relief.jpg" width="576" height="1322" alt="Satellite relief of Minjerribah, with a long ocean beach on the east and sandbanks in Moreton Bay to the west">
+              <a class="map-pin map-pin-amity" href="#place-amity" data-place-link>Amity Point</a>
+              <a class="map-pin map-pin-lookout" href="#place-lookout" data-place-link>Point Lookout</a>
+              <a class="map-pin map-pin-dunwich" href="#place-dunwich" data-place-link>Dunwich</a>
+            </div>
           </div>
-          <figcaption>Schematic, for orientation only. <a href="https://parks.qld.gov.au/parks/minjerribah/maps-resources">Queensland Parks maps and alerts</a></figcaption>
+          <figcaption>
+            <p>North-up, for orientation. Imagery captured 13 July 2026. <a href="https://parks.qld.gov.au/parks/minjerribah/maps-resources">Queensland Parks maps and alerts</a></p>
+            <details>
+              <summary>Imagery credits</summary>
+              <p>Contains modified Copernicus Sentinel data 2026. The relief was produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved. <a href="https://doi.org/10.5270/ESA-c5d3d65">Copernicus DEM source and terms</a></p>
+              <p>Relief by <a href="https://github.com/auraofintelligence/straddie-twins/blob/main/assets/island/island-relief.jpg">Luke Nathan Hayes / Strange But True / Aura of Intelligence</a>. <a href="https://github.com/auraofintelligence/straddie-twins/blob/main/LICENCE.md">Aura of Intelligence Public Source Licence</a></p>
+            </details>
+          </figcaption>
         </figure>
 
         <div class="island-details">
@@ -90,15 +125,21 @@
             <p class="eyebrow">Western shore</p>
             <h3 id="place-dunwich-title">Dunwich</h3>
             <p>A meeting room or neighbourhood noticeboard could carry updates for people arriving at Dunwich and for those who live nearby.</p>
+            <div class="place-local place-transport">
+              <h4>Ferry and onward travel</h4>
+              <p>Match the terminal to your booking. Timetables show planned services. Check your operator for changes and use the journey planner to check onward connections on your travel day.</p>
+              <a href="https://www.sealink.com.au/north-stradbroke-island/ferry-status/">SeaLink ferry service status</a>
+              <a href="https://www.flyer.com.au/timetable">Stradbroke Flyer timetable</a>
+              <a href="https://translink.com.au/plan-your-journey">Translink journey planning and local bus timetables</a>
+            </div>
             <div class="place-local">
               <h4>Possible notice</h4>
               <p>A group could list the time, venue and access details for a local gathering, then remove the notice after the event.</p>
               <a href="https://www.redland.qld.gov.au/Libraries/Opening-hours-and-locations/Dunwich-Library">Dunwich Library information</a>
-              <a href="https://www.sealink.com.au/north-stradbroke-island/ferry-status/">SeaLink ferry service status</a>
-              <a href="https://www.flyer.com.au/timetable">Stradbroke Flyer timetable</a>
             </div>
             <div class="place-weather">
               <h4>Official weather</h4>
+              <p>Check the issue time and the forecast period for your route and destination.</p>
               <div class="island-actions">
                 <a class="button button-primary" href="https://www.bom.gov.au/places/qld/dunwich/forecast/">Dunwich forecast</a>
                 <a class="button button-secondary" href="https://www.bom.gov.au/places/qld/dunwich/observations/">Nearby observations</a>

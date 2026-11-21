@@ -1,7 +1,10 @@
 import { notices, places } from './notices.js';
+import { formatPilotTime, watchPilotFeed } from './pilot-feed.js';
 
 const placeSelect = document.querySelector('#screen-place');
 const formatSelect = document.querySelector('#screen-format');
+const wallGuide = document.querySelector('#screen-wall-guide');
+const portraitGuide = document.querySelector('#screen-portrait-guide');
 const previous = document.querySelector('#screen-previous');
 const next = document.querySelector('#screen-next');
 const play = document.querySelector('#screen-play');
@@ -14,6 +17,9 @@ const slide = document.querySelector('#screen-slide');
 const meta = document.querySelector('#screen-meta');
 const title = document.querySelector('#screen-title');
 const summary = document.querySelector('#screen-summary');
+const source = document.querySelector('#screen-source');
+const sourceDetails = document.querySelector('#screen-source-details');
+const sourceLink = document.querySelector('#screen-source-link');
 const media = document.querySelector('#screen-media');
 const image = document.querySelector('#screen-image');
 const credit = document.querySelector('#screen-credit');
@@ -27,6 +33,9 @@ const touchPrevious = document.querySelector('#touch-previous');
 const touchNext = document.querySelector('#touch-next');
 const island = document.querySelector('#screen-island');
 const rotationMs = 12000;
+const address = new URLSearchParams(window.location.search);
+const isPilot = address.get('mode') === 'pilot';
+const itemLabel = isPilot ? 'reviewed pilot' : 'sample';
 const sampleLoadedAt = new Intl.DateTimeFormat('en-AU', {
   dateStyle: 'medium',
   timeStyle: 'short',
@@ -37,6 +46,8 @@ let filtered = [];
 let index = 0;
 let rotation = null;
 let outageDrill = false;
+let feedState = isPilot ? 'loading' : 'ready';
+let displayNotices = isPilot ? [] : notices;
 
 function render() {
   const notice = filtered[index];
@@ -48,9 +59,12 @@ function render() {
   touchPrevious.disabled = previous.disabled;
   touchNext.disabled = next.disabled;
   play.disabled = filtered.length < 2;
+  if (isPilot) badge.textContent = notice ? 'Reviewed pilot notice' : 'Reviewed pilot feed';
 
   if (!notice) {
-    empty.textContent = 'There are no sample notices for this selection.';
+    if (feedState === 'loading') empty.textContent = 'Checking the reviewed pilot feed…';
+    else if (feedState === 'unavailable') empty.textContent = 'The reviewed pilot feed is unavailable. This screen will try again shortly.';
+    else empty.textContent = `There are no current ${itemLabel} notices for this selection.`;
     return;
   }
 
@@ -58,6 +72,11 @@ function render() {
   title.textContent = notice.title;
   summary.textContent = notice.summary;
   position.textContent = `${index + 1} of ${filtered.length}`;
+  if (isPilot) {
+    sourceDetails.textContent = `${notice.publisher} · Expires ${formatPilotTime(notice.expiresAt)} AEST`;
+    sourceLink.href = notice.sourceUrl;
+    source.hidden = false;
+  }
 
   media.hidden = outageDrill || !notice.image;
   if (!media.hidden) {
@@ -81,7 +100,7 @@ function pauseRotation() {
   rotation = null;
   announcement.setAttribute('aria-live', 'polite');
   play.textContent = 'Start rotation';
-  status.textContent = 'Rotation paused. All notices are examples.';
+  status.textContent = 'Rotation paused.';
 }
 
 function toggleRotation() {
@@ -92,7 +111,7 @@ function toggleRotation() {
 
   announcement.setAttribute('aria-live', 'off');
   play.textContent = 'Pause rotation';
-  status.textContent = 'Rotation playing. Each sample notice is shown for 12 seconds.';
+  status.textContent = `Rotation playing. Each ${itemLabel} notice is shown for 12 seconds.`;
   rotation = window.setInterval(() => move(1), rotationMs);
 }
 
@@ -110,10 +129,10 @@ function updateAddress() {
   history.replaceState(null, '', address);
 }
 
-function updatePlace(initialNoticeId) {
-  pauseRotation();
+function updatePlace(initialNoticeId, pause = true) {
   const place = placeSelect.value;
-  filtered = notices.filter(notice => !place || notice.place === place);
+  filtered = displayNotices.filter(notice => !place || notice.place === place);
+  if (pause || filtered.length < 2) pauseRotation();
   index = Math.max(0, filtered.findIndex(notice => notice.id === initialNoticeId));
   render();
 }
@@ -122,6 +141,9 @@ function updateFormat() {
   const isTouchscreen = formatSelect.value === 'portrait';
   display.classList.toggle('is-portrait', isTouchscreen);
   touch.hidden = !isTouchscreen;
+  wallGuide.hidden = isTouchscreen;
+  portraitGuide.hidden = !isTouchscreen;
+  formatSelect.setAttribute('aria-describedby', isTouchscreen ? portraitGuide.id : wallGuide.id);
 }
 
 function setOutageDrill(enabled) {
@@ -145,16 +167,33 @@ for (const place of places) {
   placeSelect.add(new Option(place, place));
 }
 
-const address = new URLSearchParams(window.location.search);
 const requestedPlace = address.get('place');
+const requestedNotice = address.get('notice');
 if (places.includes(requestedPlace)) placeSelect.value = requestedPlace;
 if (address.get('format') === 'portrait') formatSelect.value = 'portrait';
 placeSelect.disabled = false;
 formatSelect.disabled = false;
-outage.disabled = false;
-updatePlace(address.get('notice'));
+outage.disabled = isPilot;
+updatePlace(requestedNotice);
 updateFormat();
-if (address.get('outage') === '1') setOutageDrill(true);
+if (isPilot) {
+  document.title = 'Pilot screen | Straddie Noticeboard Network';
+  document.querySelector('#screen-page-title').textContent = 'Pilot screen';
+  document.querySelector('#screen-page-description').textContent = 'Show current reviewed notices from the Minjerribah pilot feed on a venue TV or touchscreen.';
+  const boardLink = document.querySelector('#screen-board-link');
+  boardLink.href = './board.html?mode=pilot';
+  boardLink.textContent = 'Back to the reviewed pilot board';
+  outage.hidden = true;
+  document.querySelector('#screen-outage-guide').hidden = true;
+  document.querySelector('#screen-pilot-guide').hidden = false;
+  status.textContent = 'This screen refreshes from the reviewed pilot feed.';
+  watchPilotFeed((state, currentNotices) => {
+    const activeNotice = filtered[index]?.id || requestedNotice;
+    feedState = state;
+    displayNotices = currentNotices;
+    updatePlace(activeNotice, false);
+  });
+} else if (address.get('outage') === '1') setOutageDrill(true);
 
 placeSelect.addEventListener('change', () => {
   updatePlace();

@@ -1,0 +1,57 @@
+.emergencies-hero { background: #123a3d; color: var(--paper); }
+.emergencies-hero-inner { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: center; gap: 1.5rem 3rem; padding-block: clamp(2rem, 5vw, 4.3rem); }
+.emergencies-hero .eyebrow { color: var(--gold); }
+.emergencies-hero h1 { margin-block: .55rem .75rem; font-size: clamp(2.75rem, 6.1vw, 5.6rem); overflow-wrap: anywhere; }
+.emergencies-hero p { max-width: 36rem; }
+.emergencies-call { display: flex; align-items: center; gap: .9rem; padding: clamp(1rem, 2.7vw, 1.5rem); border: 2px solid #f3cb79; border-radius: .7rem; background: #fff3d8; color: #251812; }
+.emergencies-call img, .emergencies-check img, .emergencies-prepare img { object-fit: contain; flex-shrink: 0; }
+.emergencies-call h2 { margin-bottom: .35rem; font-size: clamp(1.8rem, 3vw, 2.4rem); }
+.emergencies-call .button { margin-top: .7rem; background: #852c21; }
+.emergencies-call .button:hover { background: #672319; }
+
+.emergencies-body { padding-bottom: 2.8rem; }
+.emergencies-section { margin-top: clamp(1.65rem, 4.3vw, 3.4rem); }
+.emergencies-section h2 { margin-bottom: .8rem; font-size: clamp(2rem, 4.4vw, 3.1rem); }
+.emergencies-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; }
+.emergencies-card { display: flex; flex-direction: column; align-items: flex-start; padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--paper); }
+.emergencies-card h3 { font-size: 1.15rem; }
+.emergencies-card p { margin-block: .35rem .5rem; color: var(--muted); }
+.emergencies-body a { color: var(--teal); font-weight: 730; }
+.emergencies-card > a { margin-top: .25rem; }
+
+.emergencies-check { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: .85rem; margin-top: 1rem; padding: 1rem; border: 1px solid #bad6ca; border-radius: .6rem; background: var(--mist); }
+.emergencies-check h3 { font-size: 1.15rem; }
+.emergencies-check ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .4rem 1rem; margin-block: .45rem .65rem; padding-left: 1.25rem; }
+.emergencies-check li span { display: block; color: var(--muted); }
+
+.emergencies-contacts { display: grid; margin: 0; border: 1px solid var(--line); border-radius: .6rem; background: var(--paper); }
+.emergencies-contacts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: .25rem 1rem; padding: .85rem 1rem; }
+.emergencies-contacts > div + div { border-top: 1px solid var(--line); }
+.emergencies-contacts dt { font-weight: 740; }
+.emergencies-contacts dd { margin: 0; }
+
+.emergencies-prepare { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem 2rem; align-items: start; padding: clamp(1rem, 3vw, 1.8rem); border-radius: .65rem; background: #e5f0e8; }
+.emergencies-prepare ul { margin-block: .65rem .9rem; padding-inline-start: 1.3rem; }
+.emergencies-prepare li + li { margin-top: .45rem; }
+.emergencies-links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+.emergencies-date { margin-top: 1rem; color: var(--muted); }
+
+@media (max-width: 790px) {
+  .emergencies-hero-inner, .emergencies-grid { grid-template-columns: minmax(0, 1fr); }
+  .emergencies-check ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .emergencies-contacts > div, .emergencies-prepare { grid-template-columns: minmax(0, 1fr); }
+  .emergencies-prepare img { display: none; }
+  .emergencies-call img { width: 54px; height: 54px; }
+  .emergencies-check { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media print {
+  .site-header, .site-footer, .skip-link, .emergencies-hero img, .emergencies-check img, .emergencies-prepare img { display: none; }
+  .emergencies-hero, .emergencies-call, .emergencies-prepare, .emergencies-check { background: white; color: black; }
+  .emergencies-hero .eyebrow, .emergencies-call .button { background: white; color: black; }
+  .emergencies-hero-inner, .emergencies-prepare, .emergencies-check { display: block; padding-block: .5rem; }
+  .emergencies-section { break-inside: avoid; }
+}
