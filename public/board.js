@@ -24,7 +24,7 @@ function renderNotices() {
     image.alt = notice.imageAlt;
     card.querySelector(".notice-place").textContent = notice.place;
     card.querySelector(".notice-category").textContent = notice.category;
-    card.querySelector("h3").textContent = notice.title;
+    card.querySelector("h2").textContent = notice.title;
     card.querySelector(".notice-summary").textContent = notice.summary;
     const link = card.querySelector(".notice-link");
     const params = new URLSearchParams({ place: notice.place, notice: notice.id });
@@ -52,11 +52,6 @@ document.querySelector("#clear-filters").addEventListener("click", () => {
   setActivePill(placeFilters, "");
   renderNotices();
   placeFilters.querySelector("button").focus();
-});
-
-const credits = document.querySelector("#credits");
-document.querySelector(".format-credit").addEventListener("click", () => {
-  credits.open = true;
 });
 
 renderNotices();

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse sample Straddie notices by place and topic and preview them on a screen.">
+  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./tools.css">
+  <script type="module" src="./board.js"></script>
+  <title>Practice noticeboard | Straddie Noticeboard Network</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
+        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./how-it-works.html">How it works</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./training.html">Media training</a>
+        <a href="./island.html">Maps &amp; weather</a>
+        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell board-section">
+    <div class="tool-heading">
+      <a class="tool-back" href="./">Back to the proposal</a>
+      <h1 id="board-title">Practice noticeboard</h1>
+      <p>Explore examples of film, sports reporting, volunteering, transport information and local learning. Filter by place or topic, then see how an example would look on a screen.</p>
+    </div>
+    <div class="filters" aria-label="Filter sample notices">
+      <div class="pill-list" id="places" role="group" aria-label="Place"></div>
+      <label class="category-filter" for="category-filter">
+        <span class="sr-only">Notice category</span>
+        <select id="category-filter">
+          <option value="">All categories</option>
+        </select>
+      </label>
+    </div>
+    <p class="sr-only" id="notice-count" role="status"></p>
+    <div class="notice-grid" id="notice-grid"></div>
+    <div class="empty-state" id="empty-state" hidden>
+      <h2>No notices match those filters</h2>
+      <p>Try another place or category.</p>
+      <button class="button button-secondary" id="clear-filters" type="button">Clear filters</button>
+    </div>
+    <noscript><p>Enable JavaScript to filter and browse the sample notices.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <strong>Straddie Noticeboard Network</strong>
+        <p>This board is for practice. Its examples illustrate the proposed service.</p>
+      </div>
+      <div class="footer-links">
+        <a href="./training.html">Learn to make a notice or local story</a>
+        <div id="credits">
+          <h2 class="footer-credit-heading">Photo credits</h2>
+          <p><a href="https://commons.wikimedia.org/wiki/File:Point_Lookout,_North_Stradbroke_Island,_by_Sarah_Barry.jpg">Point Lookout by Sarah Barry</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+          <p><a href="https://commons.wikimedia.org/wiki/File:Amity_Point_Jetty_at_Sunset._North_Stradbroke_Island,_Queensland,_Australia.jpg">Amity Point Jetty by Pacificwizard</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.</p>
+          <p><a href="https://github.com/auraofintelligence/ballow-road-sand-screen-hub/blob/main/assets/img/site-aerial-west-northwest-bay.webp">Dunwich aerial from the Ballow Road Sand and Screen Hub</a>.</p>
+          <p>Photos compressed or cropped for display.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <template id="notice-template">
+    <article class="notice-card">
+      <div class="notice-media">
+        <img class="notice-image" alt="" width="520" height="270" loading="lazy">
+        <span class="notice-place"></span>
+      </div>
+      <div class="notice-copy">
+        <p class="notice-category"></p>
+        <h2></h2>
+        <p class="notice-summary"></p>
+        <a class="notice-link">Preview on a screen</a>
+      </div>
+    </article>
+  </template>
+</body>
+</html>

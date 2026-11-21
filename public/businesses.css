@@ -1,0 +1,211 @@
+.business-hero {
+  background: linear-gradient(110deg, #0b2d33 44%, #154745);
+  color: var(--paper);
+}
+
+.business-hero-inner {
+  padding-block: clamp(2.65rem, 6.5vw, 5.3rem);
+}
+
+.business-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+}
+
+.business-hero p {
+  max-width: 42rem;
+  margin-top: .95rem;
+  color: #e1f0ea;
+  font-size: clamp(1.05rem, 2vw, 1.18rem);
+}
+
+.business-hero .business-stage {
+  color: #cce1d8;
+  font-size: .97rem;
+}
+
+.business-hero .button {
+  margin-top: 1.18rem;
+}
+
+.business-body {
+  padding-bottom: clamp(2.9rem, 6vw, 5rem);
+}
+
+.business-section {
+  padding-top: clamp(2.5rem, 5.5vw, 4.25rem);
+  scroll-margin-block-start: .8rem;
+}
+
+.business-section h2 {
+  font-size: clamp(2.1rem, 4.4vw, 3.42rem);
+}
+
+.business-routes,
+.business-plan-layout,
+.business-workflow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.business-routes,
+.business-plan-layout {
+  margin-top: 1.15rem;
+}
+
+.business-routes {
+  align-items: stretch;
+}
+
+.business-workflow {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: clamp(1.1rem, 4vw, 3.75rem);
+}
+
+.business-card {
+  padding: clamp(1.15rem, 3vw, 1.72rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+}
+
+.business-routes .business-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-card h3 {
+  font: 400 clamp(1.48rem, 2.8vw, 2rem)/1.12 var(--serif);
+  letter-spacing: -.024em;
+}
+
+.business-card p {
+  margin-top: .58rem;
+  color: var(--muted);
+}
+
+.business-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem .92rem;
+  margin-top: 1rem;
+}
+
+.business-routes .business-actions {
+  margin-top: auto;
+  padding-top: 1.05rem;
+}
+
+.business-combined,
+.business-intro {
+  max-width: 45rem;
+  margin-top: .75rem;
+  color: var(--muted);
+}
+
+.business-workflow ol {
+  display: grid;
+  gap: .65rem;
+  margin: 1rem 0;
+  padding-inline-start: 1.45rem;
+}
+
+.business-workflow li::marker {
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.business-costs {
+  background: #f8efd6;
+  border-color: #e3d6af;
+}
+
+.business-costs .text-link {
+  display: block;
+  width: fit-content;
+  margin-top: .55rem;
+}
+
+.business-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .77rem;
+  min-width: 0;
+}
+
+fieldset.business-fields {
+  margin: 1.05rem 0;
+  padding: .65rem 0 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.business-fields legend {
+  padding-right: .6rem;
+  font-weight: 750;
+}
+
+.business-field {
+  display: grid;
+  align-content: start;
+  gap: .3rem;
+  min-width: 0;
+  font-size: .94rem;
+  font-weight: 750;
+}
+
+.business-wide {
+  grid-column: 1 / -1;
+}
+
+.business-field :is(input, select),
+.business-result textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: .6rem .75rem;
+  border: 1px solid #9ab2a8;
+  border-radius: .45rem;
+  background: white;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.business-result {
+  background: var(--mist);
+}
+
+.business-result label {
+  margin: .8rem 0 .36rem;
+}
+
+.business-result textarea {
+  display: block;
+  resize: vertical;
+  font: .93rem/1.48 Consolas, 'Courier New', monospace;
+}
+
+.business-note {
+  font-size: .91rem;
+}
+
+.business-form noscript p {
+  margin-top: .7rem;
+}
+
+@media (max-width: 760px) {
+  .business-routes,
+  .business-plan-layout,
+  .business-workflow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .business-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

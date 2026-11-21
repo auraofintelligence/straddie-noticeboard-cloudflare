@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plan how a Straddie business could publish local notices, host a screen or do both in a proposed noticeboard pilot.">
+  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./businesses.css">
+  <script type="module" src="./businesses.js"></script>
+  <title>For businesses | Straddie Noticeboard Network</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
+        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./how-it-works.html">How it works</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./training.html">Training</a>
+        <a href="./island.html">Maps &amp; weather</a>
+        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="business-hero" aria-labelledby="business-title">
+      <div class="shell business-hero-inner">
+        <h1 id="business-title">For Straddie businesses</h1>
+        <p>Publish a local update, host a community screen or do both. Use this guide to plan one small trial and decide who would look after it.</p>
+        <p class="business-stage">The network and its convenor, Ready SETCO, are proposals. This prototype offers sample notices, screen previews and tools you can use to plan a trial.</p>
+        <a class="button button-accent" href="#plan">Make a setup plan</a>
+      </div>
+    </section>
+
+    <div class="shell business-body">
+      <section class="business-section" aria-labelledby="routes-title">
+        <h2 id="routes-title">Choose how to take part</h2>
+        <div class="business-routes">
+          <article class="business-card">
+            <h3>Publish notices</h3>
+            <p>A changed opening time, a local event, a workshop or a call for help can start as one short notice. Agree which subjects the business may publish and who can confirm each item.</p>
+            <p>Pick a public source, such as your own opening-hours or event page. Give the notice a take-down date and choose the town or audience it serves.</p>
+            <div class="business-actions">
+              <a class="button button-primary" data-plan-route="Publish notices" href="#plan">Plan to publish</a>
+              <a class="text-link" href="./submit.html">Prepare a first draft</a>
+            </div>
+          </article>
+          <article class="business-card">
+            <h3>Host a screen</h3>
+            <p>Start with permission from the venue owner or operator. Try a wide TV preview on an existing display and decide what people can read from the queue, footpath or ferry cabin.</p>
+            <p>Use a supported browser or a signage player. Agree which approved topics and towns will appear, who can pause the display and where to put printed information if the screen goes dark.</p>
+            <div class="business-actions">
+              <a class="button button-primary" data-plan-route="Host a screen" href="#plan">Plan to host</a>
+              <a class="text-link" href="./screen.html">Try a venue TV</a>
+            </div>
+          </article>
+        </div>
+        <p class="business-combined">Doing both? Record the publisher and host responsibilities in one plan, including who covers each job when the usual person is away.</p>
+      </section>
+
+      <section class="business-section business-workflow" aria-labelledby="workflow-title">
+        <div>
+          <h2 id="workflow-title">Take one notice from draft to display</h2>
+          <ol>
+            <li><strong>Name the stewards.</strong> Decide which role owns the facts, which role checks the draft and who controls the display. Agree a backup for days the usual person is away.</li>
+            <li><strong>Send a first draft for review.</strong> Start with one public notice. Share the draft with the person who can confirm the wording, source, permissions and take-down time.</li>
+            <li><strong>Rehearse the handover.</strong> The reviewer would give the screen host the approved copy, its version and take-down time. Test the preview on the actual display. Photograph the screen during the rehearsal only if taking the photo is permitted.</li>
+            <li><strong>Try a correction and removal.</strong> Ask the host to switch to an updated version and verify the change on the screen. Check that the old copy comes down by its expiry, and agree where readers can go for the corrected information.</li>
+          </ol>
+          <div class="business-actions">
+            <a class="text-link" href="./board.html">Browse sample notices</a>
+            <a class="text-link" href="./training.html">Practise with the training exercises</a>
+          </div>
+        </div>
+        <aside class="business-card business-costs" aria-labelledby="costs-title">
+          <h3 id="costs-title">Permissions and costs</h3>
+          <p>Take part by choice. Agree the venue’s hours, who can update the display and how the venue could withdraw. Confirm permission for the screen location, power, network access, photos and any branding.</p>
+          <p>Price the player, mount or other installation, connectivity, staff time and ongoing support. For a touch kiosk, include safe placement, tested battery runtime and backup supplies.</p>
+          <a class="text-link" href="./setup.html">Open the setup guide</a>
+          <a class="text-link" href="./grants.html">Explore grants and costs</a>
+        </aside>
+      </section>
+
+      <section class="business-section" id="plan" aria-labelledby="plan-title">
+        <h2 id="plan-title">Make a setup plan</h2>
+        <p class="business-intro">Use public business information and role names such as “duty manager”. The plan stays on this page until you copy or download it to share with your team.</p>
+        <div class="business-plan-layout">
+          <form class="business-card business-form" id="business-plan" aria-label="Business setup plan">
+            <div class="business-fields">
+              <label class="business-field business-wide">Business or venue name
+                <input id="business-name" type="text" maxlength="100" required>
+              </label>
+              <label class="business-field">Your route
+                <select id="plan-route" required>
+                  <option value="Publish notices">Publish notices</option>
+                  <option value="Host a screen">Host a screen</option>
+                  <option value="Publish and host">Publish and host</option>
+                </select>
+              </label>
+              <label class="business-field">Town or area
+                <select id="business-place" required>
+                  <option value="">Choose a place</option>
+                </select>
+              </label>
+              <label class="business-field">Lead role
+                <input id="business-lead" type="text" maxlength="90" placeholder="e.g. Duty manager" required>
+              </label>
+              <label class="business-field">Backup role
+                <input id="business-backup" type="text" maxlength="90" placeholder="e.g. Shift supervisor" required>
+              </label>
+              <label class="business-field business-wide">Permission stage
+                <select id="business-permission" required>
+                  <option value="Exploring the idea">Exploring the idea</option>
+                  <option value="Seeking venue or publisher approval">Seeking venue or publisher approval</option>
+                  <option value="Permission agreed for an internal test">Permission agreed for an internal test</option>
+                </select>
+              </label>
+            </div>
+            <fieldset class="business-fields" id="publish-fields">
+              <legend>Publishing</legend>
+              <label class="business-field business-wide">Proposed notice types
+                <input id="business-topics" type="text" maxlength="150" placeholder="e.g. Opening hours and local workshops" required>
+              </label>
+              <label class="business-field business-wide">Who reviews notices?
+                <input id="business-reviewer" type="text" maxlength="90" placeholder="e.g. Events coordinator" required>
+              </label>
+              <label class="business-field business-wide">First public source link (optional)
+                <input id="business-source" type="url" maxlength="2048" inputmode="url" placeholder="https://">
+              </label>
+            </fieldset>
+            <fieldset class="business-fields" id="host-fields" hidden disabled>
+              <legend>Screen hosting</legend>
+              <label class="business-field">Screen to test
+                <select id="business-screen" required>
+                  <option value="">Choose a screen</option>
+                  <option>Existing venue TV</option>
+                  <option>Battery-backed touchscreen</option>
+                  <option>Portable tablet or display</option>
+                </select>
+              </label>
+              <label class="business-field">Fallback to practise
+                <select id="business-fallback" required>
+                  <option value="">Choose a fallback</option>
+                  <option>Printed information</option>
+                  <option>Saved copy and printed information</option>
+                  <option>To be agreed with the host</option>
+                </select>
+              </label>
+            </fieldset>
+            <button class="button button-primary" id="create-business-plan" type="button" disabled>Create setup plan</button>
+            <noscript><p>Enable JavaScript to create and download a plan from this form.</p></noscript>
+          </form>
+
+          <section class="business-card business-result" aria-labelledby="business-export-title">
+            <h3 id="business-export-title">Your plan for review</h3>
+            <p>Check the details with the people responsible for publishing or hosting before planning a trial.</p>
+            <label class="business-field" for="business-preview">Plain-text preview</label>
+            <textarea id="business-preview" rows="12" readonly placeholder="Your setup plan will appear here."></textarea>
+            <div class="business-actions">
+              <button class="button button-primary" id="download-business-plan" type="button" disabled>Download plan</button>
+              <button class="button button-secondary" id="copy-business-plan" type="button" disabled>Copy plan</button>
+            </div>
+            <p class="business-note" id="business-status" role="status"></p>
+          </section>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <strong>Straddie Noticeboard Network</strong>
+        <p>Business participation and screen hosting are part of the proposed Minjerribah pilot.</p>
+      </div>
+      <div class="footer-links">
+        <a href="./">Noticeboard home</a>
+        <a href="./board.html">Sample board</a>
+        <a href="./resilience.html">Screens &amp; outages</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

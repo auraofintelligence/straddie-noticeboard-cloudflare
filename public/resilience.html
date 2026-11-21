@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plan how ordinary venue TVs and battery-backed public touchscreens could display Straddie notices when power, internet access or time checks are lost.">
+  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./resilience.css">
+  <title>Screens &amp; outages | Straddie Noticeboard Network</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="36" height="36">
+        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./how-it-works.html">How it works</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./training.html">Training</a>
+        <a href="./island.html">Maps &amp; weather</a>
+        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="outage-hero" aria-labelledby="outage-title">
+      <div class="shell outage-hero-inner">
+        <h1 id="outage-title">Screens &amp; outages</h1>
+        <p>A mains-powered TV, a phone and a battery-backed touchscreen serve different needs. See how each could fit the proposed island network and what a venue would need to test before relying on a saved copy.</p>
+        <div class="resilience-actions">
+          <a class="button button-accent" href="./screen.html?format=portrait&amp;outage=1">Try the sample outage drill</a>
+          <a class="button button-ghost" href="#outages">See the outage plan</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="display-section" aria-labelledby="display-title">
+      <div class="shell display-layout">
+        <div>
+          <h2 id="display-title">Start with the screens people already use</h2>
+          <dl class="display-list">
+            <div>
+              <dt>Ordinary TVs for clubs, ferries and shop windows</dt>
+              <dd>Use an existing TV with a small player or built-in browser. A club might show fixtures and call-outs, a ferry operator its verified service notices, and a shopfront nearby events and changed opening hours. Each venue would choose what fits.</dd>
+            </div>
+            <div>
+              <dt>A mobile board people can carry with them</dt>
+              <dd>Scan a code beside a screen to find the same notice on a phone, open its source or save the details for later.</dd>
+            </div>
+            <div>
+              <dt>Interactive touchscreens with independent battery power</dt>
+              <dd>At a suitable public site, people could tap through local notices, town maps, weather sources and short guides. The touchscreen and its local player would be tested together on battery power.</dd>
+            </div>
+          </dl>
+          <a class="button button-primary" href="./setup.html">Open the setup guide</a>
+        </div>
+        <figure class="concept-figure">
+          <img src="./assets/kiosk-concept.webp" width="1536" height="1024" loading="lazy" alt="Concept for a sheltered public touchscreen near an island ferry stop">
+          <figcaption>AI-generated concept for a possible ferry-stop touchscreen.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="shell resilience-section" id="outages" aria-labelledby="resilience-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="resilience-title">When the power or internet goes out</h2>
+          <p>A battery supplies power. A saved copy supplies information. Each site would need to test the two separately and rehearse what happens when both fail.</p>
+        </div>
+      </div>
+      <div class="resilience-grid">
+        <article>
+          <h3>Keep essentials on the device</h3>
+          <p>Save a plain-text copy of approved notices and a small set of public maps and guides. Test the battery-backed touchscreen in an essential mode with text and simple maps.</p>
+        </article>
+        <article>
+          <h3>Make old information obvious</h3>
+          <p>Show when the source was last verified, in Queensland local time. Take down expired everyday notices. If an official warning can’t be rechecked, display “Current status unavailable”. Only the issuer can update or cancel it.</p>
+        </article>
+        <article>
+          <h3>Keep the issuer attached</h3>
+          <p>Agree how official notices could be relayed with the issuing organisations. Keep the warning’s original instructions, issuer, affected area and times intact.</p>
+        </article>
+      </div>
+
+      <h3 class="outage-matrix-title" id="outage-matrix-title">What each screen could show</h3>
+      <p class="outage-scroll-hint">Scroll the table sideways to compare both screens.</p>
+      <div class="outage-table-wrap" role="region" aria-labelledby="outage-matrix-title" tabindex="0">
+        <table class="outage-table" aria-labelledby="outage-matrix-title">
+          <thead>
+            <tr>
+              <th scope="col">Condition</th>
+              <th scope="col">Ordinary venue TV</th>
+              <th scope="col">Battery-backed touchscreen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Mains power fails</th>
+              <td>A mains-only TV goes dark. The host puts up the agreed printed information. Any backup would need to power the TV and its player together.</td>
+              <td>The display and player can continue for their tested battery runtime. Check the connection separately. If it is down, use the saved copy.</td>
+            </tr>
+            <tr>
+              <th scope="row">Internet link fails</th>
+              <td>Use a verified copy saved on the player if the venue has tested offline start-up. Otherwise use the printed information.</td>
+              <td>Start the installed copy with essential text, saved maps and guides. Show “Offline” and the source’s last verified date and time.</td>
+            </tr>
+            <tr>
+              <th scope="row">Device clock is unreliable</th>
+              <td colspan="2">Switch to standing information and pause time-limited everyday notices. Label the time check as unavailable. Keep the issuer’s original time on any retained warning and make its unchecked status visible.</td>
+            </tr>
+            <tr>
+              <th scope="row">Battery runs low</th>
+              <td>If the host installed backup power, follow the site’s tested switch-over to printed information.</td>
+              <td>Switch to the essential display at the site’s agreed point. When the device must shut down, use the printed information and hand over to the host.</td>
+            </tr>
+            <tr>
+              <th scope="row">Power or internet returns</th>
+              <td colspan="2">Confirm the device clock, check the issuer for new messages or withdrawals and verify the approved update on the screen before resuming normal rotation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="shell outage-case" id="corrections" aria-labelledby="correction-title">
+      <div>
+        <h2 id="correction-title">Practise a correction</h2>
+        <p>A sample fishing clinic moves from morning to afternoon while one venue is offline. Use that change to see whether the host can find, verify and replace an older copy.</p>
+        <ol>
+          <li><strong>Confirm the change with the publisher.</strong> Record the source, who checked it and when. Keep the original notice ID and mark the new version so both times can’t circulate as current.</li>
+          <li><strong>Apply it where staff can verify it.</strong> Log which screens have confirmed the change. If one is offline, note its known version and name the person who will check it at the venue.</li>
+          <li><strong>Verify the display itself.</strong> Once the venue reconnects, check the updated time on the screen, confirm the old copy no longer rotates and log when the correction was seen. For an official warning, use the updated wording from its issuer.</li>
+        </ol>
+      </div>
+      <aside class="outage-sources" aria-labelledby="outage-sources-title">
+        <h3 id="outage-sources-title">Official information</h3>
+        <p>Follow the issuing authority for current conditions and instructions.</p>
+        <ul>
+          <li><a href="https://dashboard.redland.qld.gov.au/">Redlands Coast Disaster Dashboard</a></li>
+          <li><a href="https://www.redland.qld.gov.au/Community-safety-and-health/Disasters-and-emergencies/Prepare-for-disasters/Suburb-disaster-profiles-and-risks/North-Stradbroke-Island-disaster-profile">Council’s island disaster profile</a></li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <strong>Straddie Noticeboard Network</strong>
+        <p>A proposed Minjerribah network. Screen previews and the outage drill use sample notices.</p>
+      </div>
+      <div class="footer-links">
+        <a href="./">Noticeboard home</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./screen.html?format=portrait&amp;outage=1">Practise on the sample touchscreen</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

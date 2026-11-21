@@ -1,0 +1,130 @@
+.outage-hero {
+  background: linear-gradient(112deg, #0b2d33 38%, #154644);
+  color: var(--paper);
+}
+
+.outage-hero-inner {
+  padding-block: clamp(2.55rem, 6vw, 5rem);
+}
+
+.outage-hero h1 {
+  font-size: clamp(2.85rem, 7vw, 5.55rem);
+}
+
+.outage-hero p {
+  max-width: 42rem;
+  margin-top: 1.05rem;
+  color: #e1f0ea;
+  font-size: clamp(1.03rem, 2vw, 1.23rem);
+}
+
+.outage-hero .resilience-actions {
+  margin-top: 1.3rem;
+}
+
+.outage-matrix-title {
+  margin: 1.22rem 0 .75rem;
+  font: 400 clamp(1.65rem, 3vw, 2.35rem)/1.15 var(--serif);
+  letter-spacing: -.025em;
+}
+
+.outage-scroll-hint {
+  display: none;
+  margin-bottom: .6rem;
+  color: var(--muted);
+  font-size: .93rem;
+}
+
+.outage-table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: .6rem;
+  background: var(--paper);
+}
+
+.outage-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.outage-table th,
+.outage-table td {
+  padding: clamp(.75rem, 1.5vw, 1.15rem);
+  vertical-align: top;
+}
+
+.outage-table thead {
+  background: var(--teal);
+  color: white;
+}
+
+.outage-table tbody th {
+  width: 24%;
+  color: var(--ink);
+}
+
+.outage-table tbody td {
+  width: 38%;
+  color: var(--muted);
+}
+
+.outage-table tbody tr + tr {
+  border-top: 1px solid var(--line);
+}
+
+.outage-table tbody tr:nth-child(even) {
+  background: var(--mist);
+}
+
+.outage-case {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.15rem, 4vw, 3.25rem);
+  padding-block: 1.15rem clamp(2.7rem, 6vw, 4.4rem);
+  border-top: 1px solid var(--line);
+}
+
+.outage-case h2 + p {
+  margin-top: .65rem;
+  color: var(--muted);
+}
+
+.outage-case ol,
+.outage-sources ul {
+  display: grid;
+  gap: .65rem;
+  margin: 1rem 0 0;
+  padding-inline-start: 1.4rem;
+}
+
+.outage-case li::marker {
+  color: var(--teal);
+  font-weight: 750;
+}
+
+.outage-sources {
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  border: 1px solid #ddd0a9;
+  border-radius: .6rem;
+  background: #f8efd6;
+}
+
+.outage-sources h3 {
+  font: 400 clamp(1.42rem, 2.8vw, 1.9rem)/1.13 var(--serif);
+}
+
+.outage-sources p {
+  margin-top: .45rem;
+}
+
+.outage-sources a {
+  font-weight: 680;
+}
+
+@media (max-width: 740px) {
+  .outage-scroll-hint { display: block; }
+  .outage-case { grid-template-columns: minmax(0, 1fr); }
+}

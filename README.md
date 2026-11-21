@@ -6,8 +6,10 @@ A landing page and prototype for a proposed community noticeboard network on Min
 
 With Python 3 and Node.js available, run `npm start` from this folder and open [localhost:4185](http://localhost:4185/). Run `npm run check` to check the JavaScript modules. The site has no install step or hosted service dependencies.
 
-- The board filters sample notices by place and category. The separate [project references page](public/network.html) lists work that informed the proposal.
-- The [setup guide](public/setup.html) covers TV players, independent power, reviewing notices, Council coordination, outage exercises and a first pilot.
+- The homepage introduces the proposal and links to dedicated pages. The [publishing guide](public/how-it-works.html) explains the workflow and responsibilities. The [practice noticeboard](public/board.html) filters examples by place and category. [Project references](public/network.html) stay in the home footer.
+- The [media training page](public/training.html) takes a beginner from a story brief and source check through phone recording, editing, captioning, publication and corrections.
+- The [setup guide](public/setup.html) covers TV players, independent power, reviewing notices, Council coordination, outage exercises and a first pilot. [Screens and outages](public/resilience.html) explains failure modes and correction checks.
+- [Business onboarding](public/businesses.html) covers posting and hosting, with a local plan exporter. [Grants for a first pilot](public/grants.html) explains scope, applicant readiness, a sample budget, evidence and official grant leads.
 - The draft editor keeps the active draft in this browser and exports a review-only Markdown file. It can also build a prompt to copy into an AI tool for screen variants. Share the draft with the responsible publisher outside the site and check all adaptations.
 - The screen preview can rotate the sample notices or show them one at a time. The portrait preview offers touch controls and a link to the matching town map. Use `screen.html?place=Dunwich&format=portrait&outage=1` to try text fallback with the sample set.
 - The [maps and weather page](public/island.html) helps readers distinguish forecasts, observations and radar and links to the relevant official information, including Council's disaster dashboard. The drill simulates text fallback in the demo. Live publishing, an installed offline pack and device testing belong to a future pilot.

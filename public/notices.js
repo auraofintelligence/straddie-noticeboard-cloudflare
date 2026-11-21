@@ -38,11 +38,11 @@ export const notices = [
     ...photos.amity,
   },
   {
-    id: "plfc-junior-clinic",
+    id: "point-club-match-report",
     place: "Point Lookout",
     category: "Clubs & sport",
-    title: "Junior fishing clinic",
-    summary: "A club notice could tell families what to bring, who can take part and where to check the details before heading out.",
+    title: "Write a local match report",
+    summary: "Ask a club to confirm its result and fixture. Capture a short comment with permission, then make a headline and a captioned clip for the club screen.",
     ...photos.point,
   },
   {
@@ -57,8 +57,8 @@ export const notices = [
     id: "island-local-stories",
     place: "Island-wide",
     category: "Events",
-    title: "Share a short island story",
-    summary: "A sample invitation to a community storytelling session, with space for first-time contributors and local groups.",
+    title: "Try a phone interview",
+    summary: "A beginner practice session could teach how to ask one good question, record a clear answer and check which parts the speaker agrees to share.",
     ...photos.amity,
   },
   {
