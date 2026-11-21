@@ -1,4 +1,4 @@
-import { categories, notices, places } from "./notices.js";
+import { allowsNoticeOutlet, categories, notices, places } from "./notices.js";
 import { addPills, setActivePill } from "./filters.js";
 import { formatPilotTime, watchPilotFeed } from "./pilot-feed.js";
 
@@ -18,7 +18,7 @@ const itemLabel = isPilot ? "reviewed" : "sample";
 
 let selectedPlace = "";
 let feedState = isPilot ? "loading" : "ready";
-let displayNotices = isPilot ? [] : notices;
+let displayNotices = isPilot ? [] : notices.filter(notice => allowsNoticeOutlet(notice, "web"));
 
 function renderNotices() {
   const category = categoryFilter.value;
@@ -58,8 +58,14 @@ function renderNotices() {
       sourceLink.hidden = false;
       params.set("mode", "pilot");
     }
-    link.href = `./screen.html?${params}`;
-    link.setAttribute("aria-label", `Preview on a screen: ${notice.title}`);
+    const hasTv = allowsNoticeOutlet(notice, "tv");
+    const hasKiosk = allowsNoticeOutlet(notice, "kiosk");
+    link.hidden = !hasTv && !hasKiosk;
+    if (!link.hidden) {
+      if (!hasTv) params.set("format", "portrait");
+      link.href = `./screen.html?${params}`;
+      link.setAttribute("aria-label", `Preview on a screen: ${notice.title}`);
+    }
     return card;
   }));
 
@@ -68,8 +74,8 @@ function renderNotices() {
   clearFilters.hidden = displayNotices.length === 0;
   startDraft.hidden = !isPilot || displayNotices.length > 0;
   const hasNotices = displayNotices.length > 0;
-  emptyTitle.textContent = hasNotices ? "No notices match those filters" : "No reviewed pilot notices yet";
-  emptyDescription.textContent = hasNotices ? "Try another place or category." : "Current notices will appear when a pilot steward approves and publishes them.";
+  emptyTitle.textContent = hasNotices ? "No notices match those filters" : "No reviewed notices on this board yet";
+  emptyDescription.textContent = hasNotices ? "Try another place or category." : "Notices will appear here when a steward approves them for the phone and web board.";
   if (feedState === "loading") noticeCount.textContent = "Checking the reviewed pilot feed…";
   else if (feedState === "unavailable") noticeCount.textContent = "The reviewed pilot feed is unavailable. This board will try again shortly.";
   else noticeCount.textContent = `${matches.length} ${itemLabel} ${matches.length === 1 ? "notice" : "notices"} shown`;
@@ -105,16 +111,16 @@ clearFilters.addEventListener("click", () => {
 if (isPilot) {
   document.title = "Reviewed pilot board | Straddie Noticeboard Network";
   document.querySelector("#board-title").textContent = "Reviewed pilot board";
-  document.querySelector("#board-description").textContent = "See current notices approved for the Minjerribah pilot. Each notice names its publisher, public source and take-down time.";
+  document.querySelector("#board-description").textContent = "See current notices approved for the Minjerribah phone and web board. Each notice names its publisher, public source and take-down time.";
   document.querySelector("#coverage-title").textContent = "Reviewed notices by place";
-  document.querySelector("#board-footer-note").textContent = "Local pilot board for notices published by the pilot’s stewards.";
+  document.querySelector("#board-footer-note").textContent = "Reviewed notices for Dunwich, Amity Point, Point Lookout and the wider island.";
   const modeLink = document.querySelector("#board-mode-link");
   modeLink.href = "./board.html";
   modeLink.textContent = "Try the practice board";
   document.querySelector("#board-pilot-screen").hidden = false;
   watchPilotFeed((state, currentNotices) => {
     feedState = state;
-    displayNotices = currentNotices;
+    displayNotices = currentNotices.filter(notice => allowsNoticeOutlet(notice, "web"));
     renderNotices();
   });
 } else {

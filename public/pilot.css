@@ -48,7 +48,7 @@
   border-radius: .65rem;
 }
 
-.pilot-intro figcaption,.pilot-footnote {
+.pilot-intro figcaption {
   font-size: .84rem;
   margin-top: .55rem;
 }
@@ -77,31 +77,37 @@
   margin: 1.15rem 0 .75rem;
 }
 
-.pilot-measures div {
+.pilot-measures article {
   display: grid;
-  align-content: start;
-  gap: .4rem;
-  background: #deeeeb;
-  padding: clamp(1.1rem,3vw,2rem);
+  grid-template-rows: auto auto 1fr auto;
+  gap: .6rem;
+  padding: clamp(1.1rem, 2.8vw, 1.9rem);
   border-radius: .55rem;
+  background: #deeeeb;
 }
 
-.pilot-measures div:nth-child(2) {
-  background: #e3e9fb;
-}
+.pilot-measures article:nth-child(2) { background: #e3e9fb; }
+.pilot-measures article:nth-child(3) { background: #eee6fa; }
+.pilot-measures h3 { font-size: 1.35rem; }
+.pilot-measures a { font-weight: 680; }
+.plan-lede { max-width: 65ch; margin-top: .8rem; color: var(--muted); }
+.pilot-people p + p { margin-top: .85rem; }
+.plan-note { padding: 1rem; border-left: 3px solid #53978a; background: #edf3ef; }
+.plan-evidence { margin: 0; }
+.pilot-people .plan-evidence dt:first-child { margin: 0; }
 
-.pilot-measures div:nth-child(3) {
-  background: #eee6fa;
+.permission-example {
+  margin: 1.4rem 0 0;
+  padding: 1.1rem;
+  border-radius: .6rem;
+  background: #182840;
+  color: #f1f5f8;
 }
-
-.pilot-measures strong {
-  font: 750 clamp(2.25rem,4vw,3.7rem)/1 var(--display);
-  letter-spacing: -.07em;
-}
-
-.pilot-measures span {
-  max-width: 24ch;
-}
+.permission-example figcaption { margin-bottom: .45rem; color: #9fe6d5; font-weight: 700; }
+.permission-example div { display: flex; align-items: flex-start; gap: .7rem; border-top: 1px solid #536079; padding: .7rem 0; }
+.permission-example div:last-child { padding-bottom: 0; }
+.permission-example img { flex: 0 0 42px; }
+.permission-example strong { display: block; margin-bottom: .18rem; }
 
 .pilot-people {
   display: grid;
@@ -184,16 +190,20 @@
   .pilot-measures {
     grid-template-columns: 1fr;
   }
-  .pilot-measures div {
-    grid-template-columns: 3rem 1fr;
-    align-items: center;
-    gap: 1rem;
-    padding: .85rem 1rem;
-  }
-  .pilot-measures span {
-    max-width: none;
-  }
   .pilot-rehearse img {
     width: 2.8rem;
   }
+}
+
+
+@media print {
+  .local-pilot, .pilot-measures article { background: white; color: black; }
+  .local-pilot .pilot-label, .local-pilot p:not(.pilot-label) { color: black; }
+  .pilot-intro { display: block; padding: 0; }
+  .pilot-intro figure, .local-pilot .button, .site-footer { display: none; }
+  .pilot-intro h1 { font-size: 26pt; }
+  .pilot-body section { padding-block: 1rem; }
+  .pilot-people { display: block; }
+  .pilot-body h2 { font-size: 18pt; break-after: avoid; }
+  .pilot-rehearse li, .pilot-measures article { break-inside: avoid; }
 }

@@ -209,6 +209,10 @@ h1,h2 {
   }
   .section-menu summary {
     min-height: 42px;
+    gap: .42rem;
+    padding-inline: .58rem;
+    font-size: .82rem;
+    white-space: nowrap;
   }
   .island-quick-nav {
     grid-column: 1/-1;
@@ -246,6 +250,11 @@ h1,h2 {
   }
   .primary-nav > a {
     font-size: .78rem;
+  }
+  .section-menu summary {
+    gap: .25rem;
+    padding-inline: .3rem;
+    white-space: normal;
   }
   .nav-panel {
     grid-template-columns: 1fr;

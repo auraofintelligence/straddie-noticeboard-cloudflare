@@ -1,10 +1,10 @@
-import { categories, notices as practiceNotices, places } from './notices.js';
+import { categories, noticeOutlets, notices as practiceNotices, places } from './notices.js';
 
 export const pilotZone = 'minjerribah';
 const feedUrl = new URL('./data/pilot-notices.json', import.meta.url);
 const practiceIds = new Set(practiceNotices.map((notice) => notice.id));
 const approvedFields = [
-  'id', 'status', 'title', 'publisher', 'place', 'category', 'summary', 'sourceUrl', 'reviewedBy', 'reviewedAt', 'startsAt', 'expiresAt',
+  'id', 'status', 'title', 'publisher', 'place', 'category', 'summary', 'sourceUrl', 'reviewedBy', 'reviewedAt', 'startsAt', 'expiresAt', 'outlets',
 ];
 const refreshDelay = 60_000;
 const requestLimit = 8_000;
@@ -65,6 +65,12 @@ export function validatePilotFeed(feed) {
       && validText(record.reviewedBy, 100), `${row} needs a title, publisher, summary and public reviewer credit or role.`);
     requireValid(places.includes(record.place) && categories.includes(record.category), `${row} has an unknown place or category.`);
     requireValid(validSource(record.sourceUrl), `${row} needs a public HTTPS source without embedded credentials.`);
+    if ('outlets' in record) {
+      const { outlets } = record;
+      requireValid(Array.isArray(outlets) && outlets.length > 0 && outlets.length <= noticeOutlets.length
+        && new Set(outlets).size === outlets.length && outlets.every(outlet => noticeOutlets.includes(outlet)),
+      `${row} needs a nonempty list of distinct outlets chosen from ${noticeOutlets.join(', ')}.`);
+    }
 
     const reviewed = timestamp(record.reviewedAt);
     const expiry = timestamp(record.expiresAt);

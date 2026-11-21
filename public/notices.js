@@ -2,6 +2,18 @@ export const places = ["Dunwich", "Amity Point", "Point Lookout", "Island-wide"]
 
 export const categories = ["Events", "Clubs & sport", "Paid work", "Volunteering", "Arts & culture", "Community", "Learning"];
 
+export const noticeOutlets = Object.freeze(["web", "tv", "kiosk"]);
+
+export function allowsNoticeOutlet(notice, outlet) {
+  return noticeOutlets.includes(outlet)
+    && (notice.outlets === undefined || (Array.isArray(notice.outlets) && notice.outlets.includes(outlet)));
+}
+
+export function noticesForScreen(records, place, format) {
+  const outlet = format === "portrait" ? "kiosk" : "tv";
+  return records.filter(notice => (!place || notice.place === place) && allowsNoticeOutlet(notice, outlet));
+}
+
 const photos = {
   dunwich: {
     image: "./assets/dunwich-bay.webp",

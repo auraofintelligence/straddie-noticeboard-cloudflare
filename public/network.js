@@ -2,7 +2,7 @@ export const projects = [
   {
     name: "Original Straddie Noticeboard",
     url: "https://auraofintelligence.github.io/straddie-noticeboard-network/",
-    description: "One source notice, several display formats and a take-down time. The pilot carries this pattern into the phone board and venue screen.",
+    description: "One source notice, several display formats and a take-down time. The proposed network carries this pattern into the phone board and displays at participating venues.",
     group: "Island life",
   },
   {
@@ -134,7 +134,7 @@ export const projects = [
   {
     name: "Sovereign Capacity Lab",
     url: "https://auraofintelligence.github.io/sovereign-capacity-lab/index.html",
-    description: "Change power and energy assumptions and see the result. The island outage guide applies that method to the screen, player and router at one venue.",
+    description: "Change power and energy assumptions and see the result. The island outage guide applies that method to the screen, player and router at each participating venue.",
     group: "Civic & digital",
   },
   {

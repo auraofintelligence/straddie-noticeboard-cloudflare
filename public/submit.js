@@ -1,8 +1,14 @@
-import { categories, places } from './notices.js';
+import { categories, noticeOutlets, places } from './notices.js';
 import { pilotZone } from './pilot-feed.js';
 
 const form = document.querySelector('#draft-form');
-const fields = Object.fromEntries(Array.from(form.querySelectorAll('input, select, textarea')).map(field => [field.id, field]));
+const fields = Object.fromEntries(Array.from(form.querySelectorAll('input:not([name="outlets"]), select, textarea')).map(field => [field.id, field]));
+const outletFields = Array.from(form.querySelectorAll('[name="outlets"]'));
+const outletInstructions = {
+  web: 'Phone and web board: a short headline, the essential details and a clear next step if supplied.',
+  tv: 'Venue TV: a large-type headline and up to two short lines someone can read at a glance.',
+  kiosk: 'Touchscreen kiosk: brief, plain-language text with place, timing and what to do next, if supplied.'
+};
 const generate = document.querySelector('#generate-draft');
 const preview = document.querySelector('#draft-preview');
 const copy = document.querySelector('#copy-draft');
@@ -23,16 +29,21 @@ function addOptions(select, values) {
 }
 
 function formValues() {
-  return Object.fromEntries(Object.entries(fields).map(([name, field]) => [name, field.value.trim()]));
+  const details = Object.fromEntries(Object.entries(fields).map(([name, field]) => [name, field.value.trim()]));
+  return { ...details, outlets: outletFields.filter(field => field.checked).map(field => field.value) };
 }
 
 function restoreDraft() {
   try {
     const saved = JSON.parse(localStorage.getItem(storageKey));
-    if (!saved || typeof saved !== 'object') return;
+    if (!saved || typeof saved !== 'object' || Array.isArray(saved)) return;
 
     for (const [name, field] of Object.entries(fields)) {
       if (typeof saved[name] === 'string') field.value = saved[name];
+    }
+    const savedOutlets = saved.outlets === undefined ? noticeOutlets : saved.outlets;
+    for (const field of outletFields) {
+      field.checked = Array.isArray(savedOutlets) && savedOutlets.includes(field.value);
     }
     storageStatus.textContent = 'Draft restored from this browser.';
   } catch {
@@ -71,6 +82,7 @@ function validate(values) {
       fields.source.setCustomValidity('Enter a public web link without sign-in details.');
     }
   }
+  outletFields[0].setCustomValidity(values.outlets.length ? '' : 'Choose at least one public outlet.');
   return form.reportValidity();
 }
 
@@ -78,7 +90,7 @@ function localDateTime(value) {
   return value ? `${value}:00+10:00` : '';
 }
 
-function buildMarkdown({ title, publisher, place, category, starts, expires, venue, source, summary }) {
+function buildMarkdown({ title, publisher, place, category, starts, expires, venue, source, summary, outlets }) {
   const metadata = {
     schema: 'notice.v1',
     zone: pilotZone,
@@ -86,6 +98,7 @@ function buildMarkdown({ title, publisher, place, category, starts, expires, ven
     publisher,
     town: place,
     type: category,
+    outlets,
     ...(starts && { starts: localDateTime(starts) }),
     expires: localDateTime(expires),
     ...(venue && { venue }),
@@ -97,12 +110,13 @@ function buildMarkdown({ title, publisher, place, category, starts, expires, ven
   return ['---', ...frontmatter, '---', '', `# ${title}`, '', summary, ''].join('\n');
 }
 
-function buildAiPrompt({ title, publisher, place, category, starts, expires, venue, source, summary }) {
+function buildAiPrompt({ title, publisher, place, category, starts, expires, venue, source, summary, outlets }) {
   const publicFacts = {
     title,
     issuer: publisher,
     place,
     category,
+    outlets,
     ...(venue && { public_venue: venue }),
     ...(starts && { starts: localDateTime(starts) }),
     expires: localDateTime(expires),
@@ -111,10 +125,8 @@ function buildAiPrompt({ title, publisher, place, category, starts, expires, ven
   };
 
   return [
-    'Draft three review-only versions of this community notice in Australian English.',
-    'Phone: a short headline, the essential details and a clear next step if supplied.',
-    'TV: a large-type headline and up to two short lines someone can read at a glance.',
-    'Kiosk: brief, plain-language text with place, timing and what to do next, if supplied.',
+    'Draft a review-only version of this community notice in Australian English for each of the selected public outlets below. Produce versions only for these outlets.',
+    ...outlets.map(outlet => outletInstructions[outlet]),
     'Keep the issuer, supplied dates and times, expiry and exact public source with every version. Times are Queensland local time. Mark missing or uncertain facts for a human reviewer. Do not invent facts, affiliations, approvals or authority.',
     'Use short sentences and plain words. Suggest an Easy English version if helpful. Provide alt text only when the supplied material describes the actual image. Otherwise flag it for the reviewer.',
     'Omit private contact details and sensitive information. If the material contains an emergency warning or instructions, stop and tell the reviewer to relay the issuing authority’s exact wording with its source and timestamps. Do not rewrite official alerts or issue advice.',
@@ -160,6 +172,7 @@ generate.disabled = false;
 form.addEventListener('input', event => {
   event.target.setCustomValidity('');
   fields.expires.setCustomValidity('');
+  outletFields[0].setCustomValidity('');
   saveDraft();
 
   if (preview.value) {

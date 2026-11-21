@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A funding and readiness plan for one hosted Straddie noticeboard screen and a supervised local media workshop.">
+  <meta name="description" content="Funding, implementation and multi-year operating costs for a permanent community noticeboard network on Minjerribah / North Stradbroke Island.">
   <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./grants.css">
+  <script type="module" src="./grants.js"></script>
   <title>Grants &amp; funding | Straddie Noticeboard Network</title>
   <link rel="stylesheet" href="./brand.css">
   <meta name="theme-color" content="#111526">
@@ -24,18 +25,19 @@
         <a href="./opportunities.html">Work &amp; volunteering</a>
         <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
         <details class="section-menu">
-          <summary>Pilot guides</summary>
+          <summary>Network guides</summary>
           <div class="nav-panel">
-            <a href="./pilot.html">The island pilot</a>
+            <a href="./pilot.html">Island infrastructure plan</a>
             <a href="./board.html?mode=pilot">Pilot noticeboard</a>
             <a href="./submit.html">Draft a notice</a>
             <a href="./board.html">Practice noticeboard</a>
             <a href="./how-it-works.html">Publishing &amp; moderation</a>
             <a href="./training.html">Media training</a>
             <a href="./businesses.html">Business onboarding</a>
-            <a aria-current="page" href="./grants.html">Pilot grants</a>
+            <a aria-current="page" href="./grants.html">Funding &amp; maintenance</a>
             <a href="./setup.html">Screen setup</a>
             <a href="./resilience.html">Power &amp; outages</a>
+            <a href="./visitor-volunteer.html">Visitor &amp; volunteer operations</a>
           </div>
         </details>
       </nav>
@@ -47,48 +49,77 @@
       <div class="shell grants-hero-grid">
         <div>
           <p class="eyebrow">Grants &amp; funding</p>
-          <h1 id="grants-title">Fund the first noticeboard.</h1>
-          <p>Start with one willing venue, an existing TV and a short, supervised media workshop. Use an eight-week pilot to see whether people find the notices and whether the host can keep them current.</p>
-          <a class="button button-accent" href="#funding">See funding options</a>
+          <h1 id="grants-title">Fund a lasting island network.</h1>
+          <p>The Straddie Noticeboard Network needs funding to install community displays across Minjerribah and keep people, equipment and information supported year after year.</p>
+          <p class="grants-launch-note">The December–January school-holiday period is a proposed launch window. Opening dates and locations would be agreed with participating hosts and the operating team.</p>
+          <a class="button button-accent" href="#budget">Build a long-term budget</a>
         </div>
         <aside class="grants-brief" aria-labelledby="brief-title">
-          <h2 id="brief-title">What the pilot would deliver</h2>
+          <h2 id="brief-title">What funding would support</h2>
           <ul class="grants-deliverables">
-            <li><img src="./assets/icons/television.webp" width="52" height="52" alt=""><span><strong>One indoor display</strong><br>The same checked notices on a venue TV and a phone-friendly board.</span></li>
-            <li><img src="./assets/icons/camera.webp" width="52" height="52" alt=""><span><strong>Two supervised sessions</strong><br>A small group practises recording, captioning and source checks.</span></li>
-            <li><img src="./assets/icons/review.webp" width="52" height="52" alt=""><span><strong>A pilot report</strong><br>Use, corrections, operating time and costs for the next host.</span></li>
+            <li><img src="./assets/icons/television.webp" width="52" height="52" alt=""><span><strong>Displays across the island</strong><br>A phone-friendly board, venue and ferry TVs where agreed, and battery-backed touchscreens at suitable sites.</span></li>
+            <li><img src="./assets/icons/camera.webp" width="52" height="52" alt=""><span><strong>Local media training and work</strong><br>Supervised reporting, captioning and publishing, with paid operating roles budgeted.</span></li>
+            <li><img src="./assets/icons/review.webp" width="52" height="52" alt=""><span><strong>Reliable everyday service</strong><br>Named people to check and correct notices, maintain devices and rehearse outages after launch.</span></li>
           </ul>
-          <p>Applicant, venue and workshop team are to be confirmed.</p>
+          <p>The legal applicant, venue agreements, staffing and funding are yet to be confirmed.</p>
         </aside>
       </div>
     </section>
 
     <div class="shell grants-body">
       <nav class="grants-jumps" aria-label="On this page">
-        <a href="#readiness">Get ready</a>
-        <a href="#budget">Pilot budget</a>
+        <a href="#readiness">Build the funding case</a>
+        <a href="#compute">A$6 million compute proposal</a>
+        <a href="#budget">Long-term budget</a>
         <a href="#funding">Funding options</a>
-        <a href="#results">Measure results</a>
+        <a href="#results">Track public benefit</a>
       </nav>
 
+      <section class="grants-section grants-investment" id="compute" aria-labelledby="compute-title">
+        <div class="grants-investment-lead">
+          <div>
+            <p class="eyebrow">The wider investment case</p>
+            <h2 id="compute-title">A$6 million for local frontier computing</h2>
+          </div>
+          <div>
+            <p>Luke Nathan Hayes proposes locating a frontier computing rack at Ready SETCO, a co-operative still to be formed. It would fill the missing middle between personal devices and large data centres, with local capacity to support digital twins of councils, electorates and bioregions.</p>
+            <p>The noticeboard is one public-facing use on Minjerribah. The model below prices its own installations, paid operating work and ongoing renewal. The wider investment case should allocate shared costs once and fund steady-state operations beyond the node’s initial support allowance.</p>
+          </div>
+        </div>
+        <details class="grants-investment-costs">
+          <summary>See the source’s A$6 million planning allowances</summary>
+          <dl>
+            <div><dt>Compute rack, storage and orchestration</dt><dd>A$4,000,000</dd></div>
+            <div><dt>Power, cooling, backup power and energy integration</dt><dd>A$650,000</dd></div>
+            <div><dt>High-speed networking, cybersecurity and backup communications</dt><dd>A$300,000</dd></div>
+            <div><dt>Secure room, fire systems, access control and monitoring</dt><dd>A$250,000</dd></div>
+            <div><dt>Public community laboratory and immersive learning package</dt><dd>A$350,000</dd></div>
+            <div><dt>Initial spares, specialist onboarding and operational support</dt><dd>A$250,000</dd></div>
+            <div><dt>Programme integration and contingency</dt><dd>A$200,000</dd></div>
+          </dl>
+          <p>The figures are strategic planning allowances from section 4 of <cite><a href="https://github.com/auraofintelligence/ready-set-co-op-cultural-intelligence-node/blob/main/supporting-documents/do-not-put-all-our-eggs-in-one-basket.md">Do Not Put All Our Eggs in One Basket</a></cite>, Luke Nathan Hayes’s draft submission of 21 August 2026. Obtain local engineering assessments and supplier quotes before procurement.</p>
+        </details>
+        <p class="grants-legacy"><strong>Straddie comes first.</strong> Luke’s aim is to develop the island’s volunteer and tourism management architecture for the Brisbane 2032 Olympic and Paralympic Games. Adoption would need agreement from the responsible organisers. <a href="./visitor-volunteer.html">See how a change would reach a volunteer and a visitor.</a></p>
+      </section>
+
       <section class="grants-section" id="readiness" aria-labelledby="readiness-title">
-        <h2 id="readiness-title">Get the pilot ready</h2>
+        <h2 id="readiness-title">Build the funding case</h2>
         <ol class="grants-stages">
           <li>
-            <h3>Name the people and organisations</h3>
-            <p>Record the legal applicant, its authorised signatory and the person who will keep the accounts and submit the final report. If an eligible organisation agrees to administer the grant for the project, record that auspice in a signed agreement. Name a venue manager, an editor and a backup reviewer.</p>
+            <h3>Name the applicant and operator</h3>
+            <p>Confirm the legal applicant, authorised signatory, asset owner and long-term operator. If an eligible organisation agrees to administer funding, record the auspice in writing. Set out Ready SETCO’s proposed convening and moderation role, decision-making, complaints, financial reporting and who covers paid shifts and technical faults.</p>
           </li>
           <li>
-            <h3>Show the need and get permission</h3>
-            <p>Ask residents and local groups where they currently miss notices. Keep a short summary, two permission-cleared sample notices and letters describing what each participant has agreed to provide. Get written host approval for the screen, internet access, operating hours and equipment ownership.</p>
+            <h3>Document demand and site agreements</h3>
+            <p>Gather evidence from people in Dunwich, Amity Point and Point Lookout about which notices they miss and where they look. Seek agreements from interested clubs, shops, ferry operators and public venues. Record each site's access arrangements, site and cultural permissions, opening hours, power, connectivity and who owns and maintains the equipment.</p>
           </li>
           <li>
-            <h3>Price the work and confirm the rules</h3>
-            <p>Collect itemised quotes for the screen setup, workshop and review work. Confirm insurance, venue and landowner requirements, eligible costs, the approved start date and how the host would cover ongoing expenses.</p>
+            <h3>Show how the service will work</h3>
+            <p>Provide a device plan, permission-cleared sample notices, a source and correction workflow, and an accessible media training programme. Show how people could reach official Council, weather and transport information, with issuer permission where an update would be relayed. Include offline, battery and outage testing for selected sites.</p>
           </li>
           <li>
-            <h3>Run the trial and report back</h3>
-            <p>Install and check the display, run the workshop and trial the review process. Keep invoices, source and permission notes, attendance totals and a log of changes. Report what the grant paid for and what the pilot achieved.</p>
+            <h3>Prove it can stay open</h3>
+            <p>Collect itemised installation, insurance and operating quotes. Document the maintenance schedule, warranties, fault response, replacement reserve and likely funding after the grant. Keep signed commitments, named responsibilities, cash and in-kind contributions, and milestones the applicant can report against.</p>
           </li>
         </ol>
         <div class="grants-local-links">
@@ -99,58 +130,109 @@
       </section>
 
       <section class="grants-section" id="budget" aria-labelledby="budget-title">
-        <h2 id="budget-title">Price the eight-week pilot</h2>
-        <p class="grants-lede">These are example Australian-dollar allowances for planning. Replace them with local quotes and record GST as the funder requires. Check each expense against the selected round before requesting it.</p>
+        <h2 id="budget-title">Price installation and years of service</h2>
+        <p class="grants-lede">Build this estimate from local quotes and staff rosters. Compare different staffing and opening schedules for December and January. Eight weeks is one possible launch window to price. The operating budget should also cover the months and years after the holidays.</p>
         <div class="grants-budget">
-          <table aria-describedby="budget-note">
-            <caption>Example cash expenses</caption>
-            <thead><tr><th scope="col">Expense and basis</th><th scope="col">AUD</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Media player, cables and display fittings</th><td>$650</td></tr>
-              <tr><th scope="row">Venue setup, installation and access check</th><td>$450</td></tr>
-              <tr><th scope="row">Phone microphone and tripod hire</th><td>$250</td></tr>
-              <tr><th scope="row">Workshop preparation and facilitation, 18 hours at $90</th><td>$1,620</td></tr>
-              <tr><th scope="row">Editing, captioning and review, 24 hours at $60</th><td>$1,440</td></tr>
-              <tr><th scope="row">Printed notices, workshop sheets and venue signs</th><td>$350</td></tr>
-              <tr><th scope="row">Evaluation and reporting, 8 hours at $80</th><td>$640</td></tr>
-            </tbody>
-            <tfoot><tr><th scope="row">Total example cash cost</th><td>$5,400</td></tr></tfoot>
-          </table>
-          <div class="grants-budget-ideas" id="budget-note">
-            <figure class="grants-budget-chart" aria-labelledby="budget-chart-title">
-              <h3 id="budget-chart-title">Where $5,400 would go</h3>
-              <div class="grants-budget-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-              <dl>
-                <div><dt>Workshop and editorial work</dt><dd>$3,060 <span>57%</span></dd></div>
-                <div><dt>Equipment, setup and print</dt><dd>$1,700 <span>31%</span></dd></div>
-                <div><dt>Evaluation and reporting</dt><dd>$640 <span>12%</span></dd></div>
-              </dl>
-              <figcaption>Shares of the example cash budget, rounded to the nearest per cent.</figcaption>
-            </figure>
+          <form id="grants-model" class="grants-model" aria-labelledby="budget-form-title" aria-describedby="budget-note">
+            <h3 id="budget-form-title">Enter cash costs in Australian dollars</h3>
+            <p id="budget-note">Use a consistent GST basis. Blank cost fields count as zero. The estimate stays in this browser and uses the same annual amounts in current dollars.</p>
+            <label class="grants-input grants-years" for="budget-years">
+              <span>Years of service to fund</span>
+              <input id="budget-years" type="number" min="1" step="1" inputmode="numeric" required>
+            </label>
+            <fieldset>
+              <legend>Upfront capital and launch costs</legend>
+              <label class="grants-input" for="budget-displays">
+                <span>Venue and ferry screens <small>Add quotes for displays or players, fittings, safe installation and access checks at each agreed site.</small></span>
+                <input id="budget-displays" class="grants-money" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0">
+              </label>
+              <label class="grants-input" for="budget-kiosks">
+                <span>Battery-backed touchscreens <small>Add per-site quotes for enclosures, devices, batteries, approved electrical work and offline tests.</small></span>
+                <input id="budget-kiosks" class="grants-money" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0">
+              </label>
+              <label class="grants-input" for="budget-launch">
+                <span>Shared setup and opening <small>Add software, accessibility checks, training materials, signs and launch-only staffing or logistics.</small></span>
+                <input id="budget-launch" class="grants-money" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0">
+              </label>
+            </fieldset>
+            <fieldset>
+              <legend>Annual operating costs and reserves</legend>
+              <label class="grants-input" for="budget-staff">
+                <span>Staffing and governance <small>Price rostered moderation, captioning, training and support hours at the full cost to the employer, including relief. Add oversight, administration and reporting.</small></span>
+                <input id="budget-staff" class="grants-money" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0">
+              </label>
+              <label class="grants-input" for="budget-running">
+                <span>Running and maintaining the network <small>Add hosting, connectivity, electricity, insurance, routine servicing, site visits and local technical support.</small></span>
+                <input id="budget-running" class="grants-money" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0">
+              </label>
+              <label class="grants-input" for="budget-renewal">
+                <span>Equipment renewal reserve <small>For each asset, divide its quoted replacement cost by its expected service life in years. Add those annual amounts for screens, players and batteries.</small></span>
+                <input id="budget-renewal" class="grants-money" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0">
+              </label>
+            </fieldset>
+            <button class="button button-primary" id="estimate-budget" type="submit" disabled>Estimate funding needed</button>
+            <p class="grants-model-status" id="budget-status" role="status"></p>
+            <noscript><p>Add the upfront costs to the annual operating and reserve amounts multiplied by the agreed years of service.</p></noscript>
+          </form>
+          <div class="grants-budget-ideas">
+            <section class="grants-budget-summary" aria-labelledby="budget-summary-title">
+              <h3 id="budget-summary-title">Total funding to plan for</h3>
+              <p id="budget-placeholder">Enter costs and a planning period to see the split between installation, running costs and renewal.</p>
+              <div id="budget-results" hidden>
+                <p id="budget-total" class="grants-budget-total"></p>
+                <p id="budget-period"></p>
+                <div class="grants-budget-bar" aria-hidden="true"><span id="budget-capital-bar"></span><span id="budget-operating-bar"></span><span id="budget-reserve-bar"></span></div>
+                <dl>
+                  <div><dt>Upfront capital and launch</dt><dd id="budget-capital-total"></dd></div>
+                  <div><dt>Operating over the period</dt><dd id="budget-operating-total"></dd></div>
+                  <div><dt>Renewal reserve over the period</dt><dd id="budget-reserve-total"></dd></div>
+                  <div><dt>Recurring amount per year</dt><dd id="budget-annual-total"></dd></div>
+                </dl>
+              </div>
+            </section>
             <article>
-              <h3>In-kind contributions</h3>
-              <p>Illustrative total of $1,300 for an existing TV ($400), workshop space ($600) and host support ($300). Confirm the contribution in writing and use the funder’s valuation rules.</p>
+              <h3>Keep a quote and funding register</h3>
+              <p>Record quantities, site, quote date, GST, the amount confirmed and the funding gap. Track donated screens, meeting space or host time separately. Only count contributions once and use the funder’s rules for their value.</p>
             </article>
             <article>
-              <h3>After the trial</h3>
-              <p>Allow for editing time, internet and power, hosting or backup, and repairs. For example, four hours of review a month at $60 an hour is $2,880 a year before other costs. Ask the host how this would be covered.</p>
+              <h3>Budget for wear and changing costs</h3>
+              <p>Decide who holds and replenishes the renewal reserve. Where a replacement is paid from it, keep the same cost out of other lines. Prepare a year-by-year cashflow for inflation, major replacements and costs that vary by season.</p>
             </article>
           </div>
         </div>
       </section>
 
       <section class="grants-section" id="funding" aria-labelledby="funding-title">
-        <h2 id="funding-title">Match the work to the funder</h2>
-        <p class="grants-lede">Check the current guidelines, applicant rules, eligible dates and contributions before you apply or commit to spending. If an expense has several potential funding sources, disclose the other applications and allocate each cost once.</p>
+        <h2 id="funding-title">Fund the network and keep it running</h2>
+        <p class="grants-lede">Take the whole business case to prospective funders. Show the installation costs, annual service costs and renewal plan separately, with signed host commitments and the part each funding source would cover. Confirm which costs, dates and applicants each funder accepts before spending, and allocate each cost once.</p>
+        <p class="grants-lede">A serious approach for the frontier rack would include site feasibility, grid and cooling capacity, network and security requirements, supplier quotes, proposed community and modelling workloads, legal ownership and committed ongoing support. Ask state and Commonwealth agencies which investment pathways are appropriate for that case. The options below are leads to check for defined parts of the local service.</p>
+        <div class="grants-infrastructure">
+          <article>
+            <h3>Discuss a build-ready infrastructure package</h3>
+            <p>Ask Redland City Council’s grants team whether a package of permanent, accessible installations could fit a current programme. Bring site approvals, quotes, the asset owner’s responsibilities and confirmed contributions. Check which equipment, maintenance and other ongoing costs would need separate funding.</p>
+            <div class="grants-local-links">
+              <a href="https://www.redland.qld.gov.au/Grants-and-sponsorship/Build-and-Thrive-Grant">Council Build and Thrive Grant</a>
+              <a href="https://www.redland.qld.gov.au/Grants-and-sponsorship/Grant-workshops-and-assistance">Council grants advice</a>
+            </div>
+          </article>
+          <article>
+            <h3>Look for infrastructure and operating partners</h3>
+            <p>Check state and Commonwealth listings for an eligible digital access, community infrastructure or resilience package. Ask prospective operators and hosts what they can commit to ongoing staff, venue and equipment costs, and record the gap once those offers are confirmed in writing.</p>
+            <div class="grants-local-links">
+              <a href="https://www.qld.gov.au/community/community-organisations-volunteering/funding-grants">Queensland funding and grants</a>
+              <a href="https://www.finance.gov.au/individuals/find-grant-grantconnect">Australian Government GrantConnect</a>
+            </div>
+          </article>
+        </div>
         <div class="grants-funders">
           <article>
             <h3>Community Support Grant</h3>
-            <p>Ask Redland City Council if an eligible local organisation could apply for the supervised workshop and an accessible community information trial. Check expense-by-expense eligibility with Council, especially any equipment or installation.</p>
+            <p>Ask whether a defined programme of supervised media training or accessible community information could be eligible. Check which equipment and installation costs Council would consider.</p>
             <a href="https://www.redland.qld.gov.au/Grants-and-sponsorship/Community-Support-Grant">Council Community Support Grant</a>
           </article>
           <article>
             <h3>Gambling Community Benefit Fund</h3>
-            <p>Check whether an eligible Queensland community organisation can request one-off equipment support. Have the host describe who would use the equipment, where it would be kept and who would maintain it.</p>
+            <p>Check whether the applicant could seek equipment support. Identify who would use each item, where it would be kept and who would maintain it.</p>
             <a href="https://www.justice.qld.gov.au/initiatives/community-grants">Queensland Government fund guidelines</a>
           </article>
           <article>
@@ -166,8 +248,8 @@
           <div class="grants-lab-heading">
             <img src="./assets/icons/grants.webp" width="64" height="64" alt="">
             <div>
-              <h3 id="grants-lab-title">Research the pilot with Stradbroke Grants Lab</h3>
-              <p>Start with one venue, named people and quoted costs. Use the Lab to assemble evidence and check possible funding against that scope.</p>
+              <h3 id="grants-lab-title">Research the network with Stradbroke Grants Lab</h3>
+              <p>Use the Lab to assemble the applicant record and check which parts of the island proposal could match a funding programme.</p>
             </div>
           </div>
           <ol>
@@ -179,7 +261,7 @@
             </li>
             <li>
               <strong>Compare the project with possible grants.</strong>
-              <p>The Lab records the Noticeboard Network as a prototype. It identifies possible support for a small digital improvement and flags that the applicant, scope and eligibility need to be confirmed.</p>
+              <p>The Lab’s project record documents the prototype and earlier funding research. Use it as background, then check the current guidelines against the larger installation and service now proposed.</p>
               <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/ledger-projects.html#ledger-straddie-noticeboard-network">Noticeboard project profile</a>
               <a href="https://auraofintelligence.github.io/stradbroke-grants-lab/grant-matches.html#project-straddie-noticeboard-network">Noticeboard funding research</a>
             </li>
@@ -195,21 +277,21 @@
 
       <section class="grants-section grants-results" id="results" aria-labelledby="results-title">
         <div>
-          <h2 id="results-title">Decide if it should continue</h2>
-          <p class="grants-lede">Agree on targets with the host before the trial. Keep aggregate counts and first-hand feedback that can be recorded with permission.</p>
+          <h2 id="results-title">Show how the island uses the network</h2>
+          <p class="grants-lede">Agree on measures with hosts, publishers and funders after scope is confirmed. Record useful totals and collect first-hand feedback with permission.</p>
           <ul>
-            <li><strong>Participation.</strong> Aim for six to ten learners and record how many finish a captioned, source-checked practice item.</li>
-            <li><strong>Publishing.</strong> Aim to review and display 12 notices. Track time from draft to publication and whether expired items come down on time.</li>
-            <li><strong>Access.</strong> Ask visitors whether they found an update they needed and could read it easily. Test the screen’s behaviour when the internet drops out.</li>
-            <li><strong>Ongoing work.</strong> Record actual costs and weekly review time. Ask the host to decide who would own the screen and run the board after the pilot.</li>
+            <li><strong>Coverage and access.</strong> Record which places and venue types a resident or visitor can use. Ask whether they found, read and understood what they needed.</li>
+            <li><strong>Publishing.</strong> Measure turnaround, whether corrections reached each screen and whether expired notices came down on time.</li>
+            <li><strong>Training and work.</strong> Record how many participants produce an accessible, source-checked item and who can hand the work over. Record paid work and voluntary help separately.</li>
+            <li><strong>Service and renewal.</strong> Record faults, restoration time, tested offline and battery performance, actual costs and whether reserves cover the planned replacements.</li>
           </ul>
         </div>
         <aside class="grants-draft" aria-labelledby="draft-title">
           <h3 id="draft-title">Sample project wording</h3>
           <blockquote>
-            <p>We propose an eight-week trial of a shared community noticeboard on Minjerribah. An agreed host venue would display reviewed notices on an existing TV. A supervised workshop would help residents produce short, accessible updates. We would measure participation, how easily people can find current notices and what it takes for the host to keep the board running.</p>
+            <p>We seek funding to install and sustain a community noticeboard network across Minjerribah. Reviewed notices would reach residents and visitors on phones, TVs at participating venues and ferry locations, and battery-backed touchscreens at agreed sites. A proposed school-holiday launch would introduce a year-round service with supervised media training, paid operations, equipment maintenance and a replacement reserve. We would report public use, reliability and the costs of keeping the network available.</p>
           </blockquote>
-          <p>Add the confirmed applicant, host, location and local evidence before reusing this wording in an application.</p>
+          <p>Add the confirmed applicant and operator, permissions, costed sites, funding request and evidence of local benefit before using this wording.</p>
         </aside>
       </section>
     </div>
@@ -217,7 +299,7 @@
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div><a href="./">Straddie Noticeboard Network</a><p>Local demonstration of a proposed Minjerribah network.</p></div>
+      <div><a href="./">Straddie Noticeboard Network</a><p>Funding and stewardship for a proposed permanent community network on Minjerribah.</p></div>
       <nav class="footer-links" aria-label="Related pages">
         <a href="./businesses.html">For local businesses</a>
         <a href="./training.html">Media training</a>

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Try a Dunwich event handover and see how Minjerribah could develop visitor information and volunteer operations towards Brisbane 2032.">
+  <meta name="theme-color" content="#111526">
+  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./brand.css">
+  <link rel="stylesheet" href="./visitor-volunteer.css">
+  <script type="module" src="./visitor-volunteer.js"></script>
+  <title>Visitor and volunteer operations | Straddie Noticeboard Network</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./opportunities.html">Work &amp; volunteering</a>
+        <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
+        <details class="section-menu">
+          <summary>Network guides</summary>
+          <div class="nav-panel">
+            <a href="./pilot.html">Island infrastructure plan</a>
+            <a href="./board.html?mode=pilot">Pilot noticeboard</a>
+            <a href="./submit.html">Draft a notice</a>
+            <a href="./board.html">Practice noticeboard</a>
+            <a href="./how-it-works.html">Publishing &amp; moderation</a>
+            <a href="./training.html">Media training</a>
+            <a href="./businesses.html">Business onboarding</a>
+            <a href="./grants.html">Funding &amp; maintenance</a>
+            <a href="./setup.html">Screen setup</a>
+            <a href="./resilience.html">Power &amp; outages</a>
+            <a href="./visitor-volunteer.html" aria-current="page">Visitor &amp; volunteer operations</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="visitor-hero" aria-labelledby="visitor-title">
+      <div class="shell visitor-hero-grid">
+        <div>
+          <p class="eyebrow">Visitor and volunteer operations</p>
+          <h1 id="visitor-title">From Straddie towards Brisbane 2032.</h1>
+          <p>Build the ability to welcome visitors, support volunteers and keep local information accurate on Minjerribah. What works at ordinary island events could give organisers elsewhere in Queensland a tested model to consider.</p>
+          <a class="button button-accent" href="#handover">Try the Dunwich handover</a>
+        </div>
+        <figure>
+          <img src="./assets/dunwich-bay.webp" alt="Looking across Moreton Bay from Dunwich" width="960" height="640" fetchpriority="high">
+          <figcaption><a href="./board.html#credits">Dunwich image credit</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="shell visitor-body">
+      <section class="visitor-section" id="handover" aria-labelledby="handover-title">
+        <div class="visitor-heading">
+          <h2 id="handover-title">The event time changes</h2>
+          <p>This fictional Dunwich film workshop moves to a later start and a covered entrance. Disconnect the example screen before applying the correction, then reconnect it and confirm what’s actually visible.</p>
+        </div>
+        <div class="visitor-demo-controls" id="handover-controls" role="group" aria-label="Fictional handover controls" hidden>
+          <button class="button button-primary" id="handover-correct" type="button">Apply example correction</button>
+          <button class="button button-secondary" id="handover-connection" type="button">Disconnect example screen</button>
+          <button class="button button-secondary" id="handover-confirm" type="button">Confirm screen copy</button>
+          <button class="button button-secondary" id="handover-reset" type="button">Reset example</button>
+        </div>
+        <p class="visitor-status" id="handover-status" role="status">Example screen online. Host confirmation is due.</p>
+
+        <div class="visitor-demo-grid">
+          <div class="visitor-display" id="handover-display">
+            <div class="visitor-display-head">
+              <img src="./assets/icons/television.webp" alt="" width="51" height="51">
+              <div><p class="eyebrow">What visitors see</p><p class="visitor-display-status" id="display-version">Original edition</p></div>
+            </div>
+            <h3>Dunwich community film workshop</h3>
+            <p class="visitor-time" id="display-time">10:00 am AEST</p>
+            <p id="display-details">Meet at the courtyard entrance. A volunteer can direct visitors to the step-free entrance and seating.</p>
+            <dl>
+              <dt>Source</dt><dd><a href="#source-versions">Example workshop organiser</a></dd>
+              <dt>Issued and checked</dt><dd id="display-checked">8:30 am on the demonstration day</dd>
+              <dt>Show until</dt><dd>1:00 pm AEST on the demonstration day</dd>
+            </dl>
+            <p class="visitor-offline" id="display-offline" hidden>Saved copy. The current time or meeting point may have changed. Ask the organiser before travelling.</p>
+          </div>
+
+          <div class="visitor-roles">
+            <h3>Choose a role</h3>
+            <div class="visitor-role-tabs" role="group" aria-label="Handover role" id="handover-roles" hidden>
+              <button class="button button-secondary" type="button" data-handover-role="coordinator" aria-pressed="true" aria-controls="role-coordinator">Volunteer coordinator</button>
+              <button class="button button-secondary" type="button" data-handover-role="visitor" aria-pressed="false" aria-controls="role-visitor">Visitor or operator</button>
+              <button class="button button-secondary" type="button" data-handover-role="host" aria-pressed="false" aria-controls="role-host">Screen host</button>
+            </div>
+            <article class="visitor-role" id="role-coordinator">
+              <img src="./assets/icons/review.webp" alt="" width="52" height="52">
+              <div>
+                <h4>Volunteer coordinator</h4>
+                <p>Arrange an event lead, a welcome volunteer and cover for breaks. Confirm who has agreed to each role, who can take over and what support they need.</p>
+                <p>Keep names, contacts and changes to shifts in the private roster. Paid work has its own agreed pay and conditions. Record verified voluntary elapsed time once, with permission, in a separate C-Hour record.</p>
+                <p class="visitor-next"><strong>Next task</strong> <span id="next-coordinator">Check the meeting point with the organiser and confirm who will welcome visitors.</span></p>
+              </div>
+            </article>
+            <article class="visitor-role" id="role-visitor">
+              <img src="./assets/icons/ferry.webp" alt="" width="52" height="52">
+              <div>
+                <h4>Visitor or service operator</h4>
+                <p>A visitor needs the current time, a clear meeting point and a way to check step-free access. A ferry, venue or activity operator remains responsible for its own service changes, bookings and terms.</p>
+                <p class="visitor-next"><strong>Next task</strong> <span id="next-visitor">Read the organiser’s source and check the route to the arrival point.</span></p>
+              </div>
+            </article>
+            <article class="visitor-role" id="role-host">
+              <img src="./assets/icons/kiosk.webp" alt="" width="52" height="52">
+              <div>
+                <h4>Screen host</h4>
+                <p>Check the approved wording on the actual screen. If the connection fails, make the age of the copy visible and use the venue’s agreed print or staff handover route.</p>
+                <p class="visitor-next"><strong>Next task</strong> <span id="next-host">Confirm the original edition is visible at the venue.</span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <details class="visitor-source" id="source-versions">
+          <summary>Read the two fictional organiser editions</summary>
+          <dl>
+            <dt>Original · Issued and checked 8:30 am AEST</dt><dd>10:00 am start. Meet at the courtyard entrance. A volunteer can direct visitors to the step-free entrance and seating.</dd>
+            <dt>Correction · Issued and checked 9:15 am AEST</dt><dd>11:30 am start. Meet at the covered entrance. The organiser has checked the step-free route and moved the welcome point and seating there.</dd>
+          </dl>
+          <p>Both editions refer to the same fictional event and expire at 1:00 pm AEST on the demonstration day.</p>
+        </details>
+      </section>
+
+      <section class="visitor-section" id="evidence" aria-labelledby="evidence-title">
+        <div class="visitor-heading">
+          <h2 id="evidence-title">Build evidence on the island</h2>
+          <p>Try the process with willing local hosts and supervised learners. Use the results to decide what can be maintained as part of the island network and what might be worth proposing to Brisbane 2032 organisers.</p>
+        </div>
+        <div class="visitor-evidence">
+          <article>
+            <img src="./assets/icons/signal.webp" alt="" width="57" height="57">
+            <h3>Timely information</h3>
+            <p>Record the minutes from an approved correction to visible confirmation at each venue. Count stale copies missed in the outage drill and record the time to reconcile after reconnection.</p>
+          </article>
+          <article>
+            <img src="./assets/icons/phone.webp" alt="" width="57" height="57">
+            <h3>A workable arrival</h3>
+            <p>Test how many first-time visitors can find the current time, a usable entrance and a human contact. Include people who use different formats or access routes and use their feedback with permission.</p>
+          </article>
+          <article>
+            <img src="./assets/icons/venue.webp" alt="" width="57" height="57">
+            <h3>Staffing that can last</h3>
+            <p>Track agreed shifts filled, whether relief workers can take over, time spent reviewing and the cost of operating a venue display. Report totals and lessons without publishing individual rosters or C-Hour accounts.</p>
+          </article>
+        </div>
+        <div class="visitor-proposal">
+          <h3>Take a tested local offer to organisers</h3>
+          <p>Bring an anonymised handover example, the evidence, an operating budget and the agreements made with participating hosts. Local events give the network a purpose before and beyond 2032. The Brisbane 2032 Organising Committee is responsible for Games volunteer recruitment. Any Games role or partnership would go through its applicable process.</p>
+          <a href="https://www.qld.gov.au/government/strategies-initiatives/initiatives/brisbane2032/brisbane-2032-organising-committee">Queensland Government on the Organising Committee’s responsibilities</a>
+        </div>
+      </section>
+
+      <section class="visitor-section visitor-links" aria-labelledby="visitor-links-title">
+        <h2 id="visitor-links-title">Follow the working proposals</h2>
+        <ul>
+          <li><a href="https://auraofintelligence.github.io/ready-set-co-op-cultural-intelligence-node/">Ready SETCO Cultural Intelligence Node</a><p>Locally held knowledge and computing under agreed community arrangements.</p></li>
+          <li><a href="https://auraofintelligence.github.io/aura-tourism/sources.html">Aura Tourism sources and original document</a><p>Travel, accessible visits, clear operator responsibilities and the Brisbane 2032 horizon. <a href="https://auraofintelligence.github.io/aura-tourism/sources/originals/Aura_of_Intelligence_Tourism_and_Domestic_Travel.docx">Download the public Word edition</a>.</p></li>
+          <li><a href="./opportunities.html">Work, volunteering and C-Hours</a><p>Local opportunities and a private worksheet for verified contributions.</p></li>
+          <li><a href="./resilience.html">Screens and outages</a><p>Practise keeping public information useful through disruption.</p></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><a href="./">Straddie Noticeboard Network</a><p>We acknowledge the Quandamooka People as the Traditional Custodians of Minjerribah and pay respect to Elders past and present.</p></div>
+      <nav class="footer-links" aria-label="Related pages">
+        <a href="./training.html">Media training</a>
+        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./pilot.html">The island pilot</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

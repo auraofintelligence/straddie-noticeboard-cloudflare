@@ -30,7 +30,7 @@ function buildPlan() {
   const value = name => fields[`business-${name}`].value.trim();
   const lines = [
     'STRADDIE NOTICEBOARD NETWORK',
-    'Proposed business pilot — plan for internal review',
+    'Proposed island-wide school-holiday launch and ongoing service plan for internal review',
     '',
     `Business or venue: ${value('name')}`,
     `Participation: ${route.value}`,
@@ -49,7 +49,7 @@ function buildPlan() {
       `First public source: ${value('source') || 'To be confirmed'}`,
       '[ ] Draft one notice with a public source, timing and take-down date.',
       '[ ] Confirm permission, facts, public wording and expiry with the named reviewer.',
-      '[ ] Decide who records and sends a corrected version to each host.',
+      '[ ] Decide who sends corrections to each recipient and checks acknowledgement across venues.',
       ''
     );
   }
@@ -59,15 +59,16 @@ function buildPlan() {
       'SCREEN HOSTING',
       `Screen to test: ${value('screen')}`,
       `Fallback to practise: ${value('fallback')}`,
-      '[ ] Confirm venue approval, screen placement, power, costs and who can pause it.',
-      '[ ] Test that people can read and use the display in the intended location.',
+      '[ ] Confirm venue approval, hardware ownership, accessible screen placement, power and who can pause it.',
+      '[ ] Test the display from the intended viewing positions. Confirm the roster and holiday backup.',
       '[ ] Rehearse a correction and expiry. Check the actual screen and record the result.',
       '[ ] Record the printed or saved fallback and agree who keeps it current.',
+      '[ ] Assign ongoing maintenance and budget for repairs, replacement and support.',
       ''
     );
   }
 
-  lines.push('Review with the team before committing to a trial.', '');
+  lines.push('Review with the team before confirming this venue’s participation dates and ongoing responsibilities.', '');
   return lines.join('\n');
 }
 

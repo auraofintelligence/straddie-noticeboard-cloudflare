@@ -1,0 +1,40 @@
+.draft-outlets {
+  min-inline-size: 0;
+  margin: .15rem 0 0;
+  padding: .72rem .9rem .85rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: var(--mist);
+}
+
+.draft-outlets legend {
+  padding-inline: .25rem;
+  font-size: .95rem;
+  font-weight: 740;
+}
+
+.draft-outlets .tool-hint { margin-top: 0; }
+
+.draft-outlet-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .8rem;
+  margin-top: .35rem;
+}
+
+.draft-outlet-options label {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: .42rem;
+  cursor: pointer;
+  font-size: .93rem;
+  font-weight: 650;
+}
+
+.draft-outlet-options input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0;
+  accent-color: var(--teal);
+}

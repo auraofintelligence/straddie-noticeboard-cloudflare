@@ -1,4 +1,4 @@
-import { notices, places } from './notices.js';
+import { notices, noticesForScreen, places } from './notices.js';
 import { formatPilotTime, watchPilotFeed } from './pilot-feed.js';
 
 const placeSelect = document.querySelector('#screen-place');
@@ -60,6 +60,8 @@ function render() {
   touchNext.disabled = next.disabled;
   play.disabled = filtered.length < 2;
   if (isPilot) badge.textContent = notice ? 'Reviewed pilot notice' : 'Reviewed pilot feed';
+  const mapPlace = notice?.place || placeSelect.value;
+  island.href = mapPlace ? `./island.html?${new URLSearchParams({ place: mapPlace })}` : './island.html';
 
   if (!notice) {
     if (feedState === 'loading') empty.textContent = 'Checking the reviewed pilot feed…';
@@ -85,7 +87,6 @@ function render() {
     credit.textContent = notice.credits || '';
     credit.hidden = !notice.credits;
   }
-  island.href = `./island.html?${new URLSearchParams({ place: notice.place })}`;
 }
 
 function move(step) {
@@ -129,9 +130,8 @@ function updateAddress() {
   history.replaceState(null, '', address);
 }
 
-function updatePlace(initialNoticeId, pause = true) {
-  const place = placeSelect.value;
-  filtered = displayNotices.filter(notice => !place || notice.place === place);
+function updateSelection(initialNoticeId, pause = true) {
+  filtered = noticesForScreen(displayNotices, placeSelect.value, formatSelect.value);
   if (pause || filtered.length < 2) pauseRotation();
   index = Math.max(0, filtered.findIndex(notice => notice.id === initialNoticeId));
   render();
@@ -174,12 +174,12 @@ if (address.get('format') === 'portrait') formatSelect.value = 'portrait';
 placeSelect.disabled = false;
 formatSelect.disabled = false;
 outage.disabled = isPilot;
-updatePlace(requestedNotice);
+updateSelection(requestedNotice);
 updateFormat();
 if (isPilot) {
   document.title = 'Pilot screen | Straddie Noticeboard Network';
   document.querySelector('#screen-page-title').textContent = 'Pilot screen';
-  document.querySelector('#screen-page-description').textContent = 'Show current reviewed notices from the Minjerribah pilot feed on a venue TV or touchscreen.';
+  document.querySelector('#screen-page-description').textContent = 'Choose a venue TV or touchscreen view and filter by place. Each view shows the current notices approved for that outlet.';
   const boardLink = document.querySelector('#screen-board-link');
   boardLink.href = './board.html?mode=pilot';
   boardLink.textContent = 'Back to the reviewed pilot board';
@@ -188,19 +188,21 @@ if (isPilot) {
   document.querySelector('#screen-pilot-guide').hidden = false;
   status.textContent = 'This screen refreshes from the reviewed pilot feed.';
   watchPilotFeed((state, currentNotices) => {
-    const activeNotice = filtered[index]?.id || requestedNotice;
+    const activeNotice = filtered[index]?.id || new URLSearchParams(window.location.search).get('notice');
     feedState = state;
     displayNotices = currentNotices;
-    updatePlace(activeNotice, false);
+    updateSelection(activeNotice, false);
   });
 } else if (address.get('outage') === '1') setOutageDrill(true);
 
 placeSelect.addEventListener('change', () => {
-  updatePlace();
+  updateSelection();
   updateAddress();
 });
 formatSelect.addEventListener('change', () => {
+  const activeNotice = filtered[index]?.id;
   updateFormat();
+  updateSelection(activeNotice, false);
   updateAddress();
 });
 outage.addEventListener('click', () => {
