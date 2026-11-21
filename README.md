@@ -1,14 +1,16 @@
 # Straddie Noticeboard Network
 
-A local pilot for a shared noticeboard across Dunwich, Amity Point, Point Lookout and the wider Minjerribah community. It takes the public notice, review and screen ideas from the [original Straddie Noticeboard Network](https://github.com/auraofintelligence/straddie-noticeboard-network) and brings them into a resident-facing board.
+A landing page and prototype for a proposed community noticeboard network on Minjerribah. One reviewed notice could appear on the web, clubhouse screens and public kiosks. Ready SETCO is the proposed local co-operative that would convene publishers and screen hosts and moderate the shared board. A live pilot still needs participating groups and venues, a shared review process and a way to publish to connected screens.
 
 ## Run locally
 
 With Python 3 and Node.js available, run `npm start` from this folder and open [localhost:4185](http://localhost:4185/). Run `npm run check` to check the JavaScript modules. The site has no install step or hosted service dependencies.
 
-- The board filters sample notices by place and category. The project directory includes the island, media, opportunity, civic and digital projects that informed the site.
-- The draft editor keeps the active draft in this browser and exports a review-only Markdown file. Share that file with the responsible publisher outside the site.
-- The screen preview can rotate the sample notices or show them one at a time. Use `screen.html?place=Dunwich&format=portrait` for a Dunwich portrait preview.
+- The board filters sample notices by place and category. The separate [project references page](public/network.html) lists work that informed the proposal.
+- The [setup guide](public/setup.html) covers TV players, independent power, reviewing notices, Council coordination, outage exercises and a first pilot.
+- The draft editor keeps the active draft in this browser and exports a review-only Markdown file. It can also build a prompt to copy into an AI tool for screen variants. Share the draft with the responsible publisher outside the site and check all adaptations.
+- The screen preview can rotate the sample notices or show them one at a time. The portrait preview offers touch controls and a link to the matching town map. Use `screen.html?place=Dunwich&format=portrait&outage=1` to try text fallback with the sample set.
+- The [maps and weather page](public/island.html) helps readers distinguish forecasts, observations and radar and links to the relevant official information, including Council's disaster dashboard. The drill simulates text fallback in the demo. Live publishing, an installed offline pack and device testing belong to a future pilot.
 
 ## Cloudflare
 
@@ -25,3 +27,18 @@ Based on straddie-noticeboard-network by Luke Nathan Hayes / Strange But True / 
 - [Dunwich aerial](https://github.com/auraofintelligence/ballow-road-sand-screen-hub/blob/main/assets/img/site-aerial-west-northwest-bay.webp) from Ballow Road Sand and Screen Hub, under the [project licence](https://github.com/auraofintelligence/ballow-road-sand-screen-hub/blob/main/LICENCE.md).
 
 Photos are compressed or cropped for display.
+
+The ferry-stop touchscreen is an AI-generated concept image showing a possible installation. The AI-generated logo and multi-size favicon reuse the four accents from the Ready SETCO favicon on midnight navy.
+
+<details>
+<summary>Image generation briefs</summary>
+
+**Touchscreen concept**
+
+Use case: product mockup, photorealistic documentary-style concept rendering for the Straddie Noticeboard Network. Create a horizontal 3:2 photograph-like proposal illustration of a freestanding outdoor public information touchscreen near a simple unbranded subtropical island ferry shelter in Moreton Bay, Queensland. Three-quarter eye-level view, kiosk in central foreground with generous room around it, quiet bay and low coastal vegetation behind, daylight after a passing shower, warm natural sunlight, realistic casual community infrastructure rather than a futuristic object. The kiosk is matte deep teal with a sheltered recessed portrait display at an accessible height, subtle anti-glare glass and broad base. Screen depicts a restrained warm-white and green interface with three large touch targets and a small abstract island map; omit readable words to avoid misleading display content. Soft teal water and sand palette. No people, brand logos, agency insignia, watermarks, emergency warnings, wires, electrical diagrams or assertions that this is an installed device. Make it a polished, believable rendering of a possible local installation, not a depiction of an identifiable venue.
+
+**Logo and favicon**
+
+Use case: logo-brand. Create a single iconic emblem for Straddie Noticeboard Network, a proposed community noticeboard on a coastal Australian island. Use the four Ready SETCO favicon accent colours, each clearly distinct: vivid purple #8f4dff, bright sky blue #5fd8ff, warm yellow #ffd166, luminous green #62f6a5, against midnight navy #101020. Draw a broad, slightly rounded purple upright NOTICE CARD silhouette (unlike a circle or wave emblem), a large yellow drawing-pin dot in its upper third, and TWO sweeping chunky lines only, a sky-blue line over a green line in its lower half, suggesting a notice’s text and the shoreline. Make it simple and graphic, a strong recognizable silhouette legible as a 16px favicon or 40px header logo. Center the shape on a deep midnight navy rounded square tile that fills 94% of the canvas, with genuinely transparent corners outside. Exact aspect ratio square, single composition, crisp bold solid areas, no lettering or initials, no shadows, decoration, outlines, textures, watermark, backdrop, scenes or mockup. Make the four bright colour areas large enough to survive downsampling.
+
+</details>

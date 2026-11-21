@@ -2,7 +2,7 @@ export const projects = [
   {
     name: 'Ready SETCO',
     url: 'https://ready-setco.auraofintelligence.workers.dev/',
-    description: 'Community participation, training and local project development.',
+    description: 'A proposed cooperative for local training and participation. Its proposed noticeboard role is to convene publishers and moderate notices.',
     group: 'Island life',
   },
   {

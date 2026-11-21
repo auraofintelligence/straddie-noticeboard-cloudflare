@@ -168,7 +168,7 @@
 
 .screen-display {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr;
   gap: 1rem;
   width: 100%;
   min-height: 21rem;
@@ -185,6 +185,13 @@
   margin-inline: auto;
   padding: clamp(1.1rem, 5cqw, 1.75rem);
 }
+
+.screen-display.is-outage { background: #0b2d33; }
+.screen-cache { color: #f6dfac; border-top: 1px solid #f6dfac80; padding-top: .65rem; font-size: .9rem; }
+.screen-touch { display: flex; flex-wrap: wrap; gap: .5rem; }
+.screen-touch a, .screen-touch button { flex: 1 0 auto; }
+.screen-controls button[aria-pressed="true"] { background: #f9d681; border-color: #ad8434; }
+.screen-touch :focus-visible { outline-color: #f9d681; }
 
 .screen-signature {
   display: flex;

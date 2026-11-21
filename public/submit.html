@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Prepare a public notice draft for Straddie Noticeboard Network.">
-  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <meta name="description" content="Prepare a notice draft for review in the Straddie Noticeboard Network prototype.">
+  <link rel="icon" href="./favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./tools.css">
   <script type="module" src="./submit.js"></script>
@@ -15,23 +15,23 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./">
-        <img class="brand-icon" src="./assets/icon.svg" alt="" width="36" height="36">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png" alt="" width="36" height="36">
         <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="./#board">Noticeboard</a>
-        <a href="./#network">Network</a>
-        <a href="./screen.html">Screen preview</a>
-        <a class="button button-primary" href="./submit.html" aria-current="page">Draft a notice</a>
+        <a href="./#how-it-works">How it works</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./island.html">Maps &amp; weather</a>
+        <a class="button button-primary" href="./submit.html" aria-current="page">Try the draft tool</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="shell tool-main">
     <div class="tool-heading">
-      <a class="tool-back" href="./#board">Back to the noticeboard</a>
+      <a class="tool-back" href="./#board">Back to the sample board</a>
       <h1>Draft a notice</h1>
-      <p>Prepare an event, update or call-out for the island. Download a Markdown draft to share with the person who can approve it for publication.</p>
+      <p>Prepare an event, update or call-out for review. Export the draft or copy a prompt to help adapt it for phones, TVs and kiosks.</p>
     </div>
 
     <div class="draft-layout">
@@ -68,14 +68,14 @@
           <label class="tool-field field-wide">What should people know?
             <textarea id="summary" rows="4" required maxlength="600" aria-describedby="summary-hint"></textarea>
           </label>
-          <p class="tool-hint field-wide" id="summary-hint">Keep it to 600 characters. Include practical details people can act on and use public contact information.</p>
+          <p class="tool-hint field-wide" id="summary-hint">Keep it to 600 characters. Include practical details people can act on and leave out private contact details.</p>
           <label class="tool-field field-wide">Public source link
             <input id="source" type="url" inputmode="url" placeholder="https://" required maxlength="2048" aria-describedby="source-hint">
           </label>
           <p class="tool-hint field-wide" id="source-hint">Use the publisher’s website, official update or public event page.</p>
         </div>
         <div class="tool-actions">
-          <button class="button button-primary" id="generate-draft" type="button" disabled>Create Markdown draft</button>
+          <button class="button button-primary" id="generate-draft" type="button" disabled>Prepare draft</button>
           <p class="tool-hint" id="storage-status" role="status"></p>
         </div>
         <noscript><p>Enable JavaScript to prepare and download a draft.</p></noscript>
@@ -83,7 +83,7 @@
 
       <section class="tool-panel draft-export" aria-labelledby="export-title">
         <h2 id="export-title">Review and export</h2>
-        <p class="tool-hint">The form runs on this device. Share the draft with the publisher so they can confirm the details, permissions and take-down time.</p>
+        <p class="tool-hint">The editor keeps your draft in this browser. Download the Markdown and send it to a reviewer who can confirm the details, permissions and take-down time.</p>
         <label class="tool-field" for="draft-preview">Markdown preview</label>
         <textarea class="draft-preview" id="draft-preview" rows="11" readonly placeholder="Your Markdown draft will appear here."></textarea>
         <div class="tool-actions">
@@ -91,6 +91,16 @@
           <button class="button button-secondary" id="copy-draft" type="button" disabled>Copy Markdown</button>
         </div>
         <p class="tool-hint" id="draft-status" role="status"></p>
+        <details>
+          <summary>Use AI to adapt this notice</summary>
+          <p class="tool-hint" id="ai-hint">Prepare the draft first. Before pasting this prompt into an AI tool, check that the notice details and source are safe to share. Have a person check the suggested wording before anyone publishes it.</p>
+          <label class="tool-field" for="ai-preview">AI drafting prompt</label>
+          <textarea class="draft-preview" id="ai-preview" rows="7" readonly aria-describedby="ai-hint" placeholder="Your prompt will appear here when you prepare the draft."></textarea>
+          <div class="tool-actions">
+            <button class="button button-secondary" id="copy-ai-prompt" type="button" disabled>Copy AI prompt</button>
+          </div>
+          <p class="tool-hint" id="ai-status" role="status"></p>
+        </details>
       </section>
     </div>
   </main>

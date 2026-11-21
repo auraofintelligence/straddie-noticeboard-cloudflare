@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A local noticeboard for Dunwich, Amity Point, Point Lookout and the wider Minjerribah community.">
-  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <meta name="description" content="A proposal for a shared community noticeboard on Minjerribah. See how one local notice could reach readers online, on clubhouse screens and at public kiosks.">
+  <link rel="icon" href="./favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <script type="module" src="./board.js"></script>
   <title>Straddie Noticeboard Network</title>
@@ -14,40 +14,158 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/icon.svg" alt="" width="36" height="36">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png" alt="" width="36" height="36">
         <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
       </a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="#board">Noticeboard</a>
-        <a href="#network">Network</a>
-        <a href="./screen.html">Screen preview</a>
-        <a class="button button-primary" href="./submit.html">Draft a notice</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./island.html">Maps &amp; weather</a>
+        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-photo" src="./assets/point-lookout.webp" alt="" width="960" height="720" fetchpriority="high">
       <div class="shell hero-inner">
-        <p class="eyebrow hero-label">Minjerribah / North Stradbroke Island</p>
-        <h1 id="hero-title">Straddie<br>Noticeboard</h1>
-        <p class="hero-description">What’s on, who needs a hand and what’s changing around the island.</p>
-        <div class="hero-actions">
-          <a class="button button-accent" href="#board">Browse the board</a>
-          <a class="button button-ghost" href="./screen.html">Preview a community screen</a>
+        <div class="hero-copy">
+          <p class="eyebrow hero-label">A proposal for Minjerribah / North Stradbroke Island</p>
+          <h1 id="hero-title">One local notice.<br>Across Straddie.</h1>
+          <p class="hero-description">A shared noticeboard on phones, ordinary TVs in clubs, ferries and shop windows, and public touchscreens with their own batteries.</p>
+          <p class="hero-note">A local group would write a notice once. After review, it could reach people wherever they already look for island information.</p>
+          <div class="hero-actions">
+            <a class="button button-accent" href="#how-it-works">See how it would work</a>
+            <a class="button button-ghost" href="./screen.html?notice=plfc-junior-clinic&amp;format=portrait">Try a touchscreen preview</a>
+          </div>
+        </div>
+        <figure class="format-preview" aria-labelledby="format-caption">
+          <figcaption class="format-caption" id="format-caption">One sample notice, three formats</figcaption>
+          <div class="format-grid">
+            <a class="format-card format-web" href="#board">
+              <span class="format-label">Mobile noticeboard</span>
+              <strong>Junior fishing clinic</strong>
+              <span class="format-place">Point Lookout</span>
+            </a>
+            <a class="format-card format-wall" href="./screen.html?place=Point+Lookout&amp;notice=plfc-junior-clinic">
+              <span class="format-label">Venue TV</span>
+              <strong>Junior fishing clinic</strong>
+              <span class="format-place">Point Lookout</span>
+            </a>
+            <a class="format-card format-kiosk" href="./screen.html?place=Point+Lookout&amp;notice=plfc-junior-clinic&amp;format=portrait">
+              <span class="format-label">Public touchscreen</span>
+              <strong>Junior fishing clinic</strong>
+              <span class="format-place">Point Lookout</span>
+            </a>
+          </div>
+          <a class="format-credit" href="#credits">Point Lookout photo by Sarah Barry</a>
+        </figure>
+      </div>
+    </section>
+
+    <section class="shell process-section" id="how-it-works" aria-labelledby="process-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="process-title">How it would work</h2>
+          <p>This demo shows how notices could be prepared and displayed. The shared publishing service and screen network still need to be built.</p>
         </div>
       </div>
-      <a class="hero-credit" href="#credits">Point Lookout by Sarah Barry</a>
+      <ol class="process-list">
+        <li>
+          <h3>A local group writes a notice</h3>
+          <p>Start with a title, place, useful details, a public source and a take-down time. The draft tool can prepare a file for review or a prompt to adapt it for different screens.</p>
+          <a href="./submit.html">Try writing a sample notice</a>
+        </li>
+        <li>
+          <h3>A moderator checks it</h3>
+          <p>The group confirms its own details. A moderator checks the source, permissions and expiry. A person reviews any AI-assisted summaries, captions or translations before they go out.</p>
+        </li>
+        <li>
+          <h3>People see it in more places</h3>
+          <p>Each device would take the same approved notice and lay it out for its screen. Venue hosts could choose which places and categories they display.</p>
+          <a href="./setup.html">See what a venue would need</a>
+        </li>
+      </ol>
+
+      <aside class="convenor" aria-labelledby="convenor-title">
+        <div>
+          <p class="eyebrow">Who would run it?</p>
+          <h3 id="convenor-title">Ready SETCO</h3>
+        </div>
+        <p>Ready SETCO is a proposed local co-operative. It would convene the noticeboard network by bringing together groups that post notices and venues that host screens. It would also moderate the shared board and help those groups agree on what gets published and how it’s checked.</p>
+      </aside>
+    </section>
+
+    <section class="display-section" aria-labelledby="display-title">
+      <div class="shell display-layout">
+        <div>
+          <h2 id="display-title">Start with the screens people already use</h2>
+          <dl class="display-list">
+            <div>
+              <dt>Ordinary TVs for clubs, ferries and shop windows</dt>
+              <dd>Use an existing TV with a small player or built-in browser. A club might show fixtures and call-outs, a ferry operator its verified service notices, and a shopfront nearby events and changed opening hours. Each venue would choose what fits.</dd>
+            </div>
+            <div>
+              <dt>A mobile board people can carry with them</dt>
+              <dd>Scan a code beside a screen to find the same notice on a phone, open its source or save the details for later.</dd>
+            </div>
+            <div>
+              <dt>Interactive touchscreens with independent battery power</dt>
+              <dd>At a suitable public site, people could tap through local notices, town maps, weather sources and short guides. The touchscreen and its local player would be tested together on battery power.</dd>
+            </div>
+          </dl>
+          <a class="button button-primary" href="./setup.html">Open the setup guide</a>
+        </div>
+        <figure class="concept-figure">
+          <img src="./assets/kiosk-concept.webp" width="1536" height="1024" loading="lazy" alt="Concept for a sheltered public touchscreen near an island ferry stop">
+          <figcaption>AI-generated concept for a possible ferry-stop touchscreen.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="shell resilience-section" id="outages" aria-labelledby="resilience-title">
+      <div class="section-heading">
+        <div>
+          <h2 id="resilience-title">When the power or internet goes out</h2>
+          <p>A battery supplies power. A saved copy supplies information. Each site would need to test the two separately and rehearse what happens when both fail.</p>
+        </div>
+      </div>
+      <div class="resilience-grid">
+        <article>
+          <h3>Keep essentials on the device</h3>
+          <p>Save a plain-text copy of approved notices and a small set of public maps and guides. The battery-backed touchscreen could drop video and big images to stretch its tested runtime.</p>
+        </article>
+        <article>
+          <h3>Make old information obvious</h3>
+          <p>Show when a saved update was last received or checked. Take down expired everyday notices. If an official warning can’t be rechecked, say so visibly. Only the issuer can update or cancel it.</p>
+        </article>
+        <article>
+          <h3>Keep the issuer attached</h3>
+          <p>Any future relay would need agreement with the issuing organisations. Keep the warning’s original instructions, issuer, area and times intact. Use Council and agency sources to check current conditions.</p>
+        </article>
+      </div>
+      <div class="resilience-actions">
+        <a class="button button-primary" href="./screen.html?format=portrait&amp;outage=1">Try the outage drill</a>
+        <a class="button button-secondary" href="https://dashboard.redland.qld.gov.au/">Redlands Coast Disaster Dashboard</a>
+        <a class="text-link" href="https://www.redland.qld.gov.au/Community-safety-and-health/Disasters-and-emergencies/Prepare-for-disasters/Suburb-disaster-profiles-and-risks/North-Stradbroke-Island-disaster-profile">Council’s island disaster profile</a>
+      </div>
+    </section>
+
+    <section class="shell island-callout" aria-labelledby="island-callout-title">
+      <div>
+        <h2 id="island-callout-title">Maps, weather and local knowledge</h2>
+        <p>Pick an island town, compare forecasts with observations and find the official maps. Short guides could explain how to check ferry information, read a weather update or look after local wildlife.</p>
+      </div>
+      <a class="button button-primary" href="./island.html">Explore maps &amp; weather</a>
     </section>
 
     <section class="shell board-section" id="board" aria-labelledby="board-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Around the island</p>
-          <h2 id="board-title">The noticeboard</h2>
+          <h2 id="board-title">Try the sample board</h2>
+          <p>Filter examples by place and category, then open a notice in the screen preview.</p>
         </div>
-        <p class="demo-label">Sample notices <span>·</span> Pilot preview</p>
+        <p class="demo-label">Example notices only</p>
       </div>
       <div class="filters" aria-label="Filter notices">
         <div class="pill-list" id="places" role="group" aria-label="Place"></div>
@@ -68,28 +186,10 @@
       <noscript><p>Enable JavaScript to filter and browse the sample notices.</p></noscript>
     </section>
 
-    <section class="network-section" id="network" aria-labelledby="network-title">
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">The wider network</p>
-            <h2 id="network-title">Explore related projects</h2>
-          </div>
-          <p>Island initiatives and the civic, media and digital projects that informed the noticeboard.</p>
-        </div>
-        <div class="pill-list network-filters" id="project-groups" role="group" aria-label="Project area"></div>
-        <p class="sr-only" id="project-count" role="status"></p>
-        <div class="project-grid" id="project-grid"></div>
-        <button class="button button-secondary more-projects" id="more-projects" type="button" aria-controls="project-grid">Show all projects</button>
-      </div>
-    </section>
-
-    <section class="shell publish-section" aria-labelledby="publish-title">
-      <div>
-        <h2 id="publish-title">Have something to share?</h2>
-        <p>Prepare an event, community update or call-out and download it for the publisher to review.</p>
-      </div>
-      <a class="button button-accent" href="./submit.html">Draft a notice</a>
+    <section class="shell publish-section" aria-labelledby="pilot-title">
+      <h2 id="pilot-title">What would a first pilot need?</h2>
+      <p>Start with a willing venue, a small group of local publishers and one reviewed notice. Test the same item on a phone, an ordinary TV and a sample kiosk before deciding where a battery-backed unit belongs.</p>
+      <a class="button button-accent" href="./setup.html">Plan a pilot</a>
     </section>
   </main>
 
@@ -101,9 +201,7 @@
         <p>Based on the <a href="https://github.com/auraofintelligence/straddie-noticeboard-network">original project by Luke Nathan Hayes / Strange But True / Aura of Intelligence</a>. Used under the <a href="https://github.com/auraofintelligence/straddie-noticeboard-network/blob/main/LICENCE.md">Strange But True Public Source Licence</a>.</p>
       </div>
       <div class="footer-links">
-        <a href="./screen.html">Screen preview</a>
-        <a href="https://auraofintelligence.github.io/straddie-noticeboard-network/entities.html">Original research directory</a>
-        <a href="https://auraofintelligence.github.io/straddie-noticeboard-network/pipeline.html">Original publishing pipeline</a>
+        <a href="./network.html">Project references</a>
         <details id="credits">
           <summary>Photo credits</summary>
           <p><a href="https://commons.wikimedia.org/wiki/File:Point_Lookout,_North_Stradbroke_Island,_by_Sarah_Barry.jpg">Point Lookout by Sarah Barry</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
@@ -125,15 +223,8 @@
         <p class="notice-category"></p>
         <h3></h3>
         <p class="notice-summary"></p>
-        <a class="notice-link">View example project</a>
+        <a class="notice-link">Preview on a screen</a>
       </div>
-    </article>
-  </template>
-  <template id="project-template">
-    <article class="project-card">
-      <p class="eyebrow"></p>
-      <h3><a></a></h3>
-      <p class="project-description"></p>
     </article>
   </template>
 </body>

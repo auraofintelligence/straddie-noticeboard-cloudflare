@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the Straddie Noticeboard Network’s proposed island coverage and find official maps, weather forecasts and emergency information.">
+  <link rel="icon" href="./favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./island.css">
+  <script type="module" src="./island.js"></script>
+  <title>Maps &amp; weather | Straddie Noticeboard Network</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png" alt="" width="36" height="36">
+        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./#how-it-works">How it works</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./island.html" aria-current="page">Maps &amp; weather</a>
+        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="island-intro" aria-labelledby="island-title">
+      <div class="shell">
+        <p class="eyebrow">Minjerribah / North Stradbroke Island</p>
+        <h1 id="island-title">Maps &amp; weather</h1>
+        <p>Pick a place to see how the proposed noticeboard could serve it and where to find official local information.</p>
+      </div>
+    </section>
+
+    <div class="shell island-content">
+      <aside class="island-alert" aria-labelledby="alert-title">
+        <div>
+          <h2 id="alert-title">Official warnings &amp; emergencies</h2>
+          <p>Check official sources for current warnings and local advice. In a life-threatening emergency call <a href="tel:000">Triple Zero (000)</a>.</p>
+        </div>
+        <div class="island-actions">
+          <a class="button button-secondary" href="https://dashboard.redland.qld.gov.au/">Council disaster dashboard</a>
+          <a class="button button-secondary" href="https://www.bom.gov.au/weather-and-climate/warnings-and-alerts">Bureau weather warnings</a>
+        </div>
+      </aside>
+
+      <section class="island-explorer" aria-labelledby="explore-title">
+        <figure class="island-map">
+          <div class="island-map-heading">
+            <h2 id="explore-title">Explore the island</h2>
+            <a class="button button-secondary island-all" href="#place-island" data-place-link>Island-wide</a>
+          </div>
+          <div class="map-figure" role="group" aria-label="Schematic of Minjerribah with Amity Point in the north-west, Point Lookout in the north-east and Dunwich on the western shore">
+            <div class="map-land" aria-hidden="true"></div>
+            <span class="map-north" aria-hidden="true">N</span>
+            <span class="map-bay" aria-hidden="true">Moreton Bay</span>
+            <span class="map-ocean" aria-hidden="true">Pacific Ocean</span>
+            <a class="map-pin map-pin-amity" href="#place-amity" data-place-link>Amity Point</a>
+            <a class="map-pin map-pin-lookout" href="#place-lookout" data-place-link>Point Lookout</a>
+            <a class="map-pin map-pin-dunwich" href="#place-dunwich" data-place-link>Dunwich</a>
+          </div>
+          <figcaption>Schematic, for orientation only. <a href="https://parks.qld.gov.au/parks/minjerribah/maps-resources">Queensland Parks maps and alerts</a></figcaption>
+        </figure>
+
+        <div class="island-details">
+          <p class="sr-only" id="place-status" role="status"></p>
+          <article class="place-panel" id="place-island" data-place="Island-wide" aria-labelledby="place-island-title">
+            <p class="eyebrow">Across Minjerribah</p>
+            <h3 id="place-island-title">Island-wide</h3>
+            <p>See where a shared notice might be useful across several communities. Each participating venue could choose which notices to show.</p>
+            <div class="place-local">
+              <h4>Possible notice</h4>
+              <p>An island clean-up could list separate meeting places and times alongside a single organiser contact.</p>
+              <a href="https://parks.qld.gov.au/parks/minjerribah/maps-resources">Queensland Parks maps and track updates</a>
+            </div>
+            <div class="place-weather">
+              <h4>Official weather</h4>
+              <div class="island-actions">
+                <a class="button button-primary" href="https://www.bom.gov.au/places/qld/north-stradbroke-island/forecast/">Island forecast</a>
+                <a class="button button-secondary" href="https://www.bom.gov.au/places/qld/north-stradbroke-island/observations/point-lookout/">Point Lookout observations</a>
+              </div>
+            </div>
+          </article>
+          <article class="place-panel" id="place-dunwich" data-place="Dunwich" aria-labelledby="place-dunwich-title">
+            <p class="eyebrow">Western shore</p>
+            <h3 id="place-dunwich-title">Dunwich</h3>
+            <p>A meeting room or neighbourhood noticeboard could carry updates for people arriving at Dunwich and for those who live nearby.</p>
+            <div class="place-local">
+              <h4>Possible notice</h4>
+              <p>A group could list the time, venue and access details for a local gathering, then remove the notice after the event.</p>
+              <a href="https://www.redland.qld.gov.au/Libraries/Opening-hours-and-locations/Dunwich-Library">Dunwich Library information</a>
+              <a href="https://www.sealink.com.au/north-stradbroke-island/ferry-status/">SeaLink ferry service status</a>
+              <a href="https://www.flyer.com.au/timetable">Stradbroke Flyer timetable</a>
+            </div>
+            <div class="place-weather">
+              <h4>Official weather</h4>
+              <div class="island-actions">
+                <a class="button button-primary" href="https://www.bom.gov.au/places/qld/dunwich/forecast/">Dunwich forecast</a>
+                <a class="button button-secondary" href="https://www.bom.gov.au/places/qld/dunwich/observations/">Nearby observations</a>
+              </div>
+            </div>
+          </article>
+          <article class="place-panel" id="place-amity" data-place="Amity Point" aria-labelledby="place-amity-title">
+            <p class="eyebrow">North-western shore</p>
+            <h3 id="place-amity-title">Amity Point</h3>
+            <p>A hall or community meeting place could carry notices about local get-togethers, volunteering and bayside events.</p>
+            <div class="place-local">
+              <h4>Possible notice</h4>
+              <p>A volunteer group could share where to meet, what to bring and how to contact the organiser if plans change.</p>
+              <a href="https://www.redland.qld.gov.au/Parks-venues-and-sport/Sport-and-recreation/Skate-and-ramp-parks">Council recreation information for Amity Point</a>
+            </div>
+            <div class="place-weather">
+              <h4>Official weather</h4>
+              <div class="island-actions">
+                <a class="button button-primary" href="https://www.bom.gov.au/places/qld/amity/forecast/">Amity forecast</a>
+                <a class="button button-secondary" href="https://www.bom.gov.au/places/qld/amity/observations/">Nearby observations</a>
+              </div>
+            </div>
+          </article>
+          <article class="place-panel" id="place-lookout" data-place="Point Lookout" aria-labelledby="place-lookout-title">
+            <p class="eyebrow">North-eastern headland</p>
+            <h3 id="place-lookout-title">Point Lookout</h3>
+            <p>A clubhouse or community space could display local events and help visitors find information about the surrounding area.</p>
+            <div class="place-local">
+              <h4>Possible notice</h4>
+              <p>A club could show when its outdoor session starts and where to check for a change of venue.</p>
+              <a href="https://www.redland.qld.gov.au/Libraries/Opening-hours-and-locations/Point-Lookout-Library">Point Lookout Library information</a>
+            </div>
+            <div class="place-weather">
+              <h4>Official weather</h4>
+              <div class="island-actions">
+                <a class="button button-primary" href="https://www.bom.gov.au/places/qld/point-lookout/forecast/">Point Lookout forecast</a>
+                <a class="button button-secondary" href="https://www.bom.gov.au/places/qld/north-stradbroke-island/observations/point-lookout/">Point Lookout observations</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="weather-guide" aria-labelledby="weather-title">
+        <h2 id="weather-title">Read a weather display</h2>
+        <p>A future public screen could show the source, place and timestamp beside each item. This demo links to the official pages for current conditions.</p>
+        <div class="weather-guide-grid">
+          <details open>
+            <summary>Forecast</summary>
+            <p>A forecast describes what is expected over a stated period. Check the place, issue time and the hours the forecast covers.</p>
+          </details>
+          <details>
+            <summary>Observations</summary>
+            <p>Observations record what a station measured at a stated time. Check the station name and time, since wind and rain can differ across the island.</p>
+          </details>
+          <details>
+            <summary>Rain radar</summary>
+            <p>Read the time on each frame to see where rainfall echoes have moved. Pair the radar with the forecast and official warnings.</p>
+            <a href="https://www.bom.gov.au/products/IDR663.loop.shtml">Open Bureau radar for Brisbane (Mt Stapylton)</a>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><a href="./">Straddie Noticeboard Network</a><p>Local demonstration of a proposed Minjerribah network. Community screen locations and weather publishing are proposals.</p></div>
+      <nav class="footer-links" aria-label="Related pages">
+        <a href="./setup.html">Explore local setup</a>
+        <a href="./screen.html">Try a sample noticeboard screen</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

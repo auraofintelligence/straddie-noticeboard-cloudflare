@@ -5,6 +5,6 @@
   "type": "module",
   "scripts": {
     "start": "python -m http.server 4185 --bind 127.0.0.1 --directory public",
-    "check": "node --check public/board.js && node --check public/notices.js && node --check public/network.js && node --check public/submit.js && node --check public/screen.js"
+    "check": "node --check public/board.js && node --check public/notices.js && node --check public/network.js && node --check public/submit.js && node --check public/screen.js && node --check public/projects.js && node --check public/filters.js && node --check public/island.js"
   }
 }

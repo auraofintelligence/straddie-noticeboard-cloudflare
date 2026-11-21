@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse the island, media and civic projects that informed the Straddie Noticeboard Network prototype.">
+  <link rel="icon" href="./favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./tools.css">
+  <script type="module" src="./projects.js"></script>
+  <title>Project references | Straddie Noticeboard Network</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png" alt="" width="36" height="36">
+        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./#how-it-works">How it works</a>
+        <a href="./setup.html">Setup guide</a>
+        <a href="./island.html">Maps &amp; weather</a>
+        <a class="button button-primary" href="./submit.html">Try the draft tool</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="network-section" id="main">
+    <div class="shell">
+      <div class="section-heading">
+        <div class="tool-heading">
+          <a class="tool-back" href="./">Back to the noticeboard prototype</a>
+          <h1>Project references</h1>
+          <p>These island, media and civic projects informed the proposed community noticeboard for Minjerribah. Ready SETCO is a proposed cooperative that would bring local publishers together and moderate notices.</p>
+        </div>
+      </div>
+      <div class="pill-list network-filters" id="project-groups" role="group" aria-label="Project area"></div>
+      <p class="sr-only" id="project-count" role="status"></p>
+      <div class="project-grid" id="project-grid"></div>
+      <button class="button button-secondary more-projects" id="more-projects" type="button" aria-controls="project-grid" aria-expanded="false" hidden>Show all projects</button>
+      <noscript><p>Enable JavaScript to browse and filter the references.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <strong>Straddie Noticeboard Network</strong>
+        <p>We acknowledge the Quandamooka People as the Traditional Custodians of Minjerribah and pay respect to Elders past and present.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://auraofintelligence.github.io/straddie-noticeboard-network/">Original noticeboard prototype</a>
+      </div>
+    </div>
+  </footer>
+
+  <template id="project-template">
+    <article class="project-card">
+      <p class="eyebrow"></p>
+      <h3><a></a></h3>
+      <p class="project-description"></p>
+    </article>
+  </template>
+</body>
+</html>
