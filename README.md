@@ -30,7 +30,9 @@ The [pilot board](http://localhost:4185/board.html?mode=pilot) and [pilot screen
 
 ## Cloudflare
 
-The `public/` folder is the complete deployable site. `wrangler.jsonc` configures Cloudflare Workers Static Assets. When ready to publish from an authenticated Cloudflare session, run `npx wrangler deploy` in the repository root. The local pilot has no deployed Cloudflare URL.
+The [public Straddie Noticeboard Network site](https://straddie-noticeboard-cloudflare.auraofintelligence.workers.dev/) runs on Cloudflare Workers Static Assets. The [reviewed noticeboard](https://straddie-noticeboard-cloudflare.auraofintelligence.workers.dev/board.html?mode=pilot) reads the published feed. The [practice board](https://straddie-noticeboard-cloudflare.auraofintelligence.workers.dev/board.html) carries example notices.
+
+To publish an update, run `npm run check`, then `npx wrangler deploy` from the repository root while signed in to the Cloudflare account. `wrangler.jsonc` selects the Worker and the `public/` directory. `public/.assetsignore` keeps the two retired aerial images out of the upload.
 
 ## Notices and images
 
