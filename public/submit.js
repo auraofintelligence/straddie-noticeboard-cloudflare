@@ -148,7 +148,7 @@ function showDraft() {
   copy.disabled = false;
   download.disabled = false;
   copyAi.disabled = false;
-  draftStatus.textContent = 'Your Markdown draft is ready.';
+  draftStatus.textContent = 'Your draft is ready to copy or download.';
   aiStatus.textContent = '';
   preview.focus();
 }
@@ -194,7 +194,7 @@ form.addEventListener('submit', event => {
 
 generate.addEventListener('click', showDraft);
 
-copy.addEventListener('click', () => copyText(preview, draftStatus, 'Markdown'));
+copy.addEventListener('click', () => copyText(preview, draftStatus, 'Draft'));
 copyAi.addEventListener('click', () => copyText(aiPreview, aiStatus, 'AI prompt'));
 
 download.addEventListener('click', () => {
@@ -207,5 +207,5 @@ download.addEventListener('click', () => {
   link.click();
   link.remove();
   window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-  draftStatus.textContent = 'Markdown download started.';
+  draftStatus.textContent = 'Draft download started.';
 });

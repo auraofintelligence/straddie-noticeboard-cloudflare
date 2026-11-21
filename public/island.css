@@ -218,6 +218,9 @@
 #map-dialog[open] > .map-stage > .map-viewport { height: 100%; min-height: 0; }
 
 .island-details { min-width: 0; }
+.town-photo { margin: 1.25rem 0 0; }
+.town-photo img { display: block; width: 100%; height: clamp(9rem, 18vw, 15rem); object-fit: cover; border-radius: .5rem; }
+.town-photo figcaption { margin-top: .45rem; color: var(--muted); font-size: .8rem; line-height: 1.4; }
 
 .place-panel { padding: clamp(1.05rem, 3vw, 1.65rem); scroll-margin-top: 1rem; }
 .place-panel + .place-panel { margin-top: .8rem; }

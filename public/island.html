@@ -32,38 +32,52 @@
           <a class="primary-nav-extra" href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a>
         </div>
         <details class="section-menu">
-          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>All pages</summary>
+          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>Menu</summary>
           <div class="nav-panel" id="navigation-panel">
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-start">Start here</p>
-              <ul role="list" aria-labelledby="nav-start">
-                <li><a href="./" data-nav-route="index">Home</a></li>
-                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Pilot noticeboard</a></li>
-                <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
-                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
+              <p class="nav-group-title" id="nav-island-information">Find island information</p>
+              <ul role="list" aria-labelledby="nav-island-information">
+                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Reviewed noticeboard</a></li>
                 <li><a href="./island.html" data-nav-route="island" aria-current="page">Island travel</a></li>
                 <li><a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Board and screen tools</summary>
+                    <ul role="list">
+                      <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
+                      <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Reviewed notices on screen</a></li>
+                      <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-proposal">Follow the proposal</p>
+              <ul role="list" aria-labelledby="nav-proposal">
+                <li><a href="./" data-nav-route="index">The noticeboard idea</a></li>
+                <li><a href="./how-it-works.html" data-nav-route="how-it-works">How one notice travels</a></li>
+                <li><a href="./training.html" data-nav-route="training">Tell a local story</a></li>
+                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
                 <li><a href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a></li>
               </ul>
             </div>
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-displays">Publishing &amp; screens</p>
-              <ul role="list" aria-labelledby="nav-displays">
-                <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Pilot screen</a></li>
-                <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
-                <li><a href="./how-it-works.html" data-nav-route="how-it-works">Publishing &amp; moderation</a></li>
-                <li><a href="./training.html" data-nav-route="training">Media training</a></li>
-                <li><a href="./setup.html" data-nav-route="setup">Screen setup</a></li>
-                <li><a href="./resilience.html" data-nav-route="resilience">Power &amp; outages</a></li>
-              </ul>
-            </div>
-            <div class="nav-group">
-              <p class="nav-group-title" id="nav-network">Network &amp; participation</p>
-              <ul role="list" aria-labelledby="nav-network">
-                <li><a href="./pilot.html" data-nav-route="pilot">Island infrastructure plan</a></li>
-                <li><a href="./businesses.html" data-nav-route="businesses">Business onboarding</a></li>
-                <li><a href="./grants.html" data-nav-route="grants">Funding &amp; maintenance</a></li>
-                <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Visitor &amp; volunteer operations</a></li>
+              <p class="nav-group-title" id="nav-participate">Help build the network</p>
+              <ul role="list" aria-labelledby="nav-participate">
+                <li><a href="./businesses.html" data-nav-route="businesses">Publish or host</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Screen and visitor guides</summary>
+                    <ul role="list">
+                      <li><a href="./setup.html" data-nav-route="setup">Connect a screen</a></li>
+                      <li><a href="./resilience.html" data-nav-route="resilience">Prepare for outages</a></li>
+                      <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Manage a busy island day</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="./pilot.html" data-nav-route="pilot">Local ownership and operation</a></li>
+                <li><a href="./grants.html" data-nav-route="grants">Fund and maintain the network</a></li>
                 <li><a href="./network.html" data-nav-route="network">Project references</a></li>
               </ul>
             </div>
@@ -134,7 +148,7 @@
           <article class="place-panel" id="place-island" data-place="Island-wide" aria-labelledby="place-island-title">
             <p class="eyebrow">Across Minjerribah</p>
             <h3 id="place-island-title">Island-wide</h3>
-            <p>See where a shared notice might be useful across several communities. Each participating venue could choose which notices to show.</p>
+            <p>Dunwich is the island arrival point for ferries from Cleveland. Choose a town on the map for its bus connections, forecast and local information.</p>
             <div class="place-local">
               <h4>Possible notice</h4>
               <p>An island clean-up could list separate meeting places and times alongside a single organiser contact.</p>
@@ -151,7 +165,7 @@
           <article class="place-panel" id="place-dunwich" data-place="Dunwich" aria-labelledby="place-dunwich-title">
             <p class="eyebrow">Western shore</p>
             <h3 id="place-dunwich-title">Dunwich</h3>
-            <p>A meeting room or neighbourhood noticeboard could carry updates for people arriving at Dunwich and for those who live nearby.</p>
+            <p>There are two ferry terminals in Dunwich. The terminal on your ticket determines where to meet someone or catch the bus.</p>
             <div class="place-local place-transport">
               <h4>Ferry and onward travel</h4>
               <p>SeaLink uses the Junner Street terminal. The Stradbroke Flyer uses One Mile. Match your bus stop to the ferry you’re taking and check the route direction and travel date.</p>
@@ -178,7 +192,7 @@
           <article class="place-panel" id="place-amity" data-place="Amity Point" aria-labelledby="place-amity-title">
             <p class="eyebrow">North-western shore</p>
             <h3 id="place-amity-title">Amity Point</h3>
-            <p>A hall or community meeting place could carry notices about local get-togethers, volunteering and bayside events.</p>
+            <p>Amity Point faces Moreton Bay. For a trip between the village and the ferries at Dunwich, check route 881 for your stop and travel date.</p>
             <div class="place-local">
               <h4>Bus to or from Dunwich</h4>
               <a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/f/881">Translink route 881 timetable</a>
@@ -195,11 +209,15 @@
                 <a class="button button-secondary" href="https://www.bom.gov.au/places/qld/amity/observations/">Nearby observations</a>
               </div>
             </div>
+            <figure class="town-photo">
+              <img src="./assets/amity-jetty.webp" alt="Sunset over the bay at Amity Point Jetty" width="1280" height="960" loading="lazy">
+              <figcaption>Amity Point Jetty, on the bay side of the island. <a href="https://commons.wikimedia.org/wiki/File:Amity_Point_Jetty_at_Sunset._North_Stradbroke_Island,_Queensland,_Australia.jpg">Photo by Pacificwizard</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Cropped for display.</figcaption>
+            </figure>
           </article>
           <article class="place-panel" id="place-lookout" data-place="Point Lookout" aria-labelledby="place-lookout-title">
             <p class="eyebrow">North-eastern headland</p>
             <h3 id="place-lookout-title">Point Lookout</h3>
-            <p>A clubhouse or community space could display local events and help visitors find information about the surrounding area.</p>
+            <p>Point Lookout faces the Pacific. For a trip between the headland and the ferries at Dunwich, check route 880 for your stop and travel date.</p>
             <div class="place-local">
               <h4>Bus to or from Dunwich</h4>
               <a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/f/880">Translink route 880 timetable</a>
@@ -216,6 +234,10 @@
                 <a class="button button-secondary" href="https://www.bom.gov.au/places/qld/north-stradbroke-island/observations/point-lookout/">Point Lookout observations</a>
               </div>
             </div>
+            <figure class="town-photo">
+              <img src="./assets/point-lookout.webp" alt="The headland and ocean at Point Lookout" width="960" height="720" loading="lazy">
+              <figcaption>The ocean side of Minjerribah at Point Lookout. <a href="https://commons.wikimedia.org/wiki/File:Point_Lookout,_North_Stradbroke_Island,_by_Sarah_Barry.jpg">Photo by Sarah Barry</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Cropped for display.</figcaption>
+            </figure>
           </article>
         </div>
       </section>
@@ -326,9 +348,9 @@
       </nav>
     </div>
     <div class="shell page-navigation">
-      <nav class="page-sequence" aria-label="Pages in this guide">
-        <a href="./screen.html?mode=pilot" rel="prev"><span>Previous</span><strong>Reviewed noticeboard screen</strong></a>
-        <a href="./emergencies.html" rel="next"><span>Next</span><strong>Emergency information</strong></a>
+      <nav class="page-sequence" aria-label="Continue from this page">
+        <a href="./visitor-volunteer.html" rel="prev"><span>Previous</span><strong>See how visitors get help on a busy day</strong></a>
+        <a href="./emergencies.html" rel="next"><span>Next</span><strong>Find the sources for official warnings</strong></a>
       </nav>
       <div class="page-top-slot"><a class="page-top" href="#main">Back to top</a></div>
     </div>

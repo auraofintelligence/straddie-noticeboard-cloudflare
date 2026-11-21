@@ -29,38 +29,52 @@
           <a class="primary-nav-extra" href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a>
         </div>
         <details class="section-menu">
-          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>All pages</summary>
+          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>Menu</summary>
           <div class="nav-panel" id="navigation-panel">
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-start">Start here</p>
-              <ul role="list" aria-labelledby="nav-start">
-                <li><a href="./" data-nav-route="index">Home</a></li>
-                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Pilot noticeboard</a></li>
-                <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
-                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
+              <p class="nav-group-title" id="nav-island-information">Find island information</p>
+              <ul role="list" aria-labelledby="nav-island-information">
+                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Reviewed noticeboard</a></li>
                 <li><a href="./island.html" data-nav-route="island">Island travel</a></li>
                 <li><a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Board and screen tools</summary>
+                    <ul role="list">
+                      <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
+                      <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Reviewed notices on screen</a></li>
+                      <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-proposal">Follow the proposal</p>
+              <ul role="list" aria-labelledby="nav-proposal">
+                <li><a href="./" data-nav-route="index">The noticeboard idea</a></li>
+                <li><a href="./how-it-works.html" data-nav-route="how-it-works">How one notice travels</a></li>
+                <li><a href="./training.html" data-nav-route="training" aria-current="page">Tell a local story</a></li>
+                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
                 <li><a href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a></li>
               </ul>
             </div>
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-displays">Publishing &amp; screens</p>
-              <ul role="list" aria-labelledby="nav-displays">
-                <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Pilot screen</a></li>
-                <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
-                <li><a href="./how-it-works.html" data-nav-route="how-it-works">Publishing &amp; moderation</a></li>
-                <li><a href="./training.html" data-nav-route="training" aria-current="page">Media training</a></li>
-                <li><a href="./setup.html" data-nav-route="setup">Screen setup</a></li>
-                <li><a href="./resilience.html" data-nav-route="resilience">Power &amp; outages</a></li>
-              </ul>
-            </div>
-            <div class="nav-group">
-              <p class="nav-group-title" id="nav-network">Network &amp; participation</p>
-              <ul role="list" aria-labelledby="nav-network">
-                <li><a href="./pilot.html" data-nav-route="pilot">Island infrastructure plan</a></li>
-                <li><a href="./businesses.html" data-nav-route="businesses">Business onboarding</a></li>
-                <li><a href="./grants.html" data-nav-route="grants">Funding &amp; maintenance</a></li>
-                <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Visitor &amp; volunteer operations</a></li>
+              <p class="nav-group-title" id="nav-participate">Help build the network</p>
+              <ul role="list" aria-labelledby="nav-participate">
+                <li><a href="./businesses.html" data-nav-route="businesses">Publish or host</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Screen and visitor guides</summary>
+                    <ul role="list">
+                      <li><a href="./setup.html" data-nav-route="setup">Connect a screen</a></li>
+                      <li><a href="./resilience.html" data-nav-route="resilience">Prepare for outages</a></li>
+                      <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Manage a busy island day</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="./pilot.html" data-nav-route="pilot">Local ownership and operation</a></li>
+                <li><a href="./grants.html" data-nav-route="grants">Fund and maintain the network</a></li>
                 <li><a href="./network.html" data-nav-route="network">Project references</a></li>
               </ul>
             </div>
@@ -76,18 +90,13 @@
       <div class="shell training-hero-inner">
         <div>
           <p class="training-stage">Proposed beginner workshop</p>
-          <h1 id="training-title">Make a local story people can use.</h1>
-          <p class="training-lede">Use a phone to report, record and caption a short story. Then turn the checked version into a notice for a phone, a venue TV or a touchscreen kiosk.</p>
-          <a class="button button-accent" href="#lessons">Explore the four lessons</a>
+          <h1 id="training-title">Film a local maker at work</h1>
+          <p class="training-lede">How does a piece of timber become a bellyboard you can ride in the surf? Follow a Minjerribah maker at the workbench. Use a phone to record their answer, edit a one-minute film and invite the community to a screening.</p>
+          <a class="button button-accent" href="#lessons">Start with the pitch</a>
         </div>
         <figure class="training-brief">
-          <img src="./assets/dunwich-bay.webp" alt="Aerial view across the bay at Dunwich" width="860" height="574" fetchpriority="high">
-          <figcaption>
-            <p class="eyebrow">Practice story</p>
-            <h2>How to check a ferry update</h2>
-            <p>Use a simulated operator notice to show where a traveller would check the latest update and how to tell when it was issued. All example notices are workshop material.</p>
-            <span class="training-credit"><a href="https://www.commercialrealestate.com.au/property/10-12-ballow-road-dunwich-qld-4183-2020492491">Dunwich aerial from LJ Hooker Property Centre’s Ballow Road listing</a>. Cropped for display.</span>
-          </figcaption>
+          <img src="./assets/island-media-workshop.webp" alt="A learner films with a phone on a tripod while a maker sands a timber bellyboard at their workbench." width="1280" height="854" fetchpriority="high">
+          <figcaption>AI illustration for the proposed workshop.</figcaption>
         </figure>
       </div>
     </section>
@@ -95,120 +104,130 @@
     <div class="shell training-body">
       <section class="training-section" id="lessons" aria-labelledby="lessons-title">
         <div class="training-section-heading">
-          <h2 id="lessons-title">Four lessons, one working story</h2>
-          <p>Use the same practice story in each lesson so the next person can trace the facts and permissions back to the source.</p>
+          <h2 id="lessons-title">From pitch to public notice</h2>
+          <p>You’ll need a phone, a stand or tripod, headphones and an editing app. Ask a maker if they’d like to take part, or rehearse privately with a partner. A mentor can help with the edit and a screen host can check how the finished notice reads.</p>
         </div>
         <ol class="training-lessons">
           <li>
-            <h3><img src="./assets/icons/review.webp" width="50" height="50" alt="">Find the real question</h3>
+            <h3><img src="./assets/icons/review.webp" width="50" height="50" alt="">Pitch and check the story</h3>
             <dl>
-              <dt>Try</dt><dd>Ask a partner what they would want to know before travelling. Look at two versions of a simulated ferry update. Find the issuer, issue time, version and expiry. Record when you checked it.</dd>
-              <dt>Make</dt><dd>A one-sentence story brief and a source note naming the simulated issuer and the version you used.</dd>
-              <dt>Check</dt><dd>Can someone else find the same source? Does the script explain where to check for the latest operator information and flag what remains unknown?</dd>
+              <dt>Pitch</dt><dd>“How does an island maker turn a sheet of timber into a bellyboard?” Agree on what viewers will learn and what you can show.</dd>
+              <dt>Check</dt><dd>Ask the maker to confirm how they want to be named, what timber they used and what they want to explain about the shape. Ask the screening organiser to confirm event details and the public source that can be linked.</dd>
+              <dt>Hand over</dt><dd>Give the mentor a one-sentence pitch, the source notes and a record of what the maker and location host allow you to record and share. Clear any film clips, music or cultural material with the people authorised to give permission.</dd>
             </dl>
           </li>
           <li>
-            <h3><img src="./assets/icons/camera.webp" width="50" height="50" alt="">Record cleanly on a phone</h3>
+            <h3><img src="./assets/icons/camera.webp" width="50" height="50" alt="">Interview and film the making</h3>
             <dl>
-              <dt>Try</dt><dd>Record a short spoken explainer with a steady frame, light on the speaker’s face and as little wind noise as possible. Try a vertical frame for phones and a wide frame for TVs. Listen back and save a second copy.</dd>
-              <dt>Make</dt><dd>A short clip, a photo you can use and a note recording who agreed to be filmed, where it can be shown and how to credit the material.</dd>
-              <dt>Check</dt><dd>Confirm permission to film at the location and share the image or voice. Keep bystanders, private details and material that needs separate cultural permission out of the recording.</dd>
+              <dt>Ask</dt><dd>“How did you decide on this shape?” Then ask “Which part took the longest?” Listen and follow up with “Can you show me that part?” Leave a pause so the answer can stand on its own.</dd>
+              <dt>Film</dt><dd>Set the phone at eye level and light the maker’s face. Listen back to a ten-second test and move closer if the voice is hard to hear. Record the bench, the maker sanding an edge and the finished board. Keep private papers and bystanders out of frame.</dd>
+              <dt>Hand over</dt><dd>Save a backup of the original files. Give the editor the interview, the extra shots and a note with the strongest answer and its time in the recording.</dd>
             </dl>
           </li>
           <li>
-            <h3><img src="./assets/icons/phone.webp" width="50" height="50" alt="">Edit and caption for access</h3>
+            <h3><img src="./assets/icons/phone.webp" width="50" height="50" alt="">Edit the profile and add captions</h3>
             <dl>
-              <dt>Try</dt><dd>Trim the clip, then add captions for the speech and any meaningful sounds. Write the main message in short sentences and describe the photo if it conveys useful information.</dd>
-              <dt>Make</dt><dd>A captioned clip, a plain-text transcript, a short notice and a photo description where needed.</dd>
-              <dt>Check</dt><dd>Watch the clip with sound off. Check the names, dates and source against the notes. If you use generative AI to suggest captions or simpler wording, give it only approved public text and verify each change against the source.</dd>
+              <dt>Edit</dt><dd>Open with the maker at work, follow with their clearest answer and cut to the details they describe. Finish by showing the completed board. Keep the meaning of the maker’s answer intact.</dd>
+              <dt>Check</dt><dd>Caption speech and sounds that matter, such as the scrape of sandpaper. Watch with sound off and check names, timing and readability. If AI suggests wording, give it only text cleared for public use and check its suggestions against the recording.</dd>
+              <dt>Hand over</dt><dd>Export captioned clips in 16:9 landscape for the venue and 9:16 portrait for phones. Check that the portrait crop keeps the maker’s hands in frame. Include a plain-text transcript, credits and permission limits for the reviewer.</dd>
             </dl>
           </li>
           <li>
-            <h3><img src="./assets/icons/television.webp" width="50" height="50" alt="">Adapt, review and keep a record</h3>
+            <h3><img src="./assets/icons/television.webp" width="50" height="50" alt="">Prepare the notice for review</h3>
             <dl>
-              <dt>Try</dt><dd>Make a detailed phone post, a two-line TV notice and a short touchscreen guide. Hand them to a reviewer, then ask a screen host to test the approved practice copy.</dd>
-              <dt>Make</dt><dd>Three draft formats with one source and revision record, the approved display locations and a date to review or remove the story.</dd>
-              <dt>Check</dt><dd>Can someone read the TV notice from where they stand? Does every version carry the same facts? Rehearse correcting one line, confirm that the older copy is gone and record what changed.</dd>
+              <dt>Write</dt><dd>Put the action first. Say what’s screening, where, when and where people can check the details. Keep event details in the notice so they can be updated without recutting the profile.</dd>
+              <dt>Review</dt><dd>The reviewer checks the organiser’s source, permission for each outlet and the notice’s expiry. The screen host checks that the venue copy is legible from a normal viewing distance.</dd>
+              <dt>Hand over</dt><dd>Keep the approved notice, clip, source and version together. Give the host the display and take-down times and a named contact for corrections. Store contact and permission records privately.</dd>
             </dl>
           </li>
         </ol>
+      </section>
+
+      <section class="training-section" aria-labelledby="edit-title">
+        <div class="training-section-heading">
+          <h2 id="edit-title">Plan a one-minute edit</h2>
+          <p>Use these timings as a guide. Let the strongest answer and the pictures tell you where to cut.</p>
+        </div>
+        <ol class="training-edit-grid" aria-label="Example editing timeline">
+          <li><span>0–5 seconds</span><h3>Start with action</h3><p>Open on hands sanding the board. Let the recorded sound establish the scene.</p></li>
+          <li><span>5–25 seconds</span><h3>Introduce the maker</h3><p>Use their name and their answer about how they chose the shape.</p></li>
+          <li><span>25–45 seconds</span><h3>Show how it was made</h3><p>Cut from the interview to any marked outline, the hands at work and the detail the maker describes.</p></li>
+          <li><span>45–60 seconds</span><h3>Reveal the finished board</h3><p>Hold a clear shot of the board’s outline and finish. Leave space for the maker and production credits.</p></li>
+        </ol>
+      </section>
+
+      <section class="training-section training-formats" id="screening-notice" aria-labelledby="formats-title">
+        <div class="training-section-heading">
+          <h2 id="formats-title">Draft the screening notice</h2>
+          <p>Imagine an outdoor screening in a community hall courtyard in Dunwich. In this exercise, the organiser has confirmed a 6.30 pm start. Write that invitation for each display, then practise changing the time.</p>
+        </div>
+        <div class="training-format-grid">
+          <article>
+            <h3>Phone post</h3>
+            <p><strong>Local short films in Dunwich</strong><br>See how a timber bellyboard takes shape. Saturday, 6.30 pm in the community hall courtyard. Check the organiser’s event page for details.</p>
+          </article>
+          <article>
+            <h3>Venue TV</h3>
+            <p><strong>Shaping a timber bellyboard · Local short films</strong><br>Saturday, 6.30 pm · Community hall courtyard, Dunwich</p>
+          </article>
+          <article>
+            <h3>Touchscreen kiosk</h3>
+            <p><strong>Local short films and a bellyboard maker profile</strong><br>Saturday, 6.30 pm · Community hall courtyard, Dunwich<br>Tap for the programme and the organiser’s details.</p>
+          </article>
+        </div>
+        <p class="training-format-source">Enter the title, publisher, place, summary and expiry in the draft tool. Use <code>https://example.org/</code> as the source for this exercise and keep the draft in your practice files. For a real event, attach the organiser’s public event link.</p>
+        <a class="button button-primary training-draft-link" href="./submit.html#draft-form">Open the draft tool</a>
+        <a class="button button-secondary training-draft-link" href="./screen.html?place=Dunwich&amp;notice=dunwich-screen-night">Preview a sample screening notice</a>
         <details class="training-sources-drill">
-          <summary>Open the two simulated ferry notices</summary>
-          <p>These fictional sources come from the Training Ferry Desk. All times are simulated Queensland times.</p>
+          <summary>Rehearse the organiser’s time change</summary>
+          <p>Use the same Saturday clock for all three steps. The organiser’s confirmation is the source for the change.</p>
           <ol class="training-correction-flow">
             <li>
-              <time datetime="08:00">8 am</time>
-              <h3>Version 1</h3>
-              <p>Look under “Timetable” for new messages. Expires at 9 am.</p>
+              <time datetime="14:00">2 pm</time>
+              <h3>Version 1 goes to the host</h3>
+              <p>The organiser confirms a 6.30 pm start. Record when the notice was approved, the three display versions and the 7.15 pm take-down.</p>
             </li>
             <li>
-              <time datetime="08:20">8.20 am</time>
-              <h3>Version 2 replaces version 1</h3>
-              <p>Look under “Service updates” for new messages. Expires at 9 am.</p>
+              <time datetime="16:15">4.15 pm</time>
+              <h3>The organiser confirms 7 pm</h3>
+              <p>Record the source and publish version 2 through the same approved channels. Ask the host to replace version 1 and confirm what is visible. Flag any offline display for follow-up.</p>
             </li>
             <li>
-              <time datetime="09:00">9 am</time>
-              <h3>Take the notice down</h3>
-              <p>Check that neither version remains in rotation.</p>
+              <time datetime="19:15">7.15 pm</time>
+              <h3>Remove the invitation</h3>
+              <p>Check each outlet has removed it from rotation. Keep the checked source, permissions, current clip and a record of what changed.</p>
             </li>
           </ol>
         </details>
       </section>
 
-      <section class="training-section training-formats" aria-labelledby="formats-title">
-        <div class="training-section-heading">
-          <h2 id="formats-title">What the group makes</h2>
-          <p>A short public explainer in three formats. These samples teach the checking process without reporting a sailing, disruption or warning.</p>
-        </div>
-        <div class="training-format-grid">
-          <article>
-            <h3>Phone post</h3>
-            <p>Find the ferry operator’s current service updates. Look for the route, when the notice was issued and whether a newer update has replaced it.</p>
-          </article>
-          <article>
-            <h3>Venue TV</h3>
-            <p><strong>Travelling by ferry?</strong><br>Check the operator’s latest update before you go.</p>
-          </article>
-          <article>
-            <h3>Touchscreen guide</h3>
-            <p>Choose the route. Read the latest issue time. If the screen is offline, confirm current service with the operator before travelling.</p>
-          </article>
-        </div>
-        <p class="training-format-source">Workshop exercise using a simulated operator source. Keep the source, last check, version and review time with the notice when it moves between screens.</p>
-      </section>
-
       <section class="training-section" aria-labelledby="session-title">
         <div class="training-section-heading">
-          <h2 id="session-title">Train local crews to keep publishing</h2>
-          <p>Beginner sessions could help groups in Dunwich, Amity Point and Point Lookout prepare for a possible December and January launch. Each group can practise with a phone, headphones and an available screen, then pass a checked story to participating hosts.</p>
+          <h2 id="session-title">Run the next session</h2>
+          <p>A first session could use one story and one available screen. The learner completes a useful task with the mentor, then shows a host how to check and remove the practice notice.</p>
         </div>
         <div class="training-session-grid">
           <article class="training-session-card">
-            <h3>Who hands what to whom?</h3>
+            <h3>Make the next handover easy</h3>
             <ul>
-              <li><strong>Mentor</strong> agrees on one useful task with the learner, demonstrates it and helps check the result.</li>
-              <li><strong>Reporter</strong> gives the story brief and checked sources to the phone crew.</li>
-              <li><strong>Phone crew</strong> hands over the recordings, backup copy and permission notes.</li>
-              <li><strong>Editor</strong> gives the captioned clip, transcript and draft screen versions to the reviewer.</li>
-              <li><strong>Reviewer and hosts</strong> agree what may appear. Each host checks the notice on their display and confirms corrections or removals.</li>
+              <li><strong>Learner and mentor</strong> review the pitch, demonstrate a sound check and agree what the learner will do next time.</li>
+              <li><strong>Editor and reviewer</strong> agree on the final cut, captioned exports and approved uses. Keep the originals and permissions in a folder only the crew can access.</li>
+              <li><strong>Reviewer and screen host</strong> record the current version, expiry and correction contact. Leave instructions another crew can follow.</li>
             </ul>
           </article>
           <article class="training-session-card">
-            <h3>Practise a correction</h3>
-            <p>Use the revised simulated source. The reviewer checks what changed, records the new version and tells the participating hosts which files to replace. Ask each host to confirm what’s visible and flag any offline screen. Leave the source, current files, permission limits and next check in a short handover so another crew can take over.</p>
-            <h3>Try a live cross or radio segment later</h3>
-            <p>Once the team can complete a checked story, it could rehearse a short live report or record a radio-style update. Agree with the host and contributors before recording or going live. Prepare a checked script and an accessible transcript.</p>
+            <h3>Try the story in another format</h3>
+            <p>Once the crew can hand over a checked story, rehearse a short live introduction for a screening or edit a radio-style profile using the maker’s voice and workshop sound. Confirm permission for that format, check names and facts in the script and make a transcript available.</p>
+            <p><a href="./how-it-works.html#record-title">See what a reviewed notice needs</a></p>
           </article>
         </div>
         <aside class="training-participation">
           <h3>Agree how people are taking part</h3>
-          <p>Learners practise with a mentor. Voluntary contributions are agreed and freely chosen. Any paid role would need a named employer or contractor, a defined task, pay and conditions, and someone responsible for support. Workshop dates, course bookings and vacancies remain unannounced.</p>
+          <p>Agree whether each role is supervised practice, voluntary help or paid work. A paid role would also need a named employer, a defined task, pay and conditions, and someone responsible for support. This page is a workshop plan.</p>
         </aside>
-        <a class="button button-primary training-draft-link" href="./submit.html">Try the draft tool</a>
-        <a class="button button-secondary training-draft-link" href="./visitor-volunteer.html#handover">Practise a visitor and volunteer handover</a>
       </section>
 
-      <p class="training-source">This proposed workshop adapts the reporting, supervised practice and phone media guides. <a href="https://auraofintelligence.github.io/minjerribah-screen-media-network/network/">Minjerribah Screen &amp; Media Network</a> · <a href="https://ready-setco.auraofintelligence.workers.dev/jobs.html">Ready SETCO training &amp; work</a> · <a href="https://ready-setco.auraofintelligence.workers.dev/media-assets.html">Ready SETCO notices &amp; media</a></p>
+      <p class="training-source">The workshop adapts the local media curriculum, capture checklist and mentored work handover. <a href="https://auraofintelligence.github.io/minjerribah-screen-media-network/network/">Minjerribah Screen &amp; Media Network</a> · <a href="https://ready-setco.auraofintelligence.workers.dev/media-assets.html">Ready SETCO notices &amp; media</a> · <a href="https://ready-setco.auraofintelligence.workers.dev/jobs.html">Ready SETCO training &amp; work</a></p>
     </div>
   </main>
 
@@ -224,9 +243,9 @@
       </div>
     </div>
     <div class="shell page-navigation">
-      <nav class="page-sequence" aria-label="Pages in this guide">
-        <a href="./visitor-volunteer.html" rel="prev"><span>Previous</span><strong>Visitor and volunteer operations</strong></a>
-        <a href="./businesses.html" rel="next"><span>Next</span><strong>Business onboarding</strong></a>
+      <nav class="page-sequence" aria-label="Continue through the proposal">
+        <a href="./how-it-works.html" rel="prev"><span>Previous</span><strong>See how a checked notice reaches people</strong></a>
+        <a href="./submit.html" rel="next"><span>Next</span><strong>Make your first notice</strong></a>
       </nav>
       <div class="page-top-slot"><a class="page-top" href="#main">Back to top</a></div>
     </div>

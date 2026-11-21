@@ -278,6 +278,13 @@
   border-radius: .75rem;
 }
 
+.screen-media.uses-spot-art img {
+  max-height: 15rem;
+  object-fit: contain;
+}
+
+.screen-display.is-portrait .screen-media.uses-spot-art img { max-height: 11rem; }
+
 .screen-media figcaption {
   margin-top: .45rem;
   color: #e0f0eb;
@@ -395,6 +402,8 @@
 .board-place-grid [aria-pressed="true"] .board-place-bar::before { background: var(--gold); }
 .board-count:not(:empty) { margin-bottom: .75rem; }
 .notice-figure { margin: 0; }
+.notice-figure.uses-spot-art .notice-media { background: #e7f3eb; }
+.notice-figure.uses-spot-art .notice-image { object-fit: contain; padding: .82rem; }
 .notice-credit {
   padding: .45rem 1.18rem;
   color: var(--muted);

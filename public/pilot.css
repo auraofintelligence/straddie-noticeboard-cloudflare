@@ -38,25 +38,6 @@
   margin-top: 1.1rem;
 }
 
-.pilot-intro figure {
-  margin: 0;
-}
-
-.pilot-intro figure img {
-  width: 100%;
-  height: auto;
-  border-radius: .65rem;
-}
-
-.pilot-intro figcaption {
-  font-size: .84rem;
-  margin-top: .55rem;
-}
-
-.local-pilot figcaption {
-  color: #c8d1d6;
-}
-
 .pilot-body {
   padding-bottom: 3.5rem;
 }
@@ -97,17 +78,19 @@
 .pilot-people .plan-evidence dt:first-child { margin: 0; }
 
 .permission-example {
-  margin: 1.4rem 0 0;
-  padding: 1.1rem;
-  border-radius: .6rem;
+  margin: 0;
+  padding: clamp(1rem, 3vw, 2rem);
+  border: 1px solid #495b70;
+  border-radius: .7rem;
   background: #182840;
   color: #f1f5f8;
 }
-.permission-example figcaption { margin-bottom: .45rem; color: #9fe6d5; font-weight: 700; }
-.permission-example div { display: flex; align-items: flex-start; gap: .7rem; border-top: 1px solid #536079; padding: .7rem 0; }
+.permission-example figcaption { margin-bottom: 1.2rem; font: 730 clamp(1.5rem,3vw,2.1rem)/1.13 var(--display); }
+.permission-example small { display: block; color: #9fe6d5; font: 520 .9rem/1.4 var(--display); margin-top: .4rem; }
+.permission-example div { display: flex; align-items: center; gap: .9rem; border-top: 1px solid #536079; padding: 1rem 0; }
 .permission-example div:last-child { padding-bottom: 0; }
-.permission-example img { flex: 0 0 42px; }
-.permission-example strong { display: block; margin-bottom: .18rem; }
+.permission-example img { width: clamp(2.6rem,6vw,3.9rem); height: auto; flex: none; }
+.permission-example strong { display: block; margin-bottom: .25rem; color: white; }
 
 .pilot-people {
   display: grid;

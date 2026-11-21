@@ -51,6 +51,7 @@ let displayNotices = isPilot ? [] : notices;
 
 function renderMedia(notice) {
   const hasImage = notice?.image && !outageDrill;
+  media.classList.toggle('uses-spot-art', notice?.imageKind === 'spot');
   if (!hasImage) {
     media.hidden = true;
     image.removeAttribute('src');
@@ -192,7 +193,7 @@ if (isPilot) {
   document.querySelector('#screen-page-description').textContent = 'Choose a wide display for a venue, vehicle or stop, or a touchscreen kiosk. Filter by place to see the current notices approved for that outlet.';
   const boardLink = document.querySelector('#screen-board-link');
   boardLink.href = './board.html?mode=pilot';
-  boardLink.textContent = 'Back to the reviewed pilot board';
+  boardLink.textContent = 'Read the reviewed noticeboard';
   outage.hidden = true;
   document.querySelector('#screen-outage-guide').hidden = true;
   document.querySelector('#screen-pilot-guide').hidden = false;

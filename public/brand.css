@@ -119,7 +119,7 @@ h1,h2 {
   .primary-nav .emergency-nav {
     color: #ffca9f;
   }
-  .section-menu summary {
+  .section-menu > summary {
     display: flex;
     align-items: center;
     gap: .57rem;
@@ -133,7 +133,7 @@ h1,h2 {
     font-weight: 680;
     white-space: nowrap;
   }
-  .section-menu summary::-webkit-details-marker {
+  .section-menu > summary::-webkit-details-marker {
     display: none;
   }
   .menu-symbol {
@@ -158,8 +158,8 @@ h1,h2 {
   .section-menu[open] .menu-symbol { background: transparent; }
   .section-menu[open] .menu-symbol::before { transform: rotate(45deg); }
   .section-menu[open] .menu-symbol::after { transform: rotate(-45deg); }
-  .section-menu summary:hover,
-  .section-menu[open] summary {
+  .section-menu > summary:hover,
+  .section-menu[open] > summary {
     background: #293448;
   }
   .section-menu:not([open]) .nav-panel {
@@ -197,6 +197,22 @@ h1,h2 {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+  .nav-more > summary {
+    min-height: 44px;
+    padding: .64rem .62rem;
+    border-radius: .35rem;
+    color: #cae0da;
+    cursor: pointer;
+  }
+  .nav-more > summary:hover,
+  .nav-more[open] > summary {
+    background: #223446;
+  }
+  .nav-more > ul {
+    margin: .14rem 0 .22rem .62rem;
+    padding-inline-start: .38rem;
+    border-inline-start: 1px solid #52697b;
   }
   .nav-panel a {
     padding: .46rem .62rem;
@@ -266,7 +282,7 @@ h1,h2 {
     width: 36px;
     height: 36px;
   }
-  .section-menu summary {
+  .section-menu > summary {
     gap: .48rem;
     padding-inline: .62rem;
     font-size: .84rem;

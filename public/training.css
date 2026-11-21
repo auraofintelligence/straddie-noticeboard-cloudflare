@@ -5,7 +5,7 @@
 
 .training-hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   align-items: center;
   gap: clamp(1.7rem, 6vw, 5rem);
   padding-block: clamp(2.5rem, 6vw, 5.25rem);
@@ -44,24 +44,13 @@
 .training-brief img {
   width: 100%;
   height: auto;
-  aspect-ratio: 2.45;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: center 52%;
 }
 
-.training-brief figcaption { padding: clamp(1rem, 2.8vw, 1.65rem); }
-.training-brief .eyebrow { color: var(--gold); }
-
-.training-brief h2 {
-  margin-block: .35rem .6rem;
-  font-size: clamp(1.85rem, 3.3vw, 2.75rem);
-}
-
-.training-brief figcaption > p:not(.eyebrow) { color: #e6f3ee; }
-
-.training-credit {
-  display: inline-block;
-  margin-top: .6rem;
+.training-brief figcaption {
+  padding: .6rem .85rem;
   color: #c6e1d6;
   font-size: .875rem;
 }
@@ -120,6 +109,29 @@
 .training-lessons dt { color: var(--teal); font-weight: 780; }
 .training-lessons dd { margin: 0; color: var(--muted); }
 
+.training-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.training-edit-grid > li {
+  padding: .95rem;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--teal);
+  border-radius: .5rem;
+  background: var(--paper);
+}
+.training-edit-grid span, .training-correction-flow time {
+  color: var(--teal);
+  font-weight: 780;
+  font-variant-numeric: tabular-nums;
+}
+.training-edit-grid h3 { margin-block: .28rem .42rem; font-size: 1.12rem; }
+.training-edit-grid p { color: var(--muted); }
+
 .training-sources-drill, .training-participation {
   margin-top: 1.2rem;
   padding: 1rem 1.15rem;
@@ -127,6 +139,7 @@
   background: var(--mist);
 }
 
+.training-sources-drill { border: 1px solid var(--line); }
 .training-sources-drill summary { color: var(--teal); font-weight: 750; }
 .training-sources-drill > p, .training-participation p { margin-top: .45rem; }
 .training-participation h3 { font-size: 1.15rem; }
@@ -135,7 +148,6 @@
 .training-correction-flow > li:nth-child(2) { border-top-color: var(--teal); }
 .training-correction-flow > li:nth-child(3) { border-top-color: #a77724; }
 .training-correction-flow h3 { margin-block: .2rem; font-size: 1.02rem; }
-.training-correction-flow time { color: var(--teal); font-weight: 780; font-variant-numeric: tabular-nums; }
 
 .training-formats {
   padding: clamp(1.2rem, 4vw, 2.8rem);
@@ -178,7 +190,7 @@
   .training-hero-inner { grid-template-columns: 1fr; }
   .training-hero h1 { max-width: 15ch; }
   .training-brief { width: min(100%, 42rem); }
-  .training-brief img { aspect-ratio: 3; }
+  .training-edit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 660px) {
@@ -186,6 +198,7 @@
 }
 
 @media (max-width: 400px) {
+  .training-edit-grid { grid-template-columns: 1fr; }
   .training-lessons dl { grid-template-columns: 1fr; gap: .1rem; }
   .training-lessons dd + dt { margin-top: .45rem; }
 }

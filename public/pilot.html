@@ -23,38 +23,52 @@
           <a class="primary-nav-extra" href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a>
         </div>
         <details class="section-menu">
-          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>All pages</summary>
+          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>Menu</summary>
           <div class="nav-panel" id="navigation-panel">
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-start">Start here</p>
-              <ul role="list" aria-labelledby="nav-start">
-                <li><a href="./" data-nav-route="index">Home</a></li>
-                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Pilot noticeboard</a></li>
-                <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
-                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
+              <p class="nav-group-title" id="nav-island-information">Find island information</p>
+              <ul role="list" aria-labelledby="nav-island-information">
+                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Reviewed noticeboard</a></li>
                 <li><a href="./island.html" data-nav-route="island">Island travel</a></li>
                 <li><a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Board and screen tools</summary>
+                    <ul role="list">
+                      <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
+                      <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Reviewed notices on screen</a></li>
+                      <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-proposal">Follow the proposal</p>
+              <ul role="list" aria-labelledby="nav-proposal">
+                <li><a href="./" data-nav-route="index">The noticeboard idea</a></li>
+                <li><a href="./how-it-works.html" data-nav-route="how-it-works">How one notice travels</a></li>
+                <li><a href="./training.html" data-nav-route="training">Tell a local story</a></li>
+                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
                 <li><a href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a></li>
               </ul>
             </div>
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-displays">Publishing &amp; screens</p>
-              <ul role="list" aria-labelledby="nav-displays">
-                <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Pilot screen</a></li>
-                <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
-                <li><a href="./how-it-works.html" data-nav-route="how-it-works">Publishing &amp; moderation</a></li>
-                <li><a href="./training.html" data-nav-route="training">Media training</a></li>
-                <li><a href="./setup.html" data-nav-route="setup">Screen setup</a></li>
-                <li><a href="./resilience.html" data-nav-route="resilience">Power &amp; outages</a></li>
-              </ul>
-            </div>
-            <div class="nav-group">
-              <p class="nav-group-title" id="nav-network">Network &amp; participation</p>
-              <ul role="list" aria-labelledby="nav-network">
-                <li><a href="./pilot.html" data-nav-route="pilot" aria-current="page">Island infrastructure plan</a></li>
-                <li><a href="./businesses.html" data-nav-route="businesses">Business onboarding</a></li>
-                <li><a href="./grants.html" data-nav-route="grants">Funding &amp; maintenance</a></li>
-                <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Visitor &amp; volunteer operations</a></li>
+              <p class="nav-group-title" id="nav-participate">Help build the network</p>
+              <ul role="list" aria-labelledby="nav-participate">
+                <li><a href="./businesses.html" data-nav-route="businesses">Publish or host</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Screen and visitor guides</summary>
+                    <ul role="list">
+                      <li><a href="./setup.html" data-nav-route="setup">Connect a screen</a></li>
+                      <li><a href="./resilience.html" data-nav-route="resilience">Prepare for outages</a></li>
+                      <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Manage a busy island day</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="./pilot.html" data-nav-route="pilot" aria-current="page">Local ownership and operation</a></li>
+                <li><a href="./grants.html" data-nav-route="grants">Fund and maintain the network</a></li>
                 <li><a href="./network.html" data-nav-route="network">Project references</a></li>
               </ul>
             </div>
@@ -69,13 +83,14 @@
       <div class="shell pilot-intro">
         <div>
           <p class="pilot-label">Infrastructure proposal · North Stradbroke Island</p>
-          <h1 id="plan-title">Behind the island noticeboard.</h1>
-          <p>A shop changes its hours. A club needs volunteers. A visitor checks the ferry. The board gives each a simple public route to the right information. Underneath it is a proposal for permanent island infrastructure that local people can operate and maintain.</p>
-          <a class="button button-accent" href="./grants.html#compute">Read the A$6 million funding case</a>
+          <h1 id="plan-title">Who would run the island network?</h1>
+          <p>A permanent noticeboard needs people a local publisher can call when a notice changes or a screen goes dark. The island plan sets out who would make those decisions, what each host would look after and how the service could keep running year-round.</p>
+          <a class="button button-accent" href="#sovereignty">See who decides what gets shared</a>
         </div>
-        <figure>
-          <img src="./assets/pilot-rehearsal.webp" width="1450" height="816" alt="Concept of a local host and a learner comparing an island notice on a clubhouse TV and a phone.">
-          <figcaption>AI illustration created for the Straddie Noticeboard Network proposal.</figcaption>
+        <figure class="permission-example">
+          <figcaption>A Dunwich welcome crew <small>Example of a volunteer call-out</small></figcaption>
+          <div><img src="./assets/icons/television.webp" alt="" width="62" height="62"><p><strong>What the public could read</strong>“Can you welcome visitors on Saturday? Ask at the workshop desk.”</p></div>
+          <div><img src="./assets/icons/review.webp" alt="" width="62" height="62"><p><strong>What the coordinator would keep</strong>Volunteer names, phone numbers, shifts and requests for support.</p></div>
         </figure>
       </div>
     </section>
@@ -83,7 +98,7 @@
     <div class="shell pilot-body">
       <section aria-labelledby="scope-title">
         <p class="pilot-label">Island coverage</p>
-        <h2 id="scope-title">One public notice, wherever people need it.</h2>
+        <h2 id="scope-title">Which places would the network serve?</h2>
         <p class="plan-lede">Plan coverage with residents, operators and community groups in Dunwich, Amity Point and Point Lookout. Each location would have a different audience, power supply, connection and person responsible for the display.</p>
         <div class="pilot-measures">
           <article><img src="./assets/icons/television.webp" width="66" height="66" alt=""><h3>Venue and passenger screens</h3><p>Club TVs, shop windows and screens aboard buses and ferries could carry short notices. Onboard messages would run in slots agreed with the operator, with next stops, service changes and safety messages taking priority.</p><a href="./businesses.html">Plan to publish or host</a></article>
@@ -94,31 +109,27 @@
 
       <section class="pilot-people" id="sovereignty" aria-labelledby="people-title">
         <div>
-          <p class="pilot-label">Self-sovereignty in practice</p><h2 id="people-title">Who decides what travels?</h2>
-          <figure class="permission-example">
-            <figcaption>Dunwich workshop · example</figcaption>
-            <div><img src="./assets/icons/notice.webp" alt="" width="42" height="42"><p><strong>On the public screen</strong>“Welcome crew needed for Saturday. Ask at the workshop desk.”</p></div>
-            <div><img src="./assets/icons/review.webp" alt="" width="42" height="42"><p><strong>With the coordinator</strong>Volunteer names, phone numbers, shift allocations and access requests.</p></div>
-          </figure>
+          <p class="pilot-label">Self-sovereignty in practice</p><h2 id="people-title">Who decides what gets shared?</h2>
         </div>
         <div>
-          <p>A volunteer coordinator might publish a request for help at a community event. People on a ferry could see the task and the public contact. The coordinator keeps the roster, contact details and shift changes for individual volunteers in the agreed private system.</p>
+          <p>The volunteer group would own its call-out. It could invite everyone arriving on a ferry to help while keeping each volunteer’s roster private. It could also ask a host to correct or remove the public invitation. Those choices are what local control means in this proposal.</p>
           <dl>
             <dt>The contributor chooses the public copy.</dt><dd>Agree the wording, purpose, display outlets and expiry before publication. A volunteer can keep a private <a href="./opportunities.html#c-hours">Community Hours record</a> and choose whether to share it. The people with authority over cultural material decide its use.</dd>
             <dt>The local host chooses what to carry.</dt><dd>Hosts and publishers would set the coverage, display hours and correction arrangements together. If an organiser withdraws a notice, notify each affected host and verify removal when devices reconnect. Copies someone has already photographed may persist.</dd>
-            <dt>A reviewer keeps the source attached.</dt><dd>Record who issued the notice, when it was checked and who can correct it. Official warnings and transport updates stay attributable to their issuers. Luke Nathan Hayes is developing the proposal through <a href="https://auraofintelligence.github.io/strange-but-true/index.html">Strange But True</a> while seeking local support to form Ready SETCO as the convenor and moderator.</dd>
+            <dt>A reviewer checks the source.</dt><dd>Record who issued the notice, when it was checked and who can correct it. Council, emergency services and transport operators remain responsible for their own updates.</dd>
+            <dt>A co-operative would convene the network.</dt><dd>Luke Nathan Hayes is seeking local support through <a href="https://auraofintelligence.github.io/strange-but-true/index.html">Strange But True</a> to form Ready SETCO. The proposed co-operative would bring publishers and hosts together, moderate notices and agree who handles complaints and covers review shifts.</dd>
           </dl>
-          <p class="plan-note">You can <a href="./submit.html">choose the permitted outlets in a draft</a> today. A steward records those choices in the public feed, and the board, TV and kiosk views respect them. The Sensorium paper describes a further step. Each participating organisation could operate its own node, retain authorised local copies and reconcile changes when it reconnects. The proposed island installations would need to demonstrate expiry, withdrawal and recovery under those conditions. <a href="https://github.com/auraofintelligence/C-Hour-introduction/blob/main/references/originals/Web3%20Sensorium%20for%20Science%20Debate.pdf">Sensorium design, section II</a> · <a href="https://auraofintelligence.github.io/C-Hour-introduction/sensorium.html">Community Hours and personal control</a>.</p>
+          <p class="plan-note">You can already <a href="./submit.html">choose the outlets for a draft</a>. When a reviewer approves it, the publishing tool can limit display to those outlets. The longer-term design would let each organisation run its own copy of the service, store the material it has permission to show and pick up changes when it reconnects. Hosts would test that withdrawn or expired notices come down in practice. <a href="https://github.com/auraofintelligence/C-Hour-introduction/blob/main/references/originals/Web3%20Sensorium%20for%20Science%20Debate.pdf">Read the Sensorium design, section II</a>.</p>
           <details class="steward-notes"><summary>How could two independent hosts trust the same correction?</summary><p>The paper proposes that contributors sign updates using credentials they control. Applied to the workshop, the receiving host could verify the organiser’s signature, recognise the original notice and apply its correction when the connection returns. A person or organisation could operate its own copy of the software. A reader at the ferry would simply see the checked meeting time.</p></details>
         </div>
       </section>
 
       <section class="pilot-people" id="compute" aria-labelledby="compute-title">
-        <div><p class="pilot-label">Ready SETCO · Dunwich proposal</p><h2 id="compute-title">What the compute rack would do.</h2></div>
+        <div><p class="pilot-label">The Dunwich computing proposal</p><h2 id="compute-title">What could a local compute rack do?</h2></div>
         <div>
           <p>Luke is pitching for <strong>A$6 million</strong> to establish a frontier-class computing node at the proposed Ready SETCO co-operative. This is the “missing middle” between a personal device and a distant data centre. The proposal includes the rack, power and cooling, communications, a community learning space and initial support.</p>
-          <p>A local team could use that computing capacity to model a question such as how a ferry delay would affect a visitor welcome point. Digital twins of <strong>councils, electorates and bioregions</strong> would offer different views: public services and infrastructure, opportunities for civic participation, and environmental conditions across an area. Each model needs dated sources, permissions and a clear distinction between a measurement and a scenario. A Digital Twin of Country would require direction and authority from the relevant Quandamooka people.</p>
-          <p>The public board would carry the part someone can act on: for example, the operator’s confirmed update or the organiser’s revised meeting point. Operators would keep booking details, private rosters and working simulations in their own systems.</p>
+          <p>A local team could model how a ferry delay might affect a welcome point. Digital twins are models of real places and systems. A council model could show public services and infrastructure. Models of electorates or bioregions could help people explore civic participation or environmental conditions. Each would need dated sources and permission to use them. A Digital Twin of Country would require direction and authority from the relevant Quandamooka people.</p>
+          <p>Visitors would see the organiser’s confirmed meeting point on the board. The team could keep working scenarios, passenger bookings and rosters in its own systems. The separate noticeboard budget covers displays, editorial shifts, maintenance and replacements.</p>
           <div class="guide-actions">
             <a href="https://github.com/auraofintelligence/ready-set-co-op-cultural-intelligence-node">Ready SETCO Cultural Intelligence Node</a>
             <a href="./grants.html#compute">See what the A$6 million covers</a>
@@ -128,7 +139,7 @@
 
       <section class="pilot-rehearse" id="launch" aria-labelledby="launch-title">
         <p class="pilot-label">December–January school holidays</p>
-        <h2 id="launch-title">A possible opening season.</h2>
+        <h2 id="launch-title">Opening for the school holidays</h2>
         <p class="plan-lede">An eight-week launch across December and January is an option for opening the network during the school-holiday period. Local partners would agree the dates, sites, shifts and funding. The service is intended to continue throughout the year.</p>
         <ol>
           <li><img src="./assets/icons/map.webp" alt="" width="65" height="65"><div><h3>Agree island coverage</h3><p>Walk the ferry-to-bus connections with passengers. Use boarding counts where available and observations at different times to shortlist busy stops. Record who owns each vehicle screen or stop, who can approve its use and how people can read the information while boarding stays clear.</p></div></li>
@@ -139,7 +150,7 @@
       </section>
 
       <section class="pilot-people" id="funding-brief" aria-labelledby="funding-title">
-        <div><p class="pilot-label">Implementation and maintenance</p><h2 id="funding-title">What a funder can assess.</h2></div>
+        <div><p class="pilot-label">Implementation and maintenance</p><h2 id="funding-title">What would a funder need to see?</h2></div>
         <div>
           <dl class="plan-evidence">
             <dt>Costed installation.</dt><dd>Record each candidate location, host permission, equipment life, access checks and supplier quotes. Show which costs belong to the noticeboard and which facilities are shared with the proposed compute node.</dd>
@@ -157,9 +168,9 @@
   </main>
   <footer class="site-footer"><div class="shell footer-inner"><div><strong>Straddie Noticeboard Network</strong><p>Permanent community infrastructure proposed for Minjerribah, on Quandamooka Country.</p></div><nav class="footer-links" aria-label="More pilot guides"><a href="./opportunities.html">Work, volunteering &amp; C-Hours</a><a href="./training.html">Media training</a><a href="./network.html">Connected projects &amp; sources</a></nav></div>
     <div class="shell page-navigation">
-      <nav class="page-sequence" aria-label="Pages in this guide">
-        <a href="./resilience.html" rel="prev"><span>Previous</span><strong>Power and outages</strong></a>
-        <a href="./grants.html" rel="next"><span>Next</span><strong>Funding and maintenance</strong></a>
+      <nav class="page-sequence" aria-label="Continue through the proposal">
+        <a href="./visitor-volunteer.html" rel="prev"><span>Previous</span><strong>Follow a busy day for visitors and volunteers</strong></a>
+        <a href="./grants.html" rel="next"><span>Next</span><strong>Plan how to fund and maintain it</strong></a>
       </nav>
       <div class="page-top-slot"><a class="page-top" href="#main">Back to top</a></div>
     </div>

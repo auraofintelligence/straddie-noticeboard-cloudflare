@@ -31,38 +31,52 @@
           <a class="primary-nav-extra" href="./opportunities.html" data-nav-route="opportunities" aria-current="page">Work &amp; volunteering</a>
         </div>
         <details class="section-menu">
-          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>All pages</summary>
+          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>Menu</summary>
           <div class="nav-panel" id="navigation-panel">
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-start">Start here</p>
-              <ul role="list" aria-labelledby="nav-start">
-                <li><a href="./" data-nav-route="index">Home</a></li>
-                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Pilot noticeboard</a></li>
-                <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
-                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
+              <p class="nav-group-title" id="nav-island-information">Find island information</p>
+              <ul role="list" aria-labelledby="nav-island-information">
+                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Reviewed noticeboard</a></li>
                 <li><a href="./island.html" data-nav-route="island">Island travel</a></li>
                 <li><a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Board and screen tools</summary>
+                    <ul role="list">
+                      <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
+                      <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Reviewed notices on screen</a></li>
+                      <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-proposal">Follow the proposal</p>
+              <ul role="list" aria-labelledby="nav-proposal">
+                <li><a href="./" data-nav-route="index">The noticeboard idea</a></li>
+                <li><a href="./how-it-works.html" data-nav-route="how-it-works">How one notice travels</a></li>
+                <li><a href="./training.html" data-nav-route="training">Tell a local story</a></li>
+                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
                 <li><a href="./opportunities.html" data-nav-route="opportunities" aria-current="page">Work &amp; volunteering</a></li>
               </ul>
             </div>
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-displays">Publishing &amp; screens</p>
-              <ul role="list" aria-labelledby="nav-displays">
-                <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Pilot screen</a></li>
-                <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
-                <li><a href="./how-it-works.html" data-nav-route="how-it-works">Publishing &amp; moderation</a></li>
-                <li><a href="./training.html" data-nav-route="training">Media training</a></li>
-                <li><a href="./setup.html" data-nav-route="setup">Screen setup</a></li>
-                <li><a href="./resilience.html" data-nav-route="resilience">Power &amp; outages</a></li>
-              </ul>
-            </div>
-            <div class="nav-group">
-              <p class="nav-group-title" id="nav-network">Network &amp; participation</p>
-              <ul role="list" aria-labelledby="nav-network">
-                <li><a href="./pilot.html" data-nav-route="pilot">Island infrastructure plan</a></li>
-                <li><a href="./businesses.html" data-nav-route="businesses">Business onboarding</a></li>
-                <li><a href="./grants.html" data-nav-route="grants">Funding &amp; maintenance</a></li>
-                <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Visitor &amp; volunteer operations</a></li>
+              <p class="nav-group-title" id="nav-participate">Help build the network</p>
+              <ul role="list" aria-labelledby="nav-participate">
+                <li><a href="./businesses.html" data-nav-route="businesses">Publish or host</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Screen and visitor guides</summary>
+                    <ul role="list">
+                      <li><a href="./setup.html" data-nav-route="setup">Connect a screen</a></li>
+                      <li><a href="./resilience.html" data-nav-route="resilience">Prepare for outages</a></li>
+                      <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Manage a busy island day</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="./pilot.html" data-nav-route="pilot">Local ownership and operation</a></li>
+                <li><a href="./grants.html" data-nav-route="grants">Fund and maintain the network</a></li>
                 <li><a href="./network.html" data-nav-route="network">Project references</a></li>
               </ul>
             </div>
@@ -79,24 +93,30 @@
         <div>
           <h1 id="opportunities-title">Work &amp; volunteering</h1>
           <p>Find paid roles or ways to volunteer on Minjerribah. If you’ve already given time to a community activity, try a worksheet you can keep or share with the organiser.</p>
-          <div class="opportunities-actions">
-            <a class="button button-accent" href="#find">Find opportunities</a>
-            <a class="button button-ghost" href="#c-hours">Explore C-Hours</a>
-          </div>
         </div>
-        <figure class="opportunities-photo">
-          <img src="./assets/dunwich-bay.webp" alt="Dunwich on the shore of Moreton Bay" width="860" height="574" fetchpriority="high">
-          <figcaption><a href="https://www.commercialrealestate.com.au/property/10-12-ballow-road-dunwich-qld-4183-2020492491">Dunwich aerial from LJ Hooker Property Centre’s Ballow Road listing</a>. Cropped for display.</figcaption>
-        </figure>
+        <nav class="opportunities-paths" aria-label="Choose how to take part">
+          <a href="#paid-work">
+            <img src="./assets/icons/notice.webp" alt="" width="52" height="52">
+            <span><strong>Look for paid work</strong><span>Search current listings and ask the employer about duties and pay.</span></span>
+          </a>
+          <a href="#volunteering">
+            <img src="./assets/icons/venue.webp" alt="" width="52" height="52">
+            <span><strong>Find a volunteer role</strong><span>Contact a community group about a task you’d like to do.</span></span>
+          </a>
+          <a href="#c-hours">
+            <img src="./assets/icons/review.webp" alt="" width="52" height="52">
+            <span><strong>Record voluntary time</strong><span>Draft a private C-Hour worksheet for the organiser to check.</span></span>
+          </a>
+        </nav>
       </div>
     </section>
 
     <div class="shell opportunities-body">
       <section class="opportunities-section" id="find" aria-labelledby="find-title">
         <h2 id="find-title">Find opportunities</h2>
-        <p class="opportunities-intro">Applications and current roles are on the providers’ websites. A proposed island-wide school-holiday launch could create a need for people to help check notices, support venues and maintain screens. Ready SETCO is the proposed convenor. Agree duties, paid shifts and voluntary roles before inviting people to take them on.</p>
+        <p class="opportunities-intro">For work available now, check the employer’s or volunteer organisation’s listing and apply directly. The proposed noticeboard would also need local editors, screen technicians and event helpers. Those roles would depend on funding and agreements with island hosts.</p>
         <div class="opportunities-grid">
-          <article class="opportunities-card">
+          <article class="opportunities-card" id="paid-work">
             <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/notice.webp" alt="" width="80" height="80"><h3>Paid work</h3></div>
             <p>Search for <strong>4183</strong>, Dunwich, Amity Point or Point Lookout. Check whether a listing is on the island or the mainland. Ask the employer about the duties, pay, roster and who will supervise the work.</p>
             <a class="button button-primary" href="https://www.workforceaustralia.gov.au/individuals/jobs/search">Search Workforce Australia</a>
@@ -105,7 +125,7 @@
               <a href="https://www.fairwork.gov.au/starting-employment/unpaid-work">Check Fair Work guidance on paid and unpaid work</a>
             </div>
           </article>
-          <article class="opportunities-card">
+          <article class="opportunities-card" id="volunteering">
             <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/venue.webp" alt="" width="80" height="80"><h3>Volunteering</h3></div>
             <p>Choose a role you want to take on. Check the location and commitments, ask what training or support is available and contact the organisation directly. Bushcare at Point Lookout is one local program to explore.</p>
             <a class="button button-primary" href="https://volunteeringqld.org.au/roles/">Find roles with Volunteering Queensland</a>
@@ -160,16 +180,15 @@
 
       <section class="opportunities-section opportunities-contact" aria-labelledby="contact-title">
         <div>
-          <h2 id="contact-title">Publish or host a screen</h2>
-          <p>Use the existing Ready SETCO expression-of-interest form. Select notices and media if you want to share updates. Select sharing a venue or equipment if you want to discuss hosting. If you’re enquiring for an organisation, check who can speak on its behalf.</p>
+          <h2 id="contact-title">Practise a local noticeboard role</h2>
+          <p>Write and check an update, help visitors find the current information or rehearse a handover between volunteers and screen hosts. A real role would have an agreed task, a named person to ask for support and clear terms for paid or voluntary work.</p>
           <div class="opportunities-actions">
-            <a class="button button-primary" href="https://ready-setco.auraofintelligence.workers.dev/join.html?interest=media">Enquire about publishing notices</a>
-            <a class="button button-secondary" href="https://ready-setco.auraofintelligence.workers.dev/join.html?interest=resources">Enquire about hosting</a>
+            <a class="button button-primary" href="./training.html">Try the media training exercises</a>
+            <a class="button button-secondary" href="./visitor-volunteer.html#handover">Practise a volunteer handover</a>
           </div>
         </div>
         <div class="opportunities-links">
-          <a href="./businesses.html">Make a business setup plan</a>
-          <a href="./training.html">Try the media training exercises</a>
+          <a href="https://ready-setco.auraofintelligence.workers.dev/join.html?interest=media">Express interest in notices and media through Ready SETCO</a>
           <a href="./board.html">Browse practice notices</a>
         </div>
       </section>
@@ -182,9 +201,9 @@
       <div class="footer-links"><a href="./">Noticeboard home</a><a href="./how-it-works.html">How it works</a></div>
     </div>
     <div class="shell page-navigation">
-      <nav class="page-sequence" aria-label="Pages in this guide">
-        <a href="./emergencies.html" rel="prev"><span>Previous</span><strong>Emergency information</strong></a>
-        <a href="./visitor-volunteer.html" rel="next"><span>Next</span><strong>Visitor and volunteer operations</strong></a>
+      <nav class="page-sequence" aria-label="Continue through the proposal">
+        <a href="./submit.html" rel="prev"><span>Previous</span><strong>Turn a local opportunity into a notice</strong></a>
+        <a href="./businesses.html" rel="next"><span>Next</span><strong>See how businesses can publish or host</strong></a>
       </nav>
       <div class="page-top-slot"><a class="page-top" href="#main">Back to top</a></div>
     </div>

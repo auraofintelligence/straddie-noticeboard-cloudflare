@@ -20,7 +20,7 @@ export const projects = [
   {
     name: 'Minjerribah Screen & Media Network',
     url: 'https://auraofintelligence.github.io/minjerribah-screen-media-network/',
-    description: 'Reporting, recording, captioning and checking a source become a supervised job for a local media crew. A learner and host rehearse the handover together.',
+    description: 'A proposed local newsroom and training programme. Its interview, editing and captioning lessons inform the noticeboard’s maker-film workshop.',
     group: 'Media & opportunity',
   },
   {
@@ -134,7 +134,7 @@ export const projects = [
   {
     name: "Ready S.E.T. Co-op Cultural Intelligence Node",
     url: "https://github.com/auraofintelligence/ready-set-co-op-cultural-intelligence-node",
-    description: "Shared equipment and training in Dunwich, with project-level consent. On the board, a cultural story needs permission from the people who have authority to share it.",
+    description: "A proposal for shared computing and training in Dunwich. It informs the noticeboard’s approach to local control and permission to share cultural material.",
     group: "Island life",
   },
   {
@@ -152,7 +152,7 @@ export const projects = [
   {
     name: "Joyful Responsible Abundance",
     url: "https://auraofintelligence.github.io/joyful-responsible-abundance/start-here.html",
-    description: "The wider vision connects useful shared tools with human responsibility. For this trial the question is whether residents can contribute a story, find help or learn a skill.",
+    description: "The wider vision connects shared tools with responsibility for their use. The island proposal puts that into practice through local publishing, volunteering and paid media work.",
     group: "Civic & digital",
   },
   {

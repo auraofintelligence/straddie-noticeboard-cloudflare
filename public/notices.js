@@ -14,39 +14,34 @@ export function noticesForScreen(records, place, format) {
   return records.filter(notice => (!place || notice.place === place) && allowsNoticeOutlet(notice, outlet));
 }
 
-const photos = {
-  dunwich: {
-    image: "./assets/dunwich-bay.webp",
-    imageAlt: "Aerial view looking across the bay from Dunwich",
+const practiceArt = {
+  filmNight: {
+    image: "./assets/practice-film-night.webp",
+    imageAlt: "Concept of neighbours watching a film outdoors beside the bay",
     imageCredit: {
-      source: "Dunwich aerial from LJ Hooker Property Centre’s Ballow Road listing",
-      sourceUrl: "https://www.commercialrealestate.com.au/property/10-12-ballow-road-dunwich-qld-4183-2020492491",
-      note: "Cropped for display.",
+      source: "Ballow Road Sand and Screen Hub by Luke Nathan Hayes / Strange But True / Aura of Intelligence",
+      sourceUrl: "https://auraofintelligence.github.io/ballow-road-sand-screen-hub/film.html",
+      licence: "Public Source Licence",
+      licenceUrl: "https://github.com/auraofintelligence/ballow-road-sand-screen-hub/blob/main/LICENCE.md",
+      note: "Concept illustration, cropped for display.",
     },
   },
-  amity: {
-    image: "./assets/amity-jetty.webp",
-    imageAlt: "Amity Point Jetty at sunset",
+  produceSwap: {
+    image: "./assets/practice-produce-swap.webp",
+    imageAlt: "Concept of people sorting harvested herbs and leafy greens around a shared table",
     imageCredit: {
-      source: "Amity Point Jetty at sunset by Pacificwizard",
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Amity_Point_Jetty_at_Sunset._North_Stradbroke_Island,_Queensland,_Australia.jpg",
-      licence: "CC0 1.0",
-      licenceUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
-      note: "Resized, converted to WebP and cropped for display.",
-    },
-  },
-  point: {
-    image: "./assets/point-lookout.webp",
-    imageAlt: "The coast at Point Lookout",
-    imageCredit: {
-      source: "Point Lookout by Sarah Barry",
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Point_Lookout,_North_Stradbroke_Island,_by_Sarah_Barry.jpg",
-      licence: "CC BY 4.0",
-      licenceUrl: "https://creativecommons.org/licenses/by/4.0/",
-      note: "Converted to WebP and cropped for display.",
+      source: "Straddie Shared Table by Luke Nathan Hayes / Strange But True / Aura of Intelligence",
+      sourceUrl: "https://auraofintelligence.github.io/shared-table-initiative/garden-mate.html",
+      licence: "Public Source Licence",
+      licenceUrl: "https://github.com/auraofintelligence/shared-table-initiative/blob/master/LICENCE.md",
+      note: "Garden Mate concept illustration, cropped for display.",
     },
   },
 };
+
+function spotIllustration(subject) {
+  return { image: `./assets/icons/${subject}.webp`, imageAlt: "", imageKind: "spot" };
+}
 
 export function renderImageCredit(caption, credit) {
   caption.replaceChildren();
@@ -73,16 +68,16 @@ export const notices = [
     place: "Dunwich",
     category: "Arts & culture",
     title: "A film night on the bay",
-    summary: "See how a community screening could invite neighbours to bring a camp chair and share a short film made on the island.",
-    ...photos.dunwich,
+    summary: "Saturday, 6.30 pm in the community hall courtyard, Dunwich. Come for an evening of local short films, including a one-minute profile of a maker shaping a timber bellyboard.",
+    ...practiceArt.filmNight,
   },
   {
     id: "amity-shared-table",
     place: "Amity Point",
     category: "Volunteering",
     title: "An island produce swap",
-    summary: "A call-out for garden surplus, spare seedlings and volunteers to help run a shared table.",
-    ...photos.amity,
+    summary: "Bring spare seedlings, herbs or garden produce to the shared table. Label what you bring so neighbours know what grows well. If you can help set out the table, let the swap organiser know.",
+    ...practiceArt.produceSwap,
   },
   {
     id: "point-club-match-report",
@@ -90,23 +85,23 @@ export const notices = [
     category: "Clubs & sport",
     title: "Write a local match report",
     summary: "Ask a club to confirm its result and fixture. Capture a short comment with permission, then make a headline and a captioned clip for the club screen.",
-    ...photos.point,
+    ...spotIllustration("camera"),
   },
   {
     id: "island-grant-ideas",
     place: "Island-wide",
     category: "Community",
     title: "From local idea to grant project",
-    summary: "A notice inviting community groups to bring one project idea and look at the funding paths that might suit it.",
-    ...photos.dunwich,
+    summary: "Bring a community project idea to the funding workshop. Sketch what it would cost to get started, who would look after it and which islanders would benefit.",
+    ...spotIllustration("grants"),
   },
   {
     id: "island-local-stories",
     place: "Island-wide",
     category: "Events",
     title: "Try a phone interview",
-    summary: "A beginner practice session could teach how to ask one good question, record a clear answer and check which parts the speaker agrees to share.",
-    ...photos.amity,
+    summary: "Bring a phone and pair up for a practice interview. Ask a question about something your partner makes or does. Play back the recording together and agree which parts you could share.",
+    ...spotIllustration("phone"),
   },
   {
     id: "dunwich-ferry-weather-guide",
@@ -114,6 +109,6 @@ export const notices = [
     category: "Learning",
     title: "Check the ferry and the weather",
     summary: "A timetable shows the planned service. Check your ferry operator for changes, and the Bureau of Meteorology for current weather and warnings.",
-    ...photos.dunwich,
+    ...spotIllustration("ferry"),
   },
 ];

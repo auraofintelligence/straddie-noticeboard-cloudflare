@@ -30,38 +30,52 @@
           <a class="primary-nav-extra" href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a>
         </div>
         <details class="section-menu">
-          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>All pages</summary>
+          <summary aria-controls="navigation-panel"><span class="menu-symbol" aria-hidden="true"></span>Menu</summary>
           <div class="nav-panel" id="navigation-panel">
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-start">Start here</p>
-              <ul role="list" aria-labelledby="nav-start">
-                <li><a href="./" data-nav-route="index">Home</a></li>
-                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Pilot noticeboard</a></li>
-                <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
-                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
+              <p class="nav-group-title" id="nav-island-information">Find island information</p>
+              <ul role="list" aria-labelledby="nav-island-information">
+                <li><a href="./board.html?mode=pilot" data-nav-route="board-pilot">Reviewed noticeboard</a></li>
                 <li><a href="./island.html" data-nav-route="island">Island travel</a></li>
                 <li><a class="emergency-nav" href="./emergencies.html" data-nav-route="emergencies">Emergencies</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Board and screen tools</summary>
+                    <ul role="list">
+                      <li><a href="./board.html" data-nav-route="board-practice">Practice noticeboard</a></li>
+                      <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Reviewed notices on screen</a></li>
+                      <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-group">
+              <p class="nav-group-title" id="nav-proposal">Follow the proposal</p>
+              <ul role="list" aria-labelledby="nav-proposal">
+                <li><a href="./" data-nav-route="index">The noticeboard idea</a></li>
+                <li><a href="./how-it-works.html" data-nav-route="how-it-works" aria-current="page">How one notice travels</a></li>
+                <li><a href="./training.html" data-nav-route="training">Tell a local story</a></li>
+                <li><a href="./submit.html" data-nav-route="submit">Draft a notice</a></li>
                 <li><a href="./opportunities.html" data-nav-route="opportunities">Work &amp; volunteering</a></li>
               </ul>
             </div>
             <div class="nav-group">
-              <p class="nav-group-title" id="nav-displays">Publishing &amp; screens</p>
-              <ul role="list" aria-labelledby="nav-displays">
-                <li><a href="./screen.html?mode=pilot" data-nav-route="screen-pilot">Pilot screen</a></li>
-                <li><a href="./screen.html" data-nav-route="screen-practice">Practice screen</a></li>
-                <li><a href="./how-it-works.html" data-nav-route="how-it-works" aria-current="page">Publishing &amp; moderation</a></li>
-                <li><a href="./training.html" data-nav-route="training">Media training</a></li>
-                <li><a href="./setup.html" data-nav-route="setup">Screen setup</a></li>
-                <li><a href="./resilience.html" data-nav-route="resilience">Power &amp; outages</a></li>
-              </ul>
-            </div>
-            <div class="nav-group">
-              <p class="nav-group-title" id="nav-network">Network &amp; participation</p>
-              <ul role="list" aria-labelledby="nav-network">
-                <li><a href="./pilot.html" data-nav-route="pilot">Island infrastructure plan</a></li>
-                <li><a href="./businesses.html" data-nav-route="businesses">Business onboarding</a></li>
-                <li><a href="./grants.html" data-nav-route="grants">Funding &amp; maintenance</a></li>
-                <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Visitor &amp; volunteer operations</a></li>
+              <p class="nav-group-title" id="nav-participate">Help build the network</p>
+              <ul role="list" aria-labelledby="nav-participate">
+                <li><a href="./businesses.html" data-nav-route="businesses">Publish or host</a></li>
+                <li>
+                  <details class="nav-more">
+                    <summary>Screen and visitor guides</summary>
+                    <ul role="list">
+                      <li><a href="./setup.html" data-nav-route="setup">Connect a screen</a></li>
+                      <li><a href="./resilience.html" data-nav-route="resilience">Prepare for outages</a></li>
+                      <li><a href="./visitor-volunteer.html" data-nav-route="visitor-volunteer">Manage a busy island day</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li><a href="./pilot.html" data-nav-route="pilot">Local ownership and operation</a></li>
+                <li><a href="./grants.html" data-nav-route="grants">Fund and maintain the network</a></li>
                 <li><a href="./network.html" data-nav-route="network">Project references</a></li>
               </ul>
             </div>
@@ -77,37 +91,38 @@
       <a class="tool-back" href="./">Noticeboard home</a>
       <h1>How the network would work</h1>
       <p>Each notice would have one record with its source, permissions and expiry. The web board, standard displays and touchscreens would all use that record so people can check the source and see when the information changes.</p>
-      <p>The proposed first operating season would aim for a December–January school-holiday launch, with publishers and candidate hosts in Dunwich, Amity Point and Point Lookout preparing at the same time. Dates and coverage would depend on the venues, people and funding in place. <a href="./pilot.html">Island launch plan</a></p>
+      <p>See how publishers and hosts could prepare in Dunwich, Amity Point and Point Lookout. <a href="./pilot.html">Island launch plan</a></p>
     </header>
 
     <section class="guide-section" aria-labelledby="workflow-title">
-      <h2 id="workflow-title">From a local tip to a checked notice</h2>
+      <h2 id="workflow-title">Follow a Dunwich film notice</h2>
+      <p>In this fictional example, a Dunwich screening includes local short films and a one-minute profile of a timber bellyboard maker. Follow the organiser’s notice as it goes from draft to display, then changes time.</p>
       <ol class="process-list" role="list">
         <li>
           <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/camera.webp" alt="" width="80" height="80"><h3>Gather the information</h3></div>
-          <p>Start with an event detail, a question, an interview, a photo or an official source. Name the person or group who can confirm the details.</p>
+          <p>The organiser plans to show the films outdoors at 6.30 pm on Saturday in a community hall courtyard in Dunwich. Ask for the programme, access details and a public event page people could check.</p>
         </li>
         <li>
           <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/map.webp" alt="" width="80" height="80"><h3>Verify the source</h3></div>
-          <p>Check the issuer, place, dates and affected audience. For bus service notices, verify routes, directions, affected stops and effective times against the operator’s public update. Record who can correct it.</p>
+          <p>Check the time, entrance and programme with the organiser. Ask who can confirm a late change and whether the maker’s name, stills or short clip may appear in the notice.</p>
         </li>
         <li>
           <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/notice.webp" alt="" width="80" height="80"><h3>Prepare the notice</h3></div>
-          <p>Write the public details in plain language. Choose the web board, TVs and standard displays, or touchscreen kiosks. Check photo credits and keep permission records with the people responsible for them.</p>
+          <p>Use a headline people can understand at a glance. Include the hall, time and organiser’s source. The organiser chooses which approved outlets may show it, such as the web board, a venue TV and the touchscreen kiosk.</p>
           <a href="./submit.html">Try the draft tool</a>
         </li>
         <li>
           <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/review.webp" alt="" width="80" height="80"><h3>Approve and publish</h3></div>
-          <p>A named reviewer checks the wording, confirms the publisher’s outlet choices and agrees a take-down time. Check permission with the operator or host before using a bus or stop screen. The steward records the approved choices in the public feed.</p>
+          <p>The reviewer confirms the facts, permission, outlets and the 7.15 pm take-down time. The steward releases one approved record. A transport display would also need approval from its operator or host.</p>
         </li>
         <li>
           <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/television.webp" alt="" width="80" height="80"><h3>Adapt for each screen</h3></div>
-          <p>Use a short, readable headline on venue TVs, onboard buses and standard displays at busy stops. Phones can link to the source. Interactive kiosks at a venue or stop can offer a map or more detail.</p>
-          <a href="./screen.html">Try a screen preview</a>
+          <p>The TV can show the title, place and time in large type. Phones can open the source, and a kiosk can show the programme or directions. The organiser’s details stay the same across the display versions.</p>
+          <a href="./screen.html?place=Dunwich&amp;notice=dunwich-screen-night">Preview the Dunwich film notice</a>
         </li>
         <li>
           <div class="guide-step-head"><img class="guide-pictogram" src="./assets/icons/signal.webp" alt="" width="80" height="80"><h3>Correct or take it down</h3></div>
-          <p>Log the correction against the original notice and send it to the same channels across towns. Have each intended venue confirm the replacement. Track displays that are offline separately and expire routine notices on schedule.</p>
+          <p>The organiser confirms a new start time of 7 pm. Update the same record and ask each host to confirm the new time is visible. Flag any offline display for follow-up and check the notice comes down at 7.15 pm.</p>
         </li>
       </ol>
     </section>
@@ -141,12 +156,11 @@
     </section>
 
     <section class="guide-section guide-next" aria-labelledby="next-title">
-      <h2 id="next-title">Try it with a practice story</h2>
-      <p>Work through the reporting, recording and editing lessons, or use one of the practice notices to compare a phone view and a public display.</p>
+      <h2 id="next-title">Make the short film behind the notice</h2>
+      <p>Practise interviewing and filming a bellyboard maker, then edit a one-minute profile and write the checked notice for its screening.</p>
       <div class="guide-actions">
-        <a href="./training.html">Open media training</a>
-        <a href="./board.html">Browse practice notices</a>
-        <a href="./opportunities.html">Find work and volunteering routes</a>
+        <a class="button button-primary" href="./training.html#lessons">Start the maker-film workshop</a>
+        <a class="button button-secondary" href="./training.html#screening-notice">Compare the screening versions</a>
       </div>
     </section>
   </main>
@@ -160,9 +174,9 @@
       </div>
     </div>
     <div class="shell page-navigation">
-      <nav class="page-sequence" aria-label="Pages in this guide">
-        <a href="./submit.html" rel="prev"><span>Previous</span><strong>Draft a notice</strong></a>
-        <a href="./board.html" rel="next"><span>Next</span><strong>Practice noticeboard</strong></a>
+      <nav class="page-sequence" aria-label="Continue through the proposal">
+        <a href="./" rel="prev"><span>Previous</span><strong>Start with the island noticeboard idea</strong></a>
+        <a href="./training.html" rel="next"><span>Next</span><strong>Learn to tell a local story</strong></a>
       </nav>
       <div class="page-top-slot"><a class="page-top" href="#main">Back to top</a></div>
     </div>
