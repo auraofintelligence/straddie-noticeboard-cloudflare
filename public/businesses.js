@@ -48,13 +48,14 @@ function buildPlan() {
       `Reviewer role: ${value('reviewer')}`,
       `First public source: ${value('source') || 'To be confirmed'}`,
       '[ ] Draft one notice with a public source, timing and take-down date.',
-      '[ ] Confirm permission, facts, public wording and expiry with the named reviewer.',
+      '[ ] Confirm permission, facts, public wording, expiry and the author’s selected outlet types with the named reviewer.',
       '[ ] Decide who sends corrections to each recipient and checks acknowledgement across venues.',
       ''
     );
   }
 
   if (!hostFields.disabled) {
+    const transportSite = fields['business-screen'].selectedOptions[0]?.dataset.transportSite;
     lines.push(
       'SCREEN HOSTING',
       `Screen to test: ${value('screen')}`,
@@ -63,12 +64,24 @@ function buildPlan() {
       '[ ] Test the display from the intended viewing positions. Confirm the roster and holiday backup.',
       '[ ] Rehearse a correction and expiry. Check the actual screen and record the result.',
       '[ ] Record the printed or saved fallback and agree who keeps it current.',
-      '[ ] Assign ongoing maintenance and budget for repairs, replacement and support.',
-      ''
+      '[ ] Assign ongoing maintenance and budget for repairs, replacement and support.'
     );
+    if (transportSite === 'onboard') {
+      lines.push(
+        '[ ] Confirm approval with the bus operator and vehicle owner. Use the approved passenger display, wide format and supported vehicle power.',
+        '[ ] Check readability from passenger seats and agree who can pause the community rotation so route, stop, access and safety information takes priority.'
+      );
+    }
+    if (transportSite === 'stop') {
+      lines.push(
+        '[ ] Confirm approval with the site owner, stop asset owner and transport operator. Check placement, weather exposure, reach, glare and boarding clearance.',
+        '[ ] Keep official service, access and safety information prominent. Test independent power if the installation is designed to use it.'
+      );
+    }
+    lines.push('');
   }
 
-  lines.push('Review with the team before confirming this venue’s participation dates and ongoing responsibilities.', '');
+  lines.push('Review with the team before confirming this outlet’s participation dates and ongoing responsibilities.', '');
   return lines.join('\n');
 }
 

@@ -179,7 +179,7 @@ updateFormat();
 if (isPilot) {
   document.title = 'Pilot screen | Straddie Noticeboard Network';
   document.querySelector('#screen-page-title').textContent = 'Pilot screen';
-  document.querySelector('#screen-page-description').textContent = 'Choose a venue TV or touchscreen view and filter by place. Each view shows the current notices approved for that outlet.';
+  document.querySelector('#screen-page-description').textContent = 'Choose a wide display for a venue, vehicle or stop, or a touchscreen kiosk. Filter by place to see the current notices approved for that outlet.';
   const boardLink = document.querySelector('#screen-board-link');
   boardLink.href = './board.html?mode=pilot';
   boardLink.textContent = 'Back to the reviewed pilot board';

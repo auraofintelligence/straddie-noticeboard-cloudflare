@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Plan how a Straddie business could publish local notices, host a screen or do both in a proposed noticeboard pilot.">
-  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <link rel="icon" href="./favicon.ico?v=3" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./businesses.css">
   <link rel="stylesheet" href="./guide-figures.css">
@@ -18,11 +18,11 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=3" alt="" width="43" height="43">
         <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
       <nav class="primary-nav" aria-label="Main navigation">
-        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./island.html">Island travel</a>
         <a href="./opportunities.html">Work &amp; volunteering</a>
         <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
         <details class="section-menu">
@@ -50,7 +50,7 @@
       <div class="shell business-hero-inner">
         <h1 id="business-title">For Straddie businesses</h1>
         <p>Publish a local update, host a community screen or do both. Plan what your business could support for a possible island-wide December–January school-holiday launch and who would look after it year-round.</p>
-        <p class="business-stage">The network and its convenor, Ready SETCO, are proposals. Businesses in Dunwich, Amity Point and Point Lookout could prepare in parallel, alongside club, community and ferry hosts that choose to take part.</p>
+        <p class="business-stage">The network and its convenor, Ready SETCO, are proposals. Businesses in Dunwich, Amity Point and Point Lookout could prepare in parallel, alongside community venues, ferry or bus operators and bus stop owners that choose to take part.</p>
         <a class="button button-accent" href="#plan">Make a setup plan</a>
       </div>
     </section>
@@ -82,6 +82,7 @@
             </ol>
             <p>Start with permission from the venue owner or operator. Try a wide TV preview on an existing display and decide what people can read from the queue, footpath or ferry cabin.</p>
             <p>Use a supported browser or a signage player. Agree which approved topics and towns will appear, who can pause the display and where to put printed information if the screen goes dark. Check text size, glare and access from a seated position.</p>
+            <p>For an onboard bus screen, get agreement from the operator and vehicle owner and use the wide format on an approved passenger display. At a high-traffic stop, get agreement from the site owner, stop asset owner and transport operator. Choose wide for a passive screen or kiosk for interactive use. Passenger service, accessibility and safety information takes priority at both.</p>
             <div class="business-actions">
               <a class="button button-primary" data-plan-route="Host a screen" href="#plan">Plan to host</a>
               <a class="text-link" href="./screen.html">Try a venue TV</a>
@@ -145,7 +146,7 @@
               <label class="business-field business-wide">Permission stage
                 <select id="business-permission" required>
                   <option value="Exploring the idea">Exploring the idea</option>
-                  <option value="Seeking venue or publisher approval">Seeking venue or publisher approval</option>
+                  <option value="Seeking host, owner, operator or publisher approval">Seeking host, owner, operator or publisher approval</option>
                   <option value="Permission agreed for an internal test">Permission agreed for an internal test</option>
                 </select>
               </label>
@@ -170,6 +171,9 @@
                   <option>Existing venue TV</option>
                   <option>Battery-backed touchscreen</option>
                   <option>Portable tablet or display</option>
+                  <option data-transport-site="onboard">Onboard bus screen (wide)</option>
+                  <option data-transport-site="stop">Bus stop display (wide)</option>
+                  <option data-transport-site="stop">Interactive bus stop kiosk</option>
                 </select>
               </label>
               <label class="business-field">Fallback to practise

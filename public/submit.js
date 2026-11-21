@@ -6,8 +6,8 @@ const fields = Object.fromEntries(Array.from(form.querySelectorAll('input:not([n
 const outletFields = Array.from(form.querySelectorAll('[name="outlets"]'));
 const outletInstructions = {
   web: 'Phone and web board: a short headline, the essential details and a clear next step if supplied.',
-  tv: 'Venue TV: a large-type headline and up to two short lines someone can read at a glance.',
-  kiosk: 'Touchscreen kiosk: brief, plain-language text with place, timing and what to do next, if supplied.'
+  tv: 'Venue TVs, onboard bus screens and standard stop displays: write a large-type headline and up to two short lines people can read at a glance. For a bus service change, keep the verified route, direction, affected stops and effective times if supplied.',
+  kiosk: 'Touchscreen kiosk, including interactive stops: write brief, plain-language text with place, timing and what to do next, if supplied.'
 };
 const generate = document.querySelector('#generate-draft');
 const preview = document.querySelector('#draft-preview');

@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore the Straddie Noticeboard Network’s proposed island coverage and find official maps, weather forecasts and emergency information.">
-  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <meta name="description" content="Find official bus and ferry timetables, local maps, weather forecasts and emergency information for Minjerribah / North Stradbroke Island.">
+  <link rel="icon" href="./favicon.ico?v=3" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./island.css">
   <script type="module" src="./island.js"></script>
-  <title>Maps &amp; weather | Straddie Noticeboard Network</title>
+  <title>Maps, transport &amp; weather | Straddie Noticeboard Network</title>
   <link rel="stylesheet" href="./brand.css">
   <meta name="theme-color" content="#111526">
 </head>
@@ -17,11 +17,11 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=3" alt="" width="43" height="43">
         <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
       <nav class="primary-nav" aria-label="Main navigation">
-        <a aria-current="page" href="./island.html">Maps &amp; ferries</a>
+        <a aria-current="page" href="./island.html">Island travel</a>
         <a href="./opportunities.html">Work &amp; volunteering</a>
         <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
         <details class="section-menu">
@@ -50,14 +50,14 @@
         <div>
           <p class="eyebrow">Minjerribah / North Stradbroke Island</p>
           <h1 id="island-title">Maps &amp; weather</h1>
-          <p>Find Dunwich, Amity Point and Point Lookout, and see where to check the ferry, local transport and current conditions before you head out.</p>
+          <p>Find Dunwich, Amity Point and Point Lookout. Check your ferry, connecting bus and current weather before you head out.</p>
         </div>
         <div class="island-arrival">
           <img src="./assets/icons/ferry.webp" alt="" width="76" height="76">
           <div>
-            <h2>Arriving by ferry?</h2>
+            <h2>Ferry and bus connections</h2>
             <p>Check your operator’s departure point, arrival terminal and sailing status for your travel date. If you’re visiting during the December or January holidays, check connecting transport for the same date.</p>
-            <a href="./island.html?place=Dunwich#explore-title">Find Dunwich transport links</a>
+            <a href="#transport">Find routes, stops and timetables</a>
           </div>
         </div>
       </div>
@@ -128,10 +128,11 @@
             <p>A meeting room or neighbourhood noticeboard could carry updates for people arriving at Dunwich and for those who live nearby.</p>
             <div class="place-local place-transport">
               <h4>Ferry and onward travel</h4>
-              <p>Match the terminal to your booking. Timetables show planned services. Check your operator for changes and use the journey planner to check onward connections on your travel day.</p>
+              <p>SeaLink uses the Junner Street terminal. The Stradbroke Flyer uses One Mile. Match your bus stop to the ferry you’re taking and check the route direction and travel date.</p>
               <a href="https://www.sealink.com.au/north-stradbroke-island/ferry-status/">SeaLink ferry service status</a>
-              <a href="https://www.flyer.com.au/timetable">Stradbroke Flyer timetable</a>
-              <a href="https://translink.com.au/plan-your-journey">Translink journey planning and local bus timetables</a>
+              <a href="https://jp.translink.com.au/plan-your-journey/stops/870029">Junner Street ferry terminal bus stop</a>
+              <a href="https://jp.translink.com.au/plan-your-journey/stops/870027">One Mile ferry terminal bus stop on Yabby Street</a>
+              <a href="#transport">All island bus and ferry links</a>
             </div>
             <div class="place-local">
               <h4>Possible notice</h4>
@@ -153,6 +154,10 @@
             <h3 id="place-amity-title">Amity Point</h3>
             <p>A hall or community meeting place could carry notices about local get-togethers, volunteering and bayside events.</p>
             <div class="place-local">
+              <h4>Bus to or from Dunwich</h4>
+              <a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/f/881">Translink route 881 timetable</a>
+            </div>
+            <div class="place-local">
               <h4>Possible notice</h4>
               <p>A volunteer group could share where to meet, what to bring and how to contact the organiser if plans change.</p>
               <a href="https://www.redland.qld.gov.au/Parks-venues-and-sport/Sport-and-recreation/Skate-and-ramp-parks">Council recreation information for Amity Point</a>
@@ -170,6 +175,10 @@
             <h3 id="place-lookout-title">Point Lookout</h3>
             <p>A clubhouse or community space could display local events and help visitors find information about the surrounding area.</p>
             <div class="place-local">
+              <h4>Bus to or from Dunwich</h4>
+              <a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/f/880">Translink route 880 timetable</a>
+            </div>
+            <div class="place-local">
               <h4>Possible notice</h4>
               <p>A club could show when its outdoor session starts and where to check for a change of venue.</p>
               <a href="https://www.redland.qld.gov.au/Libraries/Opening-hours-and-locations/Point-Lookout-Library">Point Lookout Library information</a>
@@ -183,6 +192,40 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <section class="weather-guide" id="transport" aria-labelledby="transport-title">
+        <h2 id="transport-title">Plan an island trip</h2>
+        <p>Choose your ferry terminal, bus stop and direction for the date you’ll travel. Check the operator for any changes before leaving.</p>
+        <div class="weather-guide-grid">
+          <div class="place-local place-transport">
+            <h3>Crossings from Cleveland</h3>
+            <p>SeaLink arrives at Junner Street. The Stradbroke Flyer arrives at One Mile.</p>
+            <a href="https://www.sealink.com.au/north-stradbroke-island/ferry-information/timetable">SeaLink ferry timetable</a>
+            <a href="https://www.sealink.com.au/north-stradbroke-island/ferry-status/">SeaLink service status</a>
+            <a href="https://www.flyer.com.au/timetable">Stradbroke Flyer timetable</a>
+          </div>
+          <div class="place-local place-transport">
+            <h3>Buses between towns</h3>
+            <p>Both island routes serve the Dunwich ferry terminal area. Check your specific trip because stops and service patterns vary.</p>
+            <a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/f/880">880 between Dunwich and Point Lookout</a>
+            <a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/f/881">881 between Dunwich and Amity Point</a>
+            <a href="https://translink.com.au/plan-your-journey/printable-timetables?lookup=881&amp;region=F">Printable island bus map and timetable</a>
+          </div>
+          <div class="place-local place-transport">
+            <h3>Find your connection</h3>
+            <p>Look up the stop closest to your ferry and check the destination shown for the bus you plan to catch.</p>
+            <a href="https://jp.translink.com.au/plan-your-journey/journey-planner">Translink journey planner</a>
+            <a href="https://jp.translink.com.au/plan-your-journey/stops/870027">Departures from Yabby Street at One Mile</a>
+            <a href="https://jp.translink.com.au/plan-your-journey/stops/870029">Departures from Junner Street ferry terminal</a>
+          </div>
+        </div>
+        <div class="place-local">
+          <h3>How a notice could help at One Mile</h3>
+          <p>At the real Yabby Street bus stop by One Mile Ferry Terminal, a display could point travellers to the 880 for Point Lookout or the 881 for Amity Point and show where to check for changes. With operator and site approval, an onboard screen could preview the transfer, a read-only display at the stop could show a short update, and a separate touchscreen could let people browse an island map and official links.</p>
+          <a href="https://jp.translink.com.au/plan-your-journey/stops/870027">Translink’s One Mile stop information</a>
+        </div>
+        <p><a href="#future-mobility">How could the board support future island transport?</a></p>
       </section>
 
       <section class="weather-guide" aria-labelledby="weather-title">
@@ -202,6 +245,35 @@
             <p>Read the time on each frame to see where rainfall echoes have moved. Pair the radar with the forecast and official warnings.</p>
             <a href="https://www.bom.gov.au/products/IDR663.loop.shtml">Open Bureau radar for Brisbane (Mt Stapylton)</a>
           </details>
+        </div>
+      </section>
+      <section class="weather-guide mobility-guide" id="future-mobility" aria-labelledby="mobility-title">
+        <p class="eyebrow">Future island transport · November 2026</p>
+        <h2 id="mobility-title">What would the board show at a new pickup point?</h2>
+        <p>Imagine a resident stepping off the ferry in Dunwich and looking for a connecting ride. If a locally agreed robotaxi pilot opened, a stop screen could show its operating area, accessible pickup point, hours and a phone number for help. If it paused, the same screen could direct people to the bus. Bookings and passenger details would stay with the operator.</p>
+        <figure class="mobility-photo">
+          <img src="./assets/moreton-bay-mobility-concept.webp" width="2400" height="1140" loading="lazy" alt="Concept illustration of passengers leaving a ferry beside three possible autonomous vehicles.">
+          <figcaption>AI concept from Luke Nathan Hayes / Strange But True / Aura of Intelligence. <a href="https://github.com/auraofintelligence/moreton-bay-autonomous-mobility">Moreton Bay Autonomous Mobility</a> · <a href="https://github.com/auraofintelligence/moreton-bay-autonomous-mobility/blob/main/LICENCE.md">Public source licence</a></figcaption>
+        </figure>
+        <div class="weather-guide-grid">
+          <article class="place-local place-transport">
+            <h3>Could Straddie go early?</h3>
+            <p>Luke’s Moreton Bay proposal explores how local bus, taxi and community transport operators could help own and run new services around ferry connections. He proposes exploring an island pilot ahead of wider rollout. Australia’s transport ministers agreed on conditional deployment in selected locations from 2027. Selection of a Straddie route remains an open question.</p>
+            <a href="https://auraofintelligence.github.io/moreton-bay-autonomous-mobility/pilot-plan.html">Moreton Bay action plan</a>
+            <a href="https://www.infrastructure.gov.au/sites/default/files/documents/itmm-communique-21-november-2025.pdf">Transport ministers’ decision (PDF)</a>
+          </article>
+          <article class="place-local place-transport">
+            <h3>Tesla’s Australian roadshow</h3>
+            <p>Tesla listed its Cybercab for public display at Burleigh Heads in October 2026 and Adelaide in November. Those events let people see the vehicle. A local passenger service would need its own operator, approvals and published service details before the board could list a ride.</p>
+            <a href="https://www.tesla.com/en_au/event/tesla-burleigh-cybercab">Tesla’s Burleigh event</a>
+            <a href="https://www.tesla.com/en_au/event/tesla-franklinst-cybercab">Tesla’s Adelaide event</a>
+          </article>
+          <article class="place-local place-transport">
+            <h3>Gold Coast air taxis</h3>
+            <p>On 17 November 2026 SkyDrive announced an agreement with the City of Gold Coast to study electric air taxis. SkyDrive and Gold Coast Helitours aim for Australia’s first commercial electric air taxi service from 2028. The SD-05 design carries a pilot and two passengers, with a published range of 15 to 40 km. A proposed link to Straddie would need specific landing sites, a feasible route, local agreement and approvals.</p>
+            <a href="https://skydrive.co.jp/en/news/73279/">SkyDrive’s agreement and proposed locations</a>
+            <a href="https://skydrive.co.jp/en/airmobility/">SD-05 seating and range</a>
+          </article>
         </div>
       </section>
     </div>

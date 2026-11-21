@@ -48,6 +48,12 @@ export const projects = [
     group: 'Island life',
   },
   {
+    name: 'Moreton Bay Autonomous Mobility',
+    url: 'https://github.com/auraofintelligence/moreton-bay-autonomous-mobility',
+    description: 'Luke’s proposal for ferry connections, island passenger services and local operator ownership. A noticeboard could carry an operator’s confirmed pickup point, service hours and fallback bus route.',
+    group: 'Island life',
+  },
+  {
     name: '7 Mile Admin Prep',
     url: 'https://auraofintelligence.github.io/7-mile-admin-prep/',
     description: 'A document register records who owns a task and what approval it needs. A venue handover can similarly name the person who reviews and removes notices.',

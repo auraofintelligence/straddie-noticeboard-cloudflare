@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Preview sample notices for the proposed Straddie Noticeboard Network on a wall display or portrait kiosk.">
-  <link rel="icon" href="./favicon.ico?v=2" sizes="16x16 24x24 32x32 48x48 64x64">
+  <meta name="description" content="Preview sample Straddie notices for venue TVs, onboard bus screens, busy stop displays and interactive kiosks.">
+  <link rel="icon" href="./favicon.ico?v=3" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./tools.css">
   <script type="module" src="./screen.js"></script>
@@ -17,11 +17,11 @@
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="./" aria-label="Straddie Noticeboard Network home">
-        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=2" alt="" width="43" height="43">
+        <img class="brand-icon" src="./assets/straddie-noticeboard-logo.png?v=3" alt="" width="43" height="43">
         <span class="brand-name">Straddie<span>Noticeboard Network</span></span>
       </a>
       <nav class="primary-nav" aria-label="Main navigation">
-        <a href="./island.html">Maps &amp; ferries</a>
+        <a href="./island.html">Island travel</a>
         <a href="./opportunities.html">Work &amp; volunteering</a>
         <a class="emergency-nav" href="./emergencies.html">Emergencies</a>
         <details class="section-menu">
@@ -48,7 +48,7 @@
     <div class="tool-heading">
       <a class="tool-back" id="screen-board-link" href="./board.html">Back to the practice board</a>
       <h1 id="screen-page-title">Screen preview</h1>
-      <p id="screen-page-description">See how the same practice notice fits a venue TV or a portrait touchscreen.</p>
+      <p id="screen-page-description">See how the same practice notice fits a venue TV, an onboard bus screen, a busy stop display or an interactive kiosk.</p>
     </div>
 
     <section class="screen-workbench" id="screen-workbench" aria-label="Notice display preview">
@@ -61,8 +61,8 @@
           </label>
           <label class="tool-field">Display format
             <select id="screen-format" aria-describedby="screen-wall-guide" disabled>
-              <option value="wall">Venue TV (16:9)</option>
-              <option value="portrait">Touchscreen (9:16)</option>
+              <option value="wall">TV or display (16:9)</option>
+              <option value="portrait">Touch kiosk (9:16)</option>
             </select>
           </label>
         </div>
@@ -77,11 +77,11 @@
       <div class="screen-guides">
         <div class="tool-illustration screen-guide" id="screen-wall-guide">
           <img src="./assets/icons/television.webp" alt="" width="48" height="48">
-          <div><strong>For a room to glance at</strong><p>Start rotation to cycle through notices every 12 seconds.</p></div>
+          <div><strong>For a quick glance</strong><p>Use this layout for venue TVs, screens onboard buses and standard displays at busy stops. Start rotation to cycle through preview notices every 12 seconds.</p></div>
         </div>
         <div class="tool-illustration screen-guide" id="screen-portrait-guide" hidden>
           <img src="./assets/icons/kiosk.webp" alt="" width="48" height="48">
-          <div><strong>For visitors to explore</strong><p>Tap through notices and open the island map on the touchscreen.</p></div>
+          <div><strong>For people who want more detail</strong><p>At a venue or bus stop with a touchscreen, tap through notices or open the island map.</p></div>
         </div>
         <div class="tool-illustration screen-guide" id="screen-outage-guide">
           <img src="./assets/icons/battery.webp" alt="" width="48" height="48">

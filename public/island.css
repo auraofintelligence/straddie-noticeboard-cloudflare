@@ -140,6 +140,12 @@
 .weather-guide details p { padding: 0 1rem .85rem; }
 .weather-guide details a { margin: -.35rem 1rem .85rem; }
 
+.mobility-guide > .eyebrow { margin-bottom: .45rem; }
+.mobility-photo { margin: 1.1rem 0; }
+.mobility-photo img { display: block; width: 100%; height: auto; border-radius: .6rem; }
+.mobility-photo figcaption { margin-top: .42rem; font-size: .86rem; color: var(--muted); }
+.mobility-guide .place-local { margin: 0; }
+
 @media (max-width: 810px) {
   .island-intro-grid { grid-template-columns: minmax(0, 1fr); }
   .island-explorer { grid-template-columns: minmax(0, 1fr); }
