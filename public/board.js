@@ -116,6 +116,7 @@ clearFilters.addEventListener("click", () => {
 });
 
 if (isPilot) {
+  document.querySelector("#practice-sources").hidden = true;
   document.title = "Reviewed noticeboard | Straddie Noticeboard Network";
   document.querySelector("#board-title").textContent = "Reviewed noticeboard";
   document.querySelector("#board-description").textContent = "This is where approved island notices appear. Each one names the publisher, links to the public source and shows when the notice comes down.";

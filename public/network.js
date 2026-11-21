@@ -6,22 +6,40 @@ export const projects = [
     group: "Island life",
   },
   {
-    name: "Strange But True",
-    url: "https://auraofintelligence.github.io/strange-but-true/index.html",
-    description: "Luke Nathan Hayes is developing the noticeboard proposal through Strange But True on Minjerribah while seeking local support to form Ready SETCO.",
-    group: "Island life",
-  },
-  {
     name: 'Ready SETCO',
-    url: 'https://ready-setco.auraofintelligence.workers.dev/',
-    description: 'A proposed cooperative for local training and participation. Its proposed noticeboard role is to convene publishers and moderate notices.',
+    url: 'https://ready-setco.auraofintelligence.workers.dev/index.html',
+    description: 'The proposed island co-operative. Luke proposes the noticeboard as its first project, bringing local publishers and hosts together and training people to review notices and look after screens.',
     group: 'Island life',
   },
   {
     name: 'Minjerribah Screen & Media Network',
     url: 'https://auraofintelligence.github.io/minjerribah-screen-media-network/',
-    description: 'A proposed local newsroom and training programme. Its interview, editing and captioning lessons inform the noticeboard’s maker-film workshop.',
+    description: 'A proposed local newsroom and training programme. Its interview, editing and captioning lessons inform the noticeboard workshop on recording island artists in their own words.',
     group: 'Media & opportunity',
+  },
+  {
+    name: 'Film Club Documentary Builders',
+    url: 'https://auraofintelligence.github.io/film-club-documentary-builders/',
+    description: 'A draft-first toolkit for planning an interview, tracing the sources for an edit and preparing notes for a screening.',
+    group: 'Media & opportunity',
+  },
+  {
+    name: 'Quandamooka Film Festival',
+    url: 'https://auraofintelligence.github.io/quandamooka-film-festival/',
+    description: 'A festival proposal with planning tools for phone filmmakers and first-time creators. Cultural permissions and partnerships are still to be established.',
+    group: 'Media & opportunity',
+  },
+  {
+    name: 'Community Club Builder: Sandy Sports',
+    url: 'https://auraofintelligence.github.io/community-club-builder-sandy-sports/sandy-sports.html#program',
+    description: 'A proposed club that could start with social beach volleyball and other portable sand games. It sets out how a founding group could share the work while it seeks local support and site permission.',
+    group: 'Media & opportunity',
+  },
+  {
+    name: "Strange But True",
+    url: "https://auraofintelligence.github.io/strange-but-true/index.html",
+    description: "Luke Nathan Hayes’s sole-trader business on Minjerribah. It holds the project plans and handles early enquiries while he invites islanders to form Ready SETCO.",
+    group: "Island life",
   },
   {
     name: 'Stradbroke Grants Lab',
@@ -38,7 +56,7 @@ export const projects = [
   {
     name: 'Wildlife Rescue Minjerribah',
     url: 'https://wildlife-rescue-minjerribah.auraofintelligence.workers.dev/',
-    description: 'Place-specific reporting and a direct handover to a rescuer illustrate how to get someone to the responsible service while keeping incident details private.',
+    description: 'A developing wildlife reporting and volunteer response prototype. Its rescue guidance and contact details are awaiting review by trained, licensed rescuers before public use.',
     group: 'Island life',
   },
   {
@@ -80,13 +98,7 @@ export const projects = [
   {
     name: 'Ballow Road Sand & Screen Hub',
     url: 'https://auraofintelligence.github.io/ballow-road-sand-screen-hub/',
-    description: 'Earlier site-specific research on sports, screenings and community use in Dunwich.',
-    group: 'Media & opportunity',
-  },
-  {
-    name: 'Community Club Builder',
-    url: 'https://auraofintelligence.github.io/community-club-builder-sandy-sports/',
-    description: 'The Sandy Sports example distributes decisions, jobs and ongoing care across a founding group. A screen host also needs someone who can take over when the usual steward is away.',
+    description: 'A site proposal for sand courts, outdoor screenings and markets in Dunwich. Ownership, site permission and planning would need to be confirmed.',
     group: 'Media & opportunity',
   },
   {

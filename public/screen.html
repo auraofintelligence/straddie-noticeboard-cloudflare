@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Preview sample Straddie notices for venue TVs, onboard bus screens, busy stop displays and interactive kiosks.">
+  <meta name="description" content="View Straddie notices in formats for venue TVs, onboard bus screens, busy stop displays and interactive kiosks.">
   <link rel="icon" href="./favicon.ico?v=4" sizes="16x16 24x24 32x32 48x48 64x64">
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./tools.css">
   <script type="module" src="./screen.js"></script>
-  <title>Screen preview | Straddie Noticeboard Network</title>
+  <title>Noticeboard screen | Straddie Noticeboard Network</title>
   <link rel="stylesheet" href="./brand.css">
   <meta name="theme-color" content="#111526">
   <link rel="stylesheet" href="./navigation.css">
@@ -88,9 +88,9 @@
 
   <main id="main" class="shell tool-main">
     <div class="tool-heading">
-      <a class="tool-back" id="screen-board-link" href="./board.html">Browse the practice board</a>
-      <h1 id="screen-page-title">Practice screen preview</h1>
-      <p id="screen-page-description">See how the same practice notice fits a venue TV, an onboard bus screen, a busy stop display or an interactive kiosk.</p>
+      <a class="tool-back" id="screen-board-link" href="./board.html?mode=pilot">Read the noticeboard</a>
+      <h1 id="screen-page-title">Noticeboard screen</h1>
+      <p id="screen-page-description">Display formats for venue TVs, onboard bus screens, busy stop displays and interactive kiosks.</p>
     </div>
 
     <section class="screen-workbench" id="screen-workbench" aria-label="Notice display preview">
@@ -113,7 +113,7 @@
           <button class="button button-secondary" id="screen-next" type="button" disabled>Next</button>
           <button class="button button-primary" id="screen-play" type="button" disabled>Start rotation</button>
           <button class="button button-secondary" id="screen-fullscreen" type="button" hidden>Full screen</button>
-          <button class="button button-secondary" id="screen-outage" type="button" aria-pressed="false" aria-describedby="screen-outage-guide" disabled>Outage drill</button>
+          <button class="button button-secondary" id="screen-outage" type="button" aria-pressed="false" aria-describedby="screen-outage-guide" disabled hidden>Outage drill</button>
         </div>
       </div>
       <div class="screen-guides">
@@ -125,7 +125,7 @@
           <img src="./assets/icons/kiosk.webp" alt="" width="48" height="48">
           <div><strong>For people who want more detail</strong><p>At a venue or bus stop with a touchscreen, tap through notices or open the island map.</p></div>
         </div>
-        <div class="tool-illustration screen-guide" id="screen-outage-guide">
+        <div class="tool-illustration screen-guide" id="screen-outage-guide" hidden>
           <img src="./assets/icons/battery.webp" alt="" width="48" height="48">
           <div><strong>Text-only fallback</strong><p>The outage drill hides photos and shows when the sample text was loaded.</p></div>
         </div>
@@ -137,7 +137,7 @@
       <div class="screen-display" id="screen-display">
         <div class="screen-signature">
           <span>Straddie Noticeboard Network</span>
-          <span class="screen-badge" id="screen-badge">Sample notice</span>
+          <span class="screen-badge" id="screen-badge" hidden></span>
         </div>
         <div class="screen-announcement" id="screen-announcement" aria-live="polite" aria-atomic="true">
           <div class="screen-slide" id="screen-slide" hidden>
@@ -155,7 +155,7 @@
               <figcaption id="screen-credit" hidden></figcaption>
             </figure>
           </div>
-          <p class="screen-empty" id="screen-empty">Sample notices load here when JavaScript is available.</p>
+          <p class="screen-empty" id="screen-empty">This screen needs JavaScript to display notices.</p>
         </div>
         <p class="screen-cache" id="screen-cache" hidden></p>
         <div class="screen-touch" id="screen-touch" role="group" aria-label="Touchscreen controls" hidden>
@@ -165,7 +165,7 @@
         </div>
         <p class="screen-position" id="screen-position"></p>
       </div>
-      <p class="tool-hint" id="screen-status" role="status">All notices on this screen are examples.</p>
+      <p class="tool-hint" id="screen-status" role="status"></p>
     </section>
   </main>
 
@@ -176,7 +176,7 @@
     </div>
     <div class="shell page-navigation">
       <nav class="page-sequence" aria-label="Continue from this page" data-sequence-mode="practice">
-        <a href="./board.html" rel="prev"><span>Previous</span><strong>Choose a sample notice</strong></a>
+        <a href="./board.html" rel="prev"><span>Previous</span><strong>Browse the noticeboard</strong></a>
         <a href="./setup.html" rel="next"><span>Next</span><strong>Try a screen at your venue</strong></a>
       </nav>
       <nav class="page-sequence" aria-label="Continue from this page" data-sequence-mode="pilot" hidden>

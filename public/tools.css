@@ -367,6 +367,9 @@
 
 .board-coverage-head h2 { margin-bottom: .2rem; }
 .board-modes { margin-top: .85rem; column-gap: .85rem; }
+.practice-sources { margin: 1.5rem 0 0; border-top: 1px solid var(--line); padding: .75rem 0; }
+.practice-sources summary { cursor: pointer; color: var(--teal); font-weight: 700; }
+.practice-sources p { max-width: 68ch; margin-top: .65rem; }
 .board-modes a:not(.button) { color: var(--teal); font-size: .94rem; font-weight: 720; }
 .board-place-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; margin-top: .85rem; }
 .board-place-grid .pill {

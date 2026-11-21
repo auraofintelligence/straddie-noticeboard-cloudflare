@@ -185,17 +185,18 @@ if (address.get('format') === 'portrait') formatSelect.value = 'portrait';
 placeSelect.disabled = false;
 formatSelect.disabled = false;
 outage.disabled = isPilot;
+outage.hidden = isPilot;
+document.querySelector('#screen-outage-guide').hidden = isPilot;
 updateSelection(requestedNotice);
 updateFormat();
+const pageTitle = document.querySelector('#screen-page-title');
+const pageDescription = document.querySelector('#screen-page-description');
+const boardLink = document.querySelector('#screen-board-link');
 if (isPilot) {
   document.title = 'Pilot screen | Straddie Noticeboard Network';
-  document.querySelector('#screen-page-title').textContent = 'Pilot screen';
-  document.querySelector('#screen-page-description').textContent = 'Choose a wide display for a venue, vehicle or stop, or a touchscreen kiosk. Filter by place to see the current notices approved for that outlet.';
-  const boardLink = document.querySelector('#screen-board-link');
-  boardLink.href = './board.html?mode=pilot';
+  pageTitle.textContent = 'Pilot screen';
+  pageDescription.textContent = 'Choose a wide display for a venue, vehicle or stop, or a touchscreen kiosk. Filter by place to see the current notices approved for that outlet.';
   boardLink.textContent = 'Read the reviewed noticeboard';
-  outage.hidden = true;
-  document.querySelector('#screen-outage-guide').hidden = true;
   document.querySelector('#screen-pilot-guide').hidden = false;
   status.textContent = 'This screen refreshes from the reviewed pilot feed.';
   watchPilotFeed((state, currentNotices) => {
@@ -204,7 +205,17 @@ if (isPilot) {
     displayNotices = currentNotices;
     updateSelection(activeNotice, false);
   });
-} else if (address.get('outage') === '1') setOutageDrill(true);
+} else {
+  document.title = 'Screen preview | Straddie Noticeboard Network';
+  pageTitle.textContent = 'Practice screen preview';
+  pageDescription.textContent = 'See how the same practice notice fits a venue TV, an onboard bus screen, a busy stop display or an interactive kiosk.';
+  boardLink.href = './board.html';
+  boardLink.textContent = 'Browse the practice board';
+  badge.textContent = 'Sample notice';
+  status.textContent = 'All notices on this screen are examples.';
+  if (address.get('outage') === '1') setOutageDrill(true);
+}
+badge.hidden = false;
 
 placeSelect.addEventListener('change', () => {
   updateSelection();
