@@ -28,7 +28,7 @@ Based on straddie-noticeboard-network by Luke Nathan Hayes / Strange But True / 
 
 Photos are compressed or cropped for display.
 
-The ferry-stop touchscreen is an AI-generated concept image showing a possible installation. The AI-generated logo and multi-size favicon reuse the four accents from the Ready SETCO favicon on midnight navy.
+The ferry-stop touchscreen is an AI-generated concept image showing a possible installation. The AI-generated logo and multi-size favicon use three overlapping notice slips, with neon green in front. The four accents come from the Ready SETCO favicon.
 
 <details>
 <summary>Image generation briefs</summary>
@@ -39,6 +39,6 @@ Use case: product mockup, photorealistic documentary-style concept rendering for
 
 **Logo and favicon**
 
-Use case: logo-brand. Create a single iconic emblem for Straddie Noticeboard Network, a proposed community noticeboard on a coastal Australian island. Use the four Ready SETCO favicon accent colours, each clearly distinct: vivid purple #8f4dff, bright sky blue #5fd8ff, warm yellow #ffd166, luminous green #62f6a5, against midnight navy #101020. Draw a broad, slightly rounded purple upright NOTICE CARD silhouette (unlike a circle or wave emblem), a large yellow drawing-pin dot in its upper third, and TWO sweeping chunky lines only, a sky-blue line over a green line in its lower half, suggesting a notice’s text and the shoreline. Make it simple and graphic, a strong recognizable silhouette legible as a 16px favicon or 40px header logo. Center the shape on a deep midnight navy rounded square tile that fills 94% of the canvas, with genuinely transparent corners outside. Exact aspect ratio square, single composition, crisp bold solid areas, no lettering or initials, no shadows, decoration, outlines, textures, watermark, backdrop, scenes or mockup. Make the four bright colour areas large enough to survive downsampling.
+Create one completely new brand icon for Straddie Noticeboard Network, a proposal for a public community noticeboard on an Australian island. Composition: a square midnight-navy #101020 rounded tile, nearly filling the canvas, with genuinely transparent corners. Center one bold modern pictogram of three overlapping notice slips, loosely fanned from one pin. The front sheet is unmistakably electric neon green #62F6A5, a chunky solid shape that occupies at least one-quarter of the whole icon, with one small midnight-navy horizontal line etched into the front so it reads as a notice. The back-left purple #8F4DFF and back-right sky blue #5FD8FF slips are distinct broad visible blocks. Place a yellow #FFD166 circular pushpin head at the upper center of the green sheet. The large green sheet must be the primary shape, memorable at 16 pixels. Carefully balanced, modern, confident, simple silhouette. Use plain, uniform solid colour on every shape, vector-like graphic fidelity, clean hard edges, no shading, reflections, smudges, gradients, light effects, mottling, shadows, dust or texture anywhere. No words or letters, no map pins, no mountains, no waves, no scenery, no mockup, no borders or additional icons. Export one centered square logo.
 
 </details>
