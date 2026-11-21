@@ -1,0 +1,353 @@
+.tool-main {
+  padding-block: clamp(2.5rem, 7vw, 5.5rem);
+  color: #0b2d33;
+}
+
+.tool-heading {
+  margin-bottom: clamp(1.75rem, 5vw, 3rem);
+  max-width: 43rem;
+}
+
+.tool-heading h1 {
+  margin: .65rem 0 .75rem;
+  font: 700 clamp(2.7rem, 7vw, 5.1rem)/1.02 Georgia, serif;
+  letter-spacing: -.045em;
+}
+
+.tool-heading p {
+  margin: 0;
+  color: #435c5b;
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  line-height: 1.65;
+}
+
+.tool-back {
+  color: #0e554d;
+  font-size: .94rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.draft-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.tool-panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #fffefa;
+  border: 1px solid #ceddd5;
+  border-radius: 1.15rem;
+}
+
+.tool-panel h2 {
+  margin: 0 0 .45rem;
+  font: 700 clamp(1.45rem, 3vw, 1.95rem)/1.16 Georgia, serif;
+}
+
+.tool-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .9rem .8rem;
+  margin-block: 1.25rem;
+}
+
+.tool-hint {
+  margin: 0;
+  color: #435c5b;
+  font-size: .92rem;
+  line-height: 1.5;
+}
+
+.tool-fields .tool-hint {
+  margin-top: -.55rem;
+}
+
+.tool-field {
+  display: grid;
+  align-content: start;
+  gap: .32rem;
+  min-width: 0;
+  font-size: .93rem;
+  font-weight: 700;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+.tool-field :is(input, textarea, select),
+.draft-preview {
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: .65rem .72rem;
+  color: #0b2d33;
+  background: #fff;
+  border: 1px solid #9db4ab;
+  border-radius: .52rem;
+  font: 400 1rem/1.35 system-ui, sans-serif;
+}
+
+.tool-field select {
+  appearance: none;
+  padding-right: 2.35rem;
+  background-image: linear-gradient(45deg, transparent 50%, #0e554d 50%), linear-gradient(135deg, #0e554d 50%, transparent 50%);
+  background-position: calc(100% - 1rem) 52%, calc(100% - .69rem) 52%;
+  background-size: .32rem .32rem;
+  background-repeat: no-repeat;
+}
+
+.tool-field textarea,
+.draft-preview {
+  resize: vertical;
+}
+
+.tool-field :is(input, textarea, select):focus-visible,
+.draft-preview:focus-visible {
+  outline: 2px solid #0e554d;
+  outline-offset: 2px;
+}
+
+.tool-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .625rem;
+  align-items: center;
+}
+
+.tool-actions .button:disabled {
+  opacity: .55;
+  cursor: default;
+}
+
+.draft-export {
+  background: #eef5f1;
+}
+
+.draft-export label {
+  margin-top: 1.25rem;
+  margin-bottom: .35rem;
+}
+
+.draft-preview {
+  display: block;
+  margin-bottom: .9rem;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: .93rem;
+}
+
+.draft-export [role='status']:not(:empty) {
+  margin-top: .8rem;
+}
+
+.screen-workbench {
+  display: grid;
+  gap: 1rem;
+  container-type: inline-size;
+}
+
+.screen-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+}
+
+.screen-settings {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(2, minmax(8rem, 13rem));
+  gap: .65rem;
+}
+
+.screen-display {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  width: 100%;
+  min-height: 21rem;
+  aspect-ratio: 16 / 9;
+  padding: clamp(1rem, 5cqw, 3rem);
+  color: #fffefa;
+  background: linear-gradient(128deg, #0b2d33 40%, #0e554d);
+  border-radius: 1.25rem;
+}
+
+.screen-display.is-portrait {
+  width: min(100%, 27rem);
+  aspect-ratio: 9 / 16;
+  margin-inline: auto;
+  padding: clamp(1.1rem, 5cqw, 1.75rem);
+}
+
+.screen-signature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .4rem .8rem;
+  padding-bottom: .7rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .29);
+  font-size: .9rem;
+  font-weight: 750;
+}
+
+.screen-badge {
+  display: inline-block;
+  padding: .22rem .58rem;
+  border-radius: 999px;
+  color: #0b2d33;
+  background: #f9d681;
+}
+
+.screen-announcement {
+  display: grid;
+  align-items: center;
+  min-width: 0;
+}
+
+.screen-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1rem, 4cqw, 2.5rem);
+}
+
+.screen-slide:has(.screen-media[hidden]),
+.screen-display.is-portrait .screen-slide {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.screen-display [hidden],
+.screen-controls [hidden] {
+  display: none;
+}
+
+.screen-message {
+  min-width: 0;
+}
+
+.screen-meta {
+  margin: 0 0 .45rem;
+  color: #f9d681;
+  font-size: .91rem;
+  font-weight: 750;
+}
+
+.screen-display h2 {
+  margin: 0;
+  font: 700 clamp(1.65rem, 5.3cqw, 4.15rem)/1.08 Georgia, serif;
+  letter-spacing: -.035em;
+  overflow-wrap: anywhere;
+}
+
+.screen-display.is-portrait h2 {
+  font-size: clamp(1.7rem, 6cqw, 2.65rem);
+}
+
+.screen-summary {
+  max-width: 39rem;
+  margin: .65rem 0 0;
+  color: #e0f0eb;
+  font-size: clamp(1rem, 2.1cqw, 1.25rem);
+  line-height: 1.45;
+}
+
+.screen-media {
+  margin: 0;
+}
+
+.screen-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: .75rem;
+}
+
+.screen-media figcaption {
+  margin-top: .45rem;
+  color: #e0f0eb;
+  font-size: .8rem;
+}
+
+.screen-empty,
+.screen-position {
+  margin: 0;
+}
+
+.screen-position {
+  justify-self: end;
+  color: #e0f0eb;
+  font-size: .9rem;
+}
+
+.screen-workbench:fullscreen {
+  display: flex;
+  flex-direction: column;
+  padding: .75rem;
+  overflow-y: auto;
+  background: #0b2d33;
+}
+
+.screen-workbench:fullscreen .screen-display {
+  order: -1;
+  flex: 1 0 auto;
+  aspect-ratio: auto;
+  max-width: 100rem;
+  margin-inline: auto;
+}
+
+.screen-workbench:fullscreen .screen-display.is-portrait {
+  max-width: 32rem;
+}
+
+.screen-workbench:fullscreen > .tool-hint {
+  color: #e0f0eb;
+}
+
+.tool-footer {
+  padding-block: 1.35rem;
+  font-size: .92rem;
+}
+
+.tool-footer p {
+  margin: .4rem 0 0;
+}
+
+@media (max-width: 47rem) {
+  .draft-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .screen-settings {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .screen-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 34rem) {
+  .tool-fields,
+  .screen-slide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .screen-display {
+    aspect-ratio: auto;
+  }
+
+  .screen-display:not(.is-portrait) .screen-media img {
+    aspect-ratio: 16 / 8;
+  }
+}

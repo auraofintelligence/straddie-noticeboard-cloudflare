@@ -1,0 +1,10 @@
+{
+  "name": "straddie-noticeboard-cloudflare",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python -m http.server 4185 --bind 127.0.0.1 --directory public",
+    "check": "node --check public/board.js && node --check public/notices.js && node --check public/network.js && node --check public/submit.js && node --check public/screen.js"
+  }
+}

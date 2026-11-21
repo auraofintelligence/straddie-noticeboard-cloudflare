@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Preview sample Straddie notices on a wall display or portrait kiosk.">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./tools.css">
+  <script type="module" src="./screen.js"></script>
+  <title>Screen preview | Straddie Noticeboard Network</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./">
+        <img class="brand-icon" src="./assets/icon.svg" alt="" width="36" height="36">
+        <span class="brand-name">Straddie Noticeboard <span>Network</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./#board">Noticeboard</a>
+        <a href="./#network">Network</a>
+        <a href="./screen.html" aria-current="page">Screen preview</a>
+        <a class="button button-primary" href="./submit.html">Draft a notice</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell tool-main">
+    <div class="tool-heading">
+      <a class="tool-back" href="./#board">Back to the noticeboard</a>
+      <h1>Screen preview</h1>
+      <p>See how sample notices look on a clubhouse wall or a portrait kiosk. Choose a place, then step through the notices or start a slideshow.</p>
+    </div>
+
+    <section class="screen-workbench" id="screen-workbench" aria-label="Notice display preview">
+      <div class="tool-panel screen-toolbar">
+        <div class="screen-settings">
+          <label class="tool-field">Place
+            <select id="screen-place" disabled>
+              <option value="">All places</option>
+            </select>
+          </label>
+          <label class="tool-field">Display format
+            <select id="screen-format" disabled>
+              <option value="wall">Wall display (16:9)</option>
+              <option value="portrait">Kiosk (9:16)</option>
+            </select>
+          </label>
+        </div>
+        <div class="tool-actions screen-controls" role="group" aria-label="Slideshow controls">
+          <button class="button button-secondary" id="screen-previous" type="button" disabled>Previous</button>
+          <button class="button button-secondary" id="screen-next" type="button" disabled>Next</button>
+          <button class="button button-primary" id="screen-play" type="button" disabled>Start rotation</button>
+          <button class="button button-secondary" id="screen-fullscreen" type="button" hidden>Full screen</button>
+        </div>
+      </div>
+      <div class="screen-display" id="screen-display">
+        <div class="screen-signature">
+          <span>Straddie Noticeboard Network</span>
+          <span class="screen-badge">Sample notice</span>
+        </div>
+        <div class="screen-announcement" id="screen-announcement" aria-live="polite" aria-atomic="true">
+          <div class="screen-slide" id="screen-slide" hidden>
+            <div class="screen-message">
+              <p class="screen-meta" id="screen-meta"></p>
+              <h2 id="screen-title"></h2>
+              <p class="screen-summary" id="screen-summary"></p>
+            </div>
+            <figure class="screen-media" id="screen-media" hidden>
+              <img id="screen-image" alt="">
+              <figcaption id="screen-credit" hidden></figcaption>
+            </figure>
+          </div>
+          <p class="screen-empty" id="screen-empty">Sample notices load here when JavaScript is available.</p>
+        </div>
+        <p class="screen-position" id="screen-position"></p>
+      </div>
+      <p class="tool-hint" id="screen-status" role="status">All notices on this screen are examples.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell tool-footer">
+      <a href="./">Straddie Noticeboard Network</a>
+      <p>Based on the <a href="https://github.com/auraofintelligence/straddie-noticeboard-network">original project by Luke Nathan Hayes / Strange But True / Aura of Intelligence</a>. Used under the <a href="https://github.com/auraofintelligence/straddie-noticeboard-network/blob/main/LICENCE.md">Strange But True Public Source Licence</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
