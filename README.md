@@ -56,6 +56,8 @@ Photos are compressed or cropped for display.
 
 The ferry-stop touchscreen is an AI-generated concept image showing a possible installation. The logo shows one public notice on two linked screens. Its open curves and gold dot draw on the Ready SETCO tide emblem. The colours are sampled from the Strange But True Facebook cover and profile artwork. The [scalable mark](public/assets/icon.svg) is the source for the [header image](public/assets/straddie-noticeboard-logo.png) and [tab icon](public/favicon.ico).
 
+Link previews use the [1200 × 630 PNG sharing image](public/assets/straddie-noticeboard-share-20261126.png), rendered from the same vector mark on a solid aubergine background. Its [SVG source](public/assets/straddie-noticeboard-share.svg) preserves the artwork at any size. All public content pages include their own title, description and canonical URL alongside Open Graph and Twitter image metadata. Browser icons include the original SVG, 48 px and 192 px PNG fallbacks, a 180 px Apple touch icon and an ICO containing 16, 24, 32, 48, 64, 128 and 256 px sizes. A [512 px logo export](public/assets/straddie-noticeboard-logo-512.png) is also available. Render future exports from the SVG rather than enlarging the 256 px header image; give revised sharing images a new filename so social services can fetch the new version.
+
 The image of possible autonomous vehicles at a ferry terminal is based on Moreton Bay Autonomous Mobility by Luke Nathan Hayes / Strange But True / Aura of Intelligence. [Original project](https://github.com/auraofintelligence/moreton-bay-autonomous-mobility) · [Strange But True Public Source Licence](https://github.com/auraofintelligence/moreton-bay-autonomous-mobility/blob/main/LICENCE.md).
 
 <details>
